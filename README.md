@@ -1,4 +1,4 @@
-# Neurodesk Literature To PostgreSQL Showcase
+# Neurodesk Literature To PostgreSQL Workflow
 
 This repository contains a lightweight, shareable version of a Neurodesk workflow for:
 
@@ -10,7 +10,7 @@ The goal of this repo is to share the workflow itself without uploading generate
 
 ## Repository Contents
 
-- `neurodesk_literature_to_pgsql_showcase.ipynb`: presentation-friendly notebook that demonstrates the workflow
+- `neurodesk_literature_to_pgsql.ipynb`: main workflow notebook for building and querying the literature/IPD workflow
 - `neurodesk_literature_to_pgsql.py`: core extraction and export logic
 - `.gitignore`: excludes generated database files, outputs, and local datasets
 
@@ -88,6 +88,6 @@ Then open the notebook and configure:
 ```bash
 git checkout -b V0.1
 git add .
-git commit -m "feat: add literature to pgsql showcase workflow"
+git commit -m "feat: add literature to pgsql workflow"
 git push -u origin V0.1
 ```
