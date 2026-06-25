@@ -10,6 +10,7 @@ from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd
 
 try:
     from pypdf import PdfReader
@@ -31,12 +32,148 @@ WHITESPACE_RE = re.compile(r"\s+")
 
 DIAGNOSIS_KEYWORDS = {
     "AD": ["alzheimer", "ad "],
-    "FTD": ["frontotemporal", "ftd"],
+    "bvFTD": [
+        "behavioral variant frontotemporal dementia",
+        "behavioural variant frontotemporal dementia",
+        "behavioral variant ftd",
+        "behavioural variant ftd",
+        "bvftd",
+        "frontal variant frontotemporal dementia",
+        "frontotemporal dementia, behavioral variant",
+        "pick's disease",
+        "picks disease",
+    ],
+    "svPPA": [
+        "semantic variant primary progressive aphasia",
+        "svppa",
+        "semantic dementia",
+    ],
+    "nfvPPA": [
+        "nonfluent variant primary progressive aphasia",
+        "non-fluent variant primary progressive aphasia",
+        "agrammatic variant primary progressive aphasia",
+        "nonfluent/agrammatic variant primary progressive aphasia",
+        "non-fluent/agrammatic variant primary progressive aphasia",
+        "progressive nonfluent aphasia",
+        "progressive non-fluent aphasia",
+        "pnfa",
+        "nfvppa",
+    ],
+    "lvPPA": [
+        "logopenic variant primary progressive aphasia",
+        "logopenic progressive aphasia",
+        "lvppa",
+        "lppa",
+    ],
+    "PPA": ["primary progressive aphasia"],
+    "FTD-ALS": [
+        "frontotemporal dementia with amyotrophic lateral sclerosis",
+        "frontotemporal dementia and amyotrophic lateral sclerosis",
+        "frontotemporal dementia with motor neuron disease",
+        "ftd-als",
+        "ftd als",
+        "ftd-mnd",
+        "ftd mnd",
+        "als-ftd",
+        "als ftd",
+    ],
+    "PSP": ["progressive supranuclear palsy", "psp"],
+    "CBS": ["corticobasal syndrome", "corticobasal degeneration", "cbs", "cbd"],
+    "FTD": ["frontotemporal dementia", "frontotemporal degeneration", "frontotemporal lobar degeneration", "ftd"],
     "DLB": ["lewy body", "dlb"],
     "VaD": ["vascular dementia", "vad", "white matter hyperintens"],
     "MCI": ["mild cognitive impairment", "mci"],
     "Control": ["control", "healthy"],
     "Dementia": ["dementia"],
+}
+
+FTD_SPECIFIC_DIAGNOSES = {"bvFTD", "svPPA", "nfvPPA", "lvPPA", "FTD-ALS", "PSP", "CBS"}
+PPA_SPECIFIC_DIAGNOSES = {"svPPA", "nfvPPA", "lvPPA"}
+
+ROI_ALIASES = {
+    "hippocampus": "hippocampus",
+    "hippocampal": "hippocampus",
+    "total_hippocampus": "hippocampus",
+    "entorhinal": "entorhinal cortex",
+    "entorhinal cortex": "entorhinal cortex",
+    "parahippocampal": "parahippocampal gyrus",
+    "parahippocampal gyrus": "parahippocampal gyrus",
+    "posterior cingulate": "posterior cingulate cortex",
+    "posterior cingulate cortex": "posterior cingulate cortex",
+    "inferior parietal": "inferior parietal cortex",
+    "inferior parietal cortex": "inferior parietal cortex",
+    "temporal cortex": "temporal cortex",
+    "temporal lobe": "temporal cortex",
+    "frontal cortex": "frontal cortex",
+    "frontal lobe": "frontal cortex",
+    "anterior temporal": "anterior temporal cortex",
+    "anterior temporal cortex": "anterior temporal cortex",
+    "insula": "insula",
+    "insular": "insula",
+    "anterior cingulate": "anterior cingulate cortex",
+    "anterior cingulate cortex": "anterior cingulate cortex",
+    "white matter": "white matter",
+    "wm": "white matter",
+}
+
+METRIC_ALIASES = {
+    "cortical_thickness": "cortical_thickness",
+    "cortical thickness": "cortical_thickness",
+    "cortical thinning": "cortical_thickness",
+    "thickness": "cortical_thickness",
+    "roi_volume": "roi_volume",
+    "volume": "roi_volume",
+    "regional volume": "roi_volume",
+    "regional_volumes": "roi_volume",
+    "hippocampal_volume": "hippocampal_volume",
+    "hippocampal volume": "hippocampal_volume",
+    "total_hippocampus": "hippocampal_volume",
+    "white_matter_hyperintensity": "white_matter_hyperintensity",
+    "white matter hyperintensity": "white_matter_hyperintensity",
+    "white matter hyperintensities": "white_matter_hyperintensity",
+}
+
+DIAGNOSIS_SIGNATURES = {
+    "AD": {
+        "rois": {"hippocampus", "entorhinal cortex", "parahippocampal gyrus", "posterior cingulate cortex", "inferior parietal cortex"},
+        "metrics": {"roi_volume", "hippocampal_volume", "cortical_thickness"},
+    },
+    "bvFTD": {
+        "rois": {"frontal cortex", "anterior temporal cortex", "insula", "anterior cingulate cortex", "temporal cortex"},
+        "metrics": {"cortical_thickness", "roi_volume"},
+    },
+    "svPPA": {
+        "rois": {"anterior temporal cortex", "temporal cortex", "entorhinal cortex", "parahippocampal gyrus"},
+        "metrics": {"cortical_thickness", "roi_volume"},
+    },
+    "nfvPPA": {
+        "rois": {"frontal cortex", "insula", "anterior cingulate cortex"},
+        "metrics": {"cortical_thickness", "roi_volume"},
+    },
+    "lvPPA": {
+        "rois": {"inferior parietal cortex", "posterior cingulate cortex", "temporal cortex", "hippocampus"},
+        "metrics": {"cortical_thickness", "roi_volume"},
+    },
+    "FTD-ALS": {
+        "rois": {"frontal cortex", "temporal cortex", "white matter"},
+        "metrics": {"cortical_thickness", "roi_volume", "white_matter_hyperintensity"},
+    },
+    "PSP": {
+        "rois": {"frontal cortex", "anterior cingulate cortex"},
+        "metrics": {"cortical_thickness", "roi_volume"},
+    },
+    "CBS": {
+        "rois": {"frontal cortex", "inferior parietal cortex", "white matter"},
+        "metrics": {"cortical_thickness", "roi_volume", "white_matter_hyperintensity"},
+    },
+    "DLB": {
+        "rois": {"posterior cingulate cortex", "temporal cortex", "hippocampus"},
+        "metrics": {"roi_volume", "cortical_thickness"},
+    },
+    "VaD": {
+        "rois": {"white matter", "frontal cortex"},
+        "metrics": {"white_matter_hyperintensity", "roi_volume"},
+    },
 }
 
 MODALITY_KEYWORDS = {
@@ -276,7 +413,156 @@ def detect_diagnoses(text_lower: str) -> list[str]:
     for label, keywords in DIAGNOSIS_KEYWORDS.items():
         if any(keyword in text_lower for keyword in keywords):
             found.append(label)
-    return found
+    return expand_diagnosis_hierarchy(found)
+
+
+def expand_diagnosis_hierarchy(labels: list[str]) -> list[str]:
+    expanded = list(labels)
+    if any(label in FTD_SPECIFIC_DIAGNOSES for label in labels):
+        expanded.append("FTD")
+    if any(label in PPA_SPECIFIC_DIAGNOSES for label in labels):
+        expanded.append("PPA")
+    return dedupe_strings(expanded)
+
+
+def normalize_diagnosis_label(label: str) -> str:
+    value = WHITESPACE_RE.sub(" ", str(label)).strip().lower()
+    if not value:
+        return ""
+
+    exact_aliases = {
+        "alzheimer's disease": "AD",
+        "alzheimer disease": "AD",
+        "ad": "AD",
+        "behavioral variant frontotemporal dementia": "bvFTD",
+        "behavioural variant frontotemporal dementia": "bvFTD",
+        "behavioral variant ftd": "bvFTD",
+        "behavioural variant ftd": "bvFTD",
+        "bvftd": "bvFTD",
+        "pick's disease": "bvFTD",
+        "picks disease": "bvFTD",
+        "semantic variant primary progressive aphasia": "svPPA",
+        "svppa": "svPPA",
+        "semantic dementia": "svPPA",
+        "nonfluent variant primary progressive aphasia": "nfvPPA",
+        "non-fluent variant primary progressive aphasia": "nfvPPA",
+        "agrammatic variant primary progressive aphasia": "nfvPPA",
+        "nonfluent/agrammatic variant primary progressive aphasia": "nfvPPA",
+        "non-fluent/agrammatic variant primary progressive aphasia": "nfvPPA",
+        "progressive nonfluent aphasia": "nfvPPA",
+        "progressive non-fluent aphasia": "nfvPPA",
+        "pnfa": "nfvPPA",
+        "nfvppa": "nfvPPA",
+        "logopenic variant primary progressive aphasia": "lvPPA",
+        "logopenic progressive aphasia": "lvPPA",
+        "lvppa": "lvPPA",
+        "lppa": "lvPPA",
+        "primary progressive aphasia": "PPA",
+        "frontotemporal dementia with amyotrophic lateral sclerosis": "FTD-ALS",
+        "frontotemporal dementia and amyotrophic lateral sclerosis": "FTD-ALS",
+        "frontotemporal dementia with motor neuron disease": "FTD-ALS",
+        "ftd-als": "FTD-ALS",
+        "ftd als": "FTD-ALS",
+        "ftd-mnd": "FTD-ALS",
+        "ftd mnd": "FTD-ALS",
+        "als-ftd": "FTD-ALS",
+        "als ftd": "FTD-ALS",
+        "progressive supranuclear palsy": "PSP",
+        "psp": "PSP",
+        "corticobasal syndrome": "CBS",
+        "corticobasal degeneration": "CBS",
+        "cbs": "CBS",
+        "cbd": "CBS",
+        "frontotemporal dementia": "FTD",
+        "frontotemporal degeneration": "FTD",
+        "frontotemporal lobar degeneration": "FTD",
+        "ftd": "FTD",
+        "dementia with lewy bodies": "DLB",
+        "lewy body dementia": "DLB",
+        "dlb": "DLB",
+        "vascular dementia": "VaD",
+        "vad": "VaD",
+        "mild cognitive impairment": "MCI",
+        "mci": "MCI",
+        "control": "Control",
+        "healthy control": "Control",
+        "healthy controls": "Control",
+        "dementia": "Dementia",
+    }
+    if value in exact_aliases:
+        return exact_aliases[value]
+
+    if "semantic" in value and "primary progressive aphasia" in value:
+        return "svPPA"
+    if ("nonfluent" in value or "non-fluent" in value or "agrammatic" in value) and "primary progressive aphasia" in value:
+        return "nfvPPA"
+    if "logopenic" in value and "primary progressive aphasia" in value:
+        return "lvPPA"
+    if "behavioral variant" in value and "frontotemporal" in value:
+        return "bvFTD"
+    if "amyotrophic lateral sclerosis" in value and "frontotemporal" in value:
+        return "FTD-ALS"
+    if "motor neuron disease" in value and "frontotemporal" in value:
+        return "FTD-ALS"
+
+    return WHITESPACE_RE.sub(" ", str(label)).strip()
+
+
+def normalize_diagnoses(labels: list[str]) -> list[str]:
+    normalized = []
+    for label in labels:
+        canonical = normalize_diagnosis_label(label)
+        if canonical:
+            normalized.append(canonical)
+    return expand_diagnosis_hierarchy(dedupe_strings(normalized))
+
+
+def normalize_roi_label(label: Any) -> str:
+    value = WHITESPACE_RE.sub(" ", str(label)).strip().lower()
+    if not value or value == "none":
+        return ""
+
+    exact_aliases = {
+        "hippocampus": "hippocampus",
+        "total_hippocampus": "hippocampus",
+        "entorhinal cortex": "entorhinal cortex",
+        "parahippocampal gyrus": "parahippocampal gyrus",
+        "posterior cingulate cortex": "posterior cingulate cortex",
+        "inferior parietal cortex": "inferior parietal cortex",
+        "temporal cortex": "temporal cortex",
+        "frontal cortex": "frontal cortex",
+        "anterior temporal cortex": "anterior temporal cortex",
+        "insula": "insula",
+        "anterior cingulate cortex": "anterior cingulate cortex",
+        "white matter": "white matter",
+    }
+    if value in exact_aliases:
+        return exact_aliases[value]
+
+    for alias, canonical in ROI_ALIASES.items():
+        if alias in value:
+            return canonical
+    return WHITESPACE_RE.sub(" ", str(label)).strip()
+
+
+def normalize_metric_label(label: Any) -> str:
+    value = WHITESPACE_RE.sub(" ", str(label)).strip().lower()
+    if not value or value == "none":
+        return ""
+
+    exact_aliases = {
+        "cortical_thickness": "cortical_thickness",
+        "roi_volume": "roi_volume",
+        "hippocampal_volume": "hippocampal_volume",
+        "white_matter_hyperintensity": "white_matter_hyperintensity",
+    }
+    if value in exact_aliases:
+        return exact_aliases[value]
+
+    for alias, canonical in METRIC_ALIASES.items():
+        if alias in value:
+            return canonical
+    return WHITESPACE_RE.sub(" ", str(label)).strip()
 
 
 def detect_modalities(text_lower: str) -> list[str]:
@@ -415,6 +701,13 @@ def infer_population(text_lower: str) -> str | None:
     for phrase in [
         "patients with mild cognitive impairment",
         "patients with alzheimer",
+        "behavioral variant frontotemporal dementia",
+        "behavioural variant frontotemporal dementia",
+        "semantic variant primary progressive aphasia",
+        "nonfluent variant primary progressive aphasia",
+        "non-fluent variant primary progressive aphasia",
+        "agrammatic variant primary progressive aphasia",
+        "logopenic variant primary progressive aphasia",
         "frontotemporal dementia",
         "healthy control",
         "older adults",
@@ -553,7 +846,7 @@ def ai_record(
 def clean_record(record: LiteratureRecord) -> LiteratureRecord:
     record.title = normalize_title(record.title or record.source_label)
     record.authors = dedupe_strings(record.authors)
-    record.diagnoses = dedupe_strings(record.diagnoses)
+    record.diagnoses = normalize_diagnoses(record.diagnoses)
     record.modalities = dedupe_strings(record.modalities)
     record.rois = dedupe_strings(record.rois)
     record.symptoms = dedupe_strings(record.symptoms)
@@ -639,6 +932,413 @@ def safe_int(value: Any) -> int | None:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureRecord]) -> pd.DataFrame:
+    rows = []
+    for raw_record in records:
+        if isinstance(raw_record, LiteratureRecord):
+            record = raw_record
+        else:
+            record = LiteratureRecord(
+                source_label=str(raw_record.get("source_label", "")),
+                title=raw_record.get("title"),
+                year=safe_int(raw_record.get("year")),
+                doi=raw_record.get("doi"),
+                authors=coerce_list(raw_record.get("authors")),
+                study_design=raw_record.get("study_design"),
+                population=raw_record.get("population"),
+                diagnoses=normalize_diagnoses(coerce_list(raw_record.get("diagnoses"))),
+                modalities=coerce_list(raw_record.get("modalities")),
+                rois=dedupe_strings([normalize_roi_label(x) for x in coerce_list(raw_record.get("rois")) if normalize_roi_label(x)]),
+                symptoms=coerce_list(raw_record.get("symptoms")),
+                sex_scope=coerce_list(raw_record.get("sex_scope")),
+                imaging_metrics=dedupe_strings([normalize_metric_label(x) for x in coerce_list(raw_record.get("imaging_metrics")) if normalize_metric_label(x)]),
+                findings=coerce_list(raw_record.get("findings")),
+                limitations=coerce_list(raw_record.get("limitations")),
+                abstract_like_summary=raw_record.get("abstract_like_summary"),
+                extraction_mode=raw_record.get("extraction_mode") or "unknown",
+                source_type=raw_record.get("source_type"),
+                source_path_or_url=raw_record.get("source_path_or_url"),
+            )
+
+        diagnoses = record.diagnoses or [None]
+        rois = record.rois or [None]
+        metrics = record.imaging_metrics or [None]
+        for diagnosis in diagnoses:
+            for roi in rois:
+                for metric in metrics:
+                    rows.append(
+                        {
+                            "diagnosis": diagnosis,
+                            "diagnosis_normalized": normalize_diagnosis_label(diagnosis) if diagnosis else None,
+                            "roi_name": roi,
+                            "roi_name_normalized": normalize_roi_label(roi) if roi else None,
+                            "imaging_metric": metric,
+                            "imaging_metric_normalized": normalize_metric_label(metric) if metric else None,
+                            "pattern_summary": " | ".join(record.findings or []),
+                            "source_title": record.title,
+                            "doi": record.doi,
+                            "source_type": record.source_type,
+                            "study_design": record.study_design,
+                            "modalities": "; ".join(record.modalities or []),
+                            "limitations": " | ".join(record.limitations or []),
+                        }
+                    )
+    return pd.DataFrame(rows)
+
+
+def normalize_structural_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    out = df.copy()
+    if "diagnosis" in out.columns:
+        out["diagnosis_normalized"] = out["diagnosis"].apply(normalize_diagnosis_label)
+    if "roi_name" in out.columns:
+        out["roi_name_normalized"] = out["roi_name"].apply(normalize_roi_label)
+    if "imaging_metric" in out.columns:
+        out["imaging_metric_normalized"] = out["imaging_metric"].apply(normalize_metric_label)
+    if "value_numeric" in out.columns:
+        out["value_numeric"] = pd.to_numeric(out["value_numeric"], errors="coerce")
+    return out
+
+
+def query_structural_features(
+    df: pd.DataFrame,
+    subject_id: str | None = None,
+    diagnosis: str | None = None,
+    roi: str | None = None,
+    metric: str | None = None,
+    sex: str | None = None,
+    source_pipeline: str | None = None,
+) -> pd.DataFrame:
+    out = normalize_structural_dataframe(df)
+    if subject_id is not None and "subject_id" in out.columns:
+        out = out[out["subject_id"].astype(str) == str(subject_id)]
+    if diagnosis is not None and "diagnosis_normalized" in out.columns:
+        out = out[out["diagnosis_normalized"].astype(str).str.lower() == normalize_diagnosis_label(diagnosis).lower()]
+    if roi is not None and "roi_name_normalized" in out.columns:
+        out = out[out["roi_name_normalized"].astype(str).str.lower() == normalize_roi_label(roi).lower()]
+    if metric is not None and "imaging_metric_normalized" in out.columns:
+        out = out[out["imaging_metric_normalized"].astype(str).str.lower() == normalize_metric_label(metric).lower()]
+    if sex is not None and "sex" in out.columns:
+        out = out[out["sex"].astype(str).str.lower() == sex.lower()]
+    if source_pipeline is not None and "source_pipeline" in out.columns:
+        out = out[out["source_pipeline"].astype(str).str.lower() == source_pipeline.lower()]
+    return out.reset_index(drop=True)
+
+
+def summarize_structural_features(df: pd.DataFrame, group_cols: tuple[str, ...] = ("diagnosis_normalized", "roi_name_normalized", "imaging_metric_normalized")) -> pd.DataFrame:
+    out = normalize_structural_dataframe(df)
+    needed = [c for c in group_cols if c in out.columns]
+    if not needed:
+        return out
+    return (
+        out.groupby(needed, dropna=False)
+        .agg(
+            n_rows=("value_numeric", "size"),
+            n_non_missing=("value_numeric", lambda x: x.notna().sum()),
+            mean_value=("value_numeric", "mean"),
+            std_value=("value_numeric", "std"),
+        )
+        .reset_index()
+    )
+
+
+def query_literature(
+    records: list[dict[str, Any]] | list[LiteratureRecord],
+    disease: str | None = None,
+    roi: str | None = None,
+    metric: str | None = None,
+    modality: str | None = None,
+    source_type: str | None = None,
+    title_contains: str | None = None,
+) -> pd.DataFrame:
+    rows = []
+    disease_norm = normalize_diagnosis_label(disease) if disease else None
+    roi_norm = normalize_roi_label(roi) if roi else None
+    metric_norm = normalize_metric_label(metric) if metric else None
+
+    for rec in records:
+        diagnoses = normalize_diagnoses(coerce_list(rec.diagnoses if isinstance(rec, LiteratureRecord) else rec.get("diagnoses")))
+        rois = [normalize_roi_label(x) for x in coerce_list(rec.rois if isinstance(rec, LiteratureRecord) else rec.get("rois"))]
+        metrics = [normalize_metric_label(x) for x in coerce_list(rec.imaging_metrics if isinstance(rec, LiteratureRecord) else rec.get("imaging_metrics"))]
+        modalities = coerce_list(rec.modalities if isinstance(rec, LiteratureRecord) else rec.get("modalities"))
+        rec_source_type = rec.source_type if isinstance(rec, LiteratureRecord) else rec.get("source_type")
+        rec_title = rec.title if isinstance(rec, LiteratureRecord) else rec.get("title")
+        if disease_norm and disease_norm not in diagnoses:
+            continue
+        if roi_norm and roi_norm not in rois:
+            continue
+        if metric_norm and metric_norm not in metrics:
+            continue
+        if modality and not any(str(x).lower() == modality.lower() for x in modalities):
+            continue
+        if source_type and str(rec_source_type or "").lower() != source_type.lower():
+            continue
+        if title_contains and title_contains.lower() not in str(rec_title or "").lower():
+            continue
+        rows.append(rec if isinstance(rec, dict) else rec.__dict__)
+    return pd.DataFrame(rows)
+
+
+def literature_features_for_disease(records: list[dict[str, Any]] | list[LiteratureRecord], disease: str) -> pd.DataFrame:
+    disease_norm = normalize_diagnosis_label(disease)
+    rows = []
+    for rec in records:
+        rec_dict = rec if isinstance(rec, dict) else rec.__dict__
+        diagnoses = normalize_diagnoses(coerce_list(rec_dict.get("diagnoses")))
+        if disease_norm not in diagnoses:
+            continue
+        for roi in rec_dict.get("rois") or [None]:
+            for metric in rec_dict.get("imaging_metrics") or [None]:
+                rows.append(
+                    {
+                        "disease": disease_norm,
+                        "title": rec_dict.get("title"),
+                        "roi": normalize_roi_label(roi) if roi else None,
+                        "metric": normalize_metric_label(metric) if metric else None,
+                        "modalities": "; ".join(coerce_list(rec_dict.get("modalities"))),
+                        "findings": " | ".join(coerce_list(rec_dict.get("findings"))),
+                    }
+                )
+    return pd.DataFrame(rows)
+
+
+def literature_diseases_for_features(records: list[dict[str, Any]] | list[LiteratureRecord], features: list[str]) -> pd.DataFrame:
+    normalized_features = {normalize_roi_label(f) or normalize_metric_label(f) or str(f).strip().lower() for f in features}
+    rows = []
+    for rec in records:
+        rec_dict = rec if isinstance(rec, dict) else rec.__dict__
+        combined = {
+            normalize_roi_label(v) for v in coerce_list(rec_dict.get("rois")) if normalize_roi_label(v)
+        } | {
+            normalize_metric_label(v) for v in coerce_list(rec_dict.get("imaging_metrics")) if normalize_metric_label(v)
+        } | {
+            str(v).strip().lower() for v in coerce_list(rec_dict.get("symptoms")) if str(v).strip()
+        }
+        if normalized_features & combined:
+            rows.append(
+                {
+                    "title": rec_dict.get("title"),
+                    "diagnoses": "; ".join(normalize_diagnoses(coerce_list(rec_dict.get("diagnoses")))),
+                    "matched_features": ", ".join(sorted(normalized_features & combined)),
+                    "findings": " | ".join(coerce_list(rec_dict.get("findings"))),
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def compare_features_to_literature(
+    structural_df: pd.DataFrame,
+    evidence_df: pd.DataFrame,
+    diagnosis: str | None = None,
+    subject_id: str | None = None,
+    roi: str | None = None,
+    metric: str | None = None,
+) -> pd.DataFrame:
+    patient_rows = query_structural_features(structural_df, subject_id=subject_id, diagnosis=diagnosis, roi=roi, metric=metric)
+    if patient_rows.empty:
+        return pd.DataFrame()
+
+    evidence = evidence_df.copy()
+    if "diagnosis_normalized" not in evidence.columns and "diagnosis" in evidence.columns:
+        evidence["diagnosis_normalized"] = evidence["diagnosis"].apply(normalize_diagnosis_label)
+    if "roi_name_normalized" not in evidence.columns and "roi_name" in evidence.columns:
+        evidence["roi_name_normalized"] = evidence["roi_name"].apply(normalize_roi_label)
+    if "imaging_metric_normalized" not in evidence.columns and "imaging_metric" in evidence.columns:
+        evidence["imaging_metric_normalized"] = evidence["imaging_metric"].apply(normalize_metric_label)
+
+    merged_rows = []
+    for _, row in patient_rows.iterrows():
+        matches = evidence.copy()
+        if diagnosis is not None:
+            matches = matches[matches["diagnosis_normalized"].astype(str).str.lower() == normalize_diagnosis_label(diagnosis).lower()]
+        elif pd.notna(row.get("diagnosis_normalized")):
+            matches = matches[matches["diagnosis_normalized"].astype(str).str.lower() == str(row["diagnosis_normalized"]).lower()]
+        if pd.notna(row.get("roi_name_normalized")):
+            matches = matches[matches["roi_name_normalized"].astype(str).str.lower() == str(row["roi_name_normalized"]).lower()]
+        if pd.notna(row.get("imaging_metric_normalized")):
+            matches = matches[matches["imaging_metric_normalized"].astype(str).str.lower() == str(row["imaging_metric_normalized"]).lower()]
+
+        if matches.empty:
+            merged_rows.append(
+                {
+                    "subject_id": row.get("subject_id"),
+                    "diagnosis": row.get("diagnosis_normalized"),
+                    "roi_name": row.get("roi_name_normalized"),
+                    "imaging_metric": row.get("imaging_metric_normalized"),
+                    "value_numeric": row.get("value_numeric"),
+                    "evidence_match": False,
+                    "source_title": None,
+                    "pattern_summary": None,
+                    "limitations": None,
+                }
+            )
+            continue
+
+        for _, match in matches.iterrows():
+            merged_rows.append(
+                {
+                    "subject_id": row.get("subject_id"),
+                    "diagnosis": row.get("diagnosis_normalized"),
+                    "roi_name": row.get("roi_name_normalized"),
+                    "imaging_metric": row.get("imaging_metric_normalized"),
+                    "value_numeric": row.get("value_numeric"),
+                    "evidence_match": True,
+                    "source_title": match.get("source_title"),
+                    "pattern_summary": match.get("pattern_summary"),
+                    "limitations": match.get("limitations"),
+                }
+            )
+    return pd.DataFrame(merged_rows)
+
+
+def compare_to_normative_reference(
+    structural_df: pd.DataFrame,
+    normative_df: pd.DataFrame | None,
+    diagnosis: str | None = None,
+    roi: str | None = None,
+    metric: str | None = None,
+) -> pd.DataFrame:
+    if normative_df is None:
+        return pd.DataFrame()
+
+    target = query_structural_features(structural_df, diagnosis=diagnosis, roi=roi, metric=metric)
+    reference = query_structural_features(normative_df, diagnosis=diagnosis, roi=roi, metric=metric)
+    if target.empty or reference.empty or "value_numeric" not in target.columns or "value_numeric" not in reference.columns:
+        return pd.DataFrame()
+
+    ref_mean = reference["value_numeric"].mean()
+    ref_std = reference["value_numeric"].std()
+    out = target[["subject_id", "diagnosis_normalized", "roi_name_normalized", "imaging_metric_normalized", "value_numeric"]].copy()
+    out["reference_mean"] = ref_mean
+    out["reference_std"] = ref_std
+    out["z_like_difference"] = None if pd.isna(ref_std) or ref_std == 0 else (out["value_numeric"] - ref_mean) / ref_std
+    return out
+
+
+def score_structural_match_for_diagnosis(row: pd.Series, diagnosis: str) -> int:
+    diagnosis_norm = normalize_diagnosis_label(diagnosis)
+    signature = DIAGNOSIS_SIGNATURES.get(diagnosis_norm, {})
+    score = 0
+    roi = normalize_roi_label(row.get("roi_name_normalized") or row.get("roi_name"))
+    metric = normalize_metric_label(row.get("imaging_metric_normalized") or row.get("imaging_metric"))
+    if roi and roi in signature.get("rois", set()):
+        score += 2
+    if metric and metric in signature.get("metrics", set()):
+        score += 1
+    return score
+
+
+def summarize_diagnosis_support(
+    structural_df: pd.DataFrame,
+    records: list[dict[str, Any]] | list[LiteratureRecord],
+    subject_id: str | None = None,
+    diagnosis_candidates: list[str] | None = None,
+) -> pd.DataFrame:
+    structural = query_structural_features(structural_df, subject_id=subject_id)
+    evidence_df = build_evidence_framework(records)
+    if structural.empty:
+        return pd.DataFrame()
+
+    if diagnosis_candidates is None:
+        diagnosis_candidates = sorted(set(DIAGNOSIS_SIGNATURES) | set(evidence_df.get("diagnosis_normalized", pd.Series(dtype=str)).dropna().tolist()))
+
+    summary_rows = []
+    for diagnosis in diagnosis_candidates:
+        diagnosis_norm = normalize_diagnosis_label(diagnosis)
+        row_scores = structural.apply(lambda row: score_structural_match_for_diagnosis(row, diagnosis_norm), axis=1)
+        structural_score = int(row_scores.sum())
+        signature_hits = int((row_scores > 0).sum())
+
+        evidence_matches = compare_features_to_literature(structural, evidence_df, diagnosis=diagnosis_norm)
+        literature_score = int(evidence_matches["evidence_match"].sum()) if not evidence_matches.empty else 0
+        source_titles = []
+        if not evidence_matches.empty and "source_title" in evidence_matches.columns:
+            source_titles = dedupe_strings([str(x) for x in evidence_matches["source_title"].dropna().tolist()])[:5]
+
+        summary_rows.append(
+            {
+                "diagnosis": diagnosis_norm,
+                "structural_signature_score": structural_score,
+                "signature_hit_rows": signature_hits,
+                "literature_match_rows": literature_score,
+                "combined_support_score": structural_score + literature_score,
+                "example_sources": " | ".join(source_titles),
+            }
+        )
+
+    out = pd.DataFrame(summary_rows)
+    if not out.empty:
+        out = out.sort_values(["combined_support_score", "literature_match_rows", "structural_signature_score"], ascending=False).reset_index(drop=True)
+    return out
+
+
+def build_interpretive_report(
+    structural_df: pd.DataFrame,
+    records: list[dict[str, Any]] | list[LiteratureRecord],
+    subject_id: str | None = None,
+    diagnosis: str | None = None,
+    roi: str | None = None,
+    metric: str | None = None,
+) -> str:
+    structural_rows = query_structural_features(structural_df, subject_id=subject_id, diagnosis=diagnosis, roi=roi, metric=metric)
+    evidence_df = build_evidence_framework(records)
+    evidence_rows = compare_features_to_literature(structural_rows, evidence_df, diagnosis=diagnosis, roi=roi, metric=metric)
+    diagnosis_support = summarize_diagnosis_support(structural_rows, records, subject_id=subject_id)
+
+    lines = [
+        "# Structured Interpretive Report",
+        "",
+        "## Scope",
+        f"- subject_id: {subject_id}",
+        f"- diagnosis filter: {diagnosis}",
+        f"- roi filter: {roi}",
+        f"- imaging_metric filter: {metric}",
+        "",
+        "## Structural MRI Summary",
+        f"- matched structural rows: {len(structural_rows)}",
+    ]
+    if "source_pipeline" in structural_rows.columns and not structural_rows.empty:
+        pipelines = sorted({str(x) for x in structural_rows["source_pipeline"].dropna().tolist()})
+        if pipelines:
+            lines.append(f"- source pipelines: {', '.join(pipelines)}")
+
+    lines.extend(
+        [
+            "",
+            "## Literature-Linked Evidence",
+            f"- evidence-linked rows: {len(evidence_rows)}",
+        ]
+    )
+    if not evidence_rows.empty:
+        top_titles = dedupe_strings([str(x) for x in evidence_rows["source_title"].dropna().tolist()])[:5]
+        if top_titles:
+            lines.append("- example supporting sources:")
+            for title in top_titles:
+                lines.append(f"  - {title}")
+    else:
+        lines.append("- no direct literature match was found for the current filter")
+
+    lines.extend(["", "## Diagnosis Support Ranking"])
+    if not diagnosis_support.empty:
+        for _, row in diagnosis_support.head(5).iterrows():
+            lines.append(
+                f"- {row['diagnosis']}: combined={row['combined_support_score']} "
+                f"(structural={row['structural_signature_score']}, literature={row['literature_match_rows']})"
+            )
+    else:
+        lines.append("- no diagnosis support summary could be generated")
+
+    lines.extend(
+        [
+            "",
+            "## Interpretation Notes",
+            "- This workflow provides evidence-informed interpretive support, not automated diagnosis.",
+            "- Disease support is derived from both structural-feature signatures and literature-linked matches.",
+            "- Pipeline choice, preprocessing variability, cohort context, and incomplete literature coverage should remain visible in interpretation.",
+        ]
+    )
+    return "\n".join(lines)
 
 
 def sql_literal(value: Any) -> str:

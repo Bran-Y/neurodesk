@@ -29,6 +29,8 @@ literature_outputs_workflow_demo/
 
 # Jupyter
 .ipynb_checkpoints/
+__pycache__/
+*.pyc
 
 # Generated databases
 *.db
