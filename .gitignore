@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+coverage/
+outputs/
+literature_outputs_workflow_demo/
+
+# Editors
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated databases
+*.db
+*.sqlite
+*.sqlite3
+*literature_database.json
+*literature_database.sql
+*literature_database.xlsx
+
+# Local datasets
+oasis_selected/
+ipd_vertical_dataset/
