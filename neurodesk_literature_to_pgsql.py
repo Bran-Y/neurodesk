@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import sqlite3
 from dataclasses import dataclass, field
 from io import BytesIO
 from pathlib import Path
@@ -936,10 +937,12 @@ def safe_int(value: Any) -> int | None:
 
 def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureRecord]) -> pd.DataFrame:
     rows = []
-    for raw_record in records:
+    for idx, raw_record in enumerate(records, start=1):
         if isinstance(raw_record, LiteratureRecord):
             record = raw_record
+            paper_id = idx
         else:
+            paper_id = safe_int(raw_record.get("paper_id")) or idx
             record = LiteratureRecord(
                 source_label=str(raw_record.get("source_label", "")),
                 title=raw_record.get("title"),
@@ -970,6 +973,7 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
                 for metric in metrics:
                     rows.append(
                         {
+                            "paper_id": paper_id,
                             "diagnosis": diagnosis,
                             "diagnosis_normalized": normalize_diagnosis_label(diagnosis) if diagnosis else None,
                             "roi_name": roi,
@@ -1168,7 +1172,9 @@ def compare_features_to_literature(
                     "imaging_metric": row.get("imaging_metric_normalized"),
                     "value_numeric": row.get("value_numeric"),
                     "evidence_match": False,
+                    "paper_id": None,
                     "source_title": None,
+                    "doi": None,
                     "pattern_summary": None,
                     "limitations": None,
                 }
@@ -1184,7 +1190,9 @@ def compare_features_to_literature(
                     "imaging_metric": row.get("imaging_metric_normalized"),
                     "value_numeric": row.get("value_numeric"),
                     "evidence_match": True,
+                    "paper_id": match.get("paper_id"),
                     "source_title": match.get("source_title"),
+                    "doi": match.get("doi"),
                     "pattern_summary": match.get("pattern_summary"),
                     "limitations": match.get("limitations"),
                 }
@@ -1427,6 +1435,229 @@ def build_sql(records: list[LiteratureRecord]) -> str:
     return "\n".join(statements)
 
 
+def initialize_sqlite_database(connection: sqlite3.Connection) -> None:
+    connection.executescript(
+        """
+        PRAGMA foreign_keys = ON;
+
+        CREATE TABLE IF NOT EXISTS source_documents (
+            source_id INTEGER PRIMARY KEY,
+            source_label TEXT,
+            source_type TEXT,
+            source_path_or_url TEXT,
+            extraction_mode TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS papers (
+            paper_id INTEGER PRIMARY KEY,
+            source_id INTEGER REFERENCES source_documents(source_id),
+            title TEXT,
+            publication_year INTEGER,
+            doi TEXT,
+            study_design TEXT,
+            population TEXT,
+            abstract_like_summary TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_authors (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            author_order INTEGER,
+            author_name TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_diagnoses (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            diagnosis TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_modalities (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            modality TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_rois (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            roi_name TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_symptoms (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            diagnosis TEXT,
+            symptom TEXT,
+            evidence_note TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS roi_observations (
+            observation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            paper_id INTEGER REFERENCES papers(paper_id),
+            diagnosis TEXT,
+            sex_scope TEXT,
+            data_level TEXT,
+            roi_name TEXT,
+            imaging_metric TEXT,
+            statistic_type TEXT,
+            value_numeric REAL,
+            unit TEXT,
+            n_total INTEGER,
+            evidence_note TEXT
+        );
+
+        CREATE TABLE IF NOT EXISTS paper_findings (
+            paper_id INTEGER REFERENCES papers(paper_id),
+            finding_type TEXT,
+            finding_text TEXT
+        );
+        """
+    )
+
+
+def write_sqlite(records: list[LiteratureRecord], output_path: Path) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with sqlite3.connect(output_path) as connection:
+        initialize_sqlite_database(connection)
+
+        connection.execute("DELETE FROM paper_authors")
+        connection.execute("DELETE FROM paper_diagnoses")
+        connection.execute("DELETE FROM paper_modalities")
+        connection.execute("DELETE FROM paper_rois")
+        connection.execute("DELETE FROM paper_symptoms")
+        connection.execute("DELETE FROM roi_observations")
+        connection.execute("DELETE FROM paper_findings")
+        connection.execute("DELETE FROM papers")
+        connection.execute("DELETE FROM source_documents")
+
+        for idx, record in enumerate(records, start=1):
+            source_id = idx
+            paper_id = idx
+            connection.execute(
+                """
+                INSERT INTO source_documents (
+                    source_id,
+                    source_label,
+                    source_type,
+                    source_path_or_url,
+                    extraction_mode
+                ) VALUES (?, ?, ?, ?, ?)
+                """,
+                (
+                    source_id,
+                    record.source_label,
+                    record.source_type,
+                    record.source_path_or_url,
+                    record.extraction_mode,
+                ),
+            )
+            connection.execute(
+                """
+                INSERT INTO papers (
+                    paper_id,
+                    source_id,
+                    title,
+                    publication_year,
+                    doi,
+                    study_design,
+                    population,
+                    abstract_like_summary
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    paper_id,
+                    source_id,
+                    record.title,
+                    record.year,
+                    record.doi,
+                    record.study_design,
+                    record.population,
+                    record.abstract_like_summary,
+                ),
+            )
+
+            for order, author in enumerate(record.authors, start=1):
+                connection.execute(
+                    "INSERT INTO paper_authors (paper_id, author_order, author_name) VALUES (?, ?, ?)",
+                    (paper_id, order, author),
+                )
+            for diagnosis in record.diagnoses:
+                connection.execute(
+                    "INSERT INTO paper_diagnoses (paper_id, diagnosis) VALUES (?, ?)",
+                    (paper_id, diagnosis),
+                )
+            for modality in record.modalities:
+                connection.execute(
+                    "INSERT INTO paper_modalities (paper_id, modality) VALUES (?, ?)",
+                    (paper_id, modality),
+                )
+            for roi in record.rois:
+                connection.execute(
+                    "INSERT INTO paper_rois (paper_id, roi_name) VALUES (?, ?)",
+                    (paper_id, roi),
+                )
+
+            diagnosis_scope = record.diagnoses or [None]
+            for symptom in record.symptoms:
+                for diagnosis in diagnosis_scope:
+                    connection.execute(
+                        """
+                        INSERT INTO paper_symptoms (paper_id, diagnosis, symptom, evidence_note)
+                        VALUES (?, ?, ?, ?)
+                        """,
+                        (paper_id, diagnosis, symptom, record.title),
+                    )
+
+            roi_scope = record.rois or [None]
+            metric_scope = record.imaging_metrics or [None]
+            sex_scope = record.sex_scope or [None]
+            for diagnosis in diagnosis_scope:
+                for roi in roi_scope:
+                    for metric in metric_scope:
+                        if roi is None and metric is None:
+                            continue
+                        for sex in sex_scope:
+                            connection.execute(
+                                """
+                                INSERT INTO roi_observations (
+                                    paper_id,
+                                    diagnosis,
+                                    sex_scope,
+                                    data_level,
+                                    roi_name,
+                                    imaging_metric,
+                                    statistic_type,
+                                    value_numeric,
+                                    unit,
+                                    n_total,
+                                    evidence_note
+                                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                """,
+                                (
+                                    paper_id,
+                                    diagnosis,
+                                    sex,
+                                    "group_summary",
+                                    roi,
+                                    metric,
+                                    "qualitative_pattern",
+                                    None,
+                                    None,
+                                    None,
+                                    record.title,
+                                ),
+                            )
+
+            for finding in record.findings:
+                connection.execute(
+                    "INSERT INTO paper_findings (paper_id, finding_type, finding_text) VALUES (?, ?, ?)",
+                    (paper_id, "finding", finding),
+                )
+            for limitation in record.limitations:
+                connection.execute(
+                    "INSERT INTO paper_findings (paper_id, finding_type, finding_text) VALUES (?, ?, ?)",
+                    (paper_id, "limitation", limitation),
+                )
+
+        connection.commit()
+
+
 def write_excel(records: list[LiteratureRecord], output_path: Path) -> None:
     if Workbook is None:
         raise ModuleNotFoundError("openpyxl is not installed in this environment")
@@ -1574,10 +1805,12 @@ def analyze_sources(
         records.append(clean_record(record))
 
     sql_path = output_dir / "literature_database.sql"
+    sqlite_path = output_dir / "literature_database.sqlite"
     json_path = output_dir / "literature_database.json"
     xlsx_path = output_dir / "literature_database.xlsx"
 
     sql_path.write_text(build_sql(records), encoding="utf-8")
+    write_sqlite(records, sqlite_path)
     json_path.write_text(
         json.dumps([record.__dict__ for record in records], indent=2, ensure_ascii=False),
         encoding="utf-8",
@@ -1590,6 +1823,7 @@ def analyze_sources(
     return {
         "records": [record.__dict__ for record in records],
         "sql_path": str(sql_path.resolve()),
+        "sqlite_path": str(sqlite_path.resolve()),
         "json_path": str(json_path.resolve()),
         "xlsx_path": str(xlsx_path.resolve()) if xlsx_written else None,
         "sources": [doc.input_value for doc in source_docs],

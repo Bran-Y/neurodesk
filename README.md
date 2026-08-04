@@ -3,6 +3,7 @@
 This repository contains a lightweight, shareable version of a Neurodesk workflow for:
 
 - turning literature sources into a structured PostgreSQL-ready database
+- turning literature sources into a lightweight SQLite database for local querying
 - querying disease-related evidence from literature records
 - querying subject-level IPD ROI rows from an external vertical CSV dataset
 
@@ -20,6 +21,7 @@ The goal of this repo is to share the workflow itself without uploading generate
 2. Run the extraction pipeline to build structured literature records.
 3. Export generated outputs as:
    - `literature_database.sql`
+   - `literature_database.sqlite`
    - `literature_database.json`
    - `literature_database.xlsx`
 4. Load the external IPD ROI CSV table.
@@ -64,6 +66,7 @@ This file is treated as an external dataset input and is not uploaded here.
 The following are intentionally excluded:
 
 - generated database artifacts such as `literature_database.sql`, `literature_database.json`, and `literature_database.xlsx`
+- generated database artifacts such as `literature_database.sqlite`
 - local output folders
 - OASIS / IPD dataset files
 - environment-specific caches and editor files
