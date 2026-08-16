@@ -942,7 +942,7 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
             record = raw_record
             paper_id = idx
         else:
-            paper_id = safe_int(raw_record.get("paper_id")) or idx
+            paper_id = raw_record.get("paper_id") or idx
             record = LiteratureRecord(
                 source_label=str(raw_record.get("source_label", "")),
                 title=raw_record.get("title"),
@@ -987,6 +987,9 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
                             "study_design": record.study_design,
                             "modalities": "; ".join(record.modalities or []),
                             "limitations": " | ".join(record.limitations or []),
+                            "matching_rule": "exact_normalized_diagnosis_roi_metric",
+                            "match_status": "candidate_evidence_match",
+                            "manual_review_status": "candidate_requires_manual_review",
                         }
                     )
     return pd.DataFrame(rows)
@@ -1172,6 +1175,9 @@ def compare_features_to_literature(
                     "imaging_metric": row.get("imaging_metric_normalized"),
                     "value_numeric": row.get("value_numeric"),
                     "evidence_match": False,
+                    "matching_rule": "exact_normalized_diagnosis_roi_metric",
+                    "match_status": "no_candidate_match",
+                    "manual_review_status": "no_candidate_to_review",
                     "paper_id": None,
                     "source_title": None,
                     "doi": None,
@@ -1190,6 +1196,9 @@ def compare_features_to_literature(
                     "imaging_metric": row.get("imaging_metric_normalized"),
                     "value_numeric": row.get("value_numeric"),
                     "evidence_match": True,
+                    "matching_rule": "exact_normalized_diagnosis_roi_metric",
+                    "match_status": "candidate_evidence_match",
+                    "manual_review_status": "candidate_requires_manual_review",
                     "paper_id": match.get("paper_id"),
                     "source_title": match.get("source_title"),
                     "doi": match.get("doi"),
@@ -1241,45 +1250,32 @@ def summarize_diagnosis_support(
     structural_df: pd.DataFrame,
     records: list[dict[str, Any]] | list[LiteratureRecord],
     subject_id: str | None = None,
-    diagnosis_candidates: list[str] | None = None,
 ) -> pd.DataFrame:
-    structural = query_structural_features(structural_df, subject_id=subject_id)
+    """Conservative single-case support summary for the prototype.
+
+    Do not rank diagnoses from structural signatures alone. A non-zero score
+    requires actual literature rows matched to measured ROI/metric rows.
+    """
+    structural = normalize_structural_dataframe(structural_df)
+    if subject_id is not None and "subject_id" in structural.columns:
+        structural = structural[structural["subject_id"].astype(str) == str(subject_id)]
     evidence_df = build_evidence_framework(records)
-    if structural.empty:
-        return pd.DataFrame()
-
-    if diagnosis_candidates is None:
-        diagnosis_candidates = sorted(set(DIAGNOSIS_SIGNATURES) | set(evidence_df.get("diagnosis_normalized", pd.Series(dtype=str)).dropna().tolist()))
-
-    summary_rows = []
-    for diagnosis in diagnosis_candidates:
-        diagnosis_norm = normalize_diagnosis_label(diagnosis)
-        row_scores = structural.apply(lambda row: score_structural_match_for_diagnosis(row, diagnosis_norm), axis=1)
-        structural_score = int(row_scores.sum())
-        signature_hits = int((row_scores > 0).sum())
-
-        evidence_matches = compare_features_to_literature(structural, evidence_df, diagnosis=diagnosis_norm)
-        literature_score = int(evidence_matches["evidence_match"].sum()) if not evidence_matches.empty else 0
-        source_titles = []
-        if not evidence_matches.empty and "source_title" in evidence_matches.columns:
-            source_titles = dedupe_strings([str(x) for x in evidence_matches["source_title"].dropna().tolist()])[:5]
-
-        summary_rows.append(
-            {
-                "diagnosis": diagnosis_norm,
-                "structural_signature_score": structural_score,
-                "signature_hit_rows": signature_hits,
-                "literature_match_rows": literature_score,
-                "combined_support_score": structural_score + literature_score,
-                "example_sources": " | ".join(source_titles),
-            }
-        )
-
-    out = pd.DataFrame(summary_rows)
-    if not out.empty:
-        out = out.sort_values(["combined_support_score", "literature_match_rows", "structural_signature_score"], ascending=False).reset_index(drop=True)
-    return out
-
+    rows = []
+    diagnoses = sorted({d for d in evidence_df.get("diagnosis_normalized", pd.Series(dtype=str)).dropna().astype(str).tolist()})
+    for diagnosis in diagnoses:
+        matches = compare_features_to_literature(structural, evidence_df, diagnosis=diagnosis)
+        literature_match_rows = int(matches["evidence_match"].sum()) if not matches.empty and "evidence_match" in matches.columns else 0
+        rows.append({
+            "diagnosis": diagnosis,
+            "measured_structural_rows": int(len(structural)),
+            "structural_signature_score": 0,
+            "signature_hits": "not_used_in_single_case_prototype",
+            "literature_match_rows": literature_match_rows,
+            "combined_support_score": literature_match_rows,
+            "ranking_interpretation": "candidate support only; not diagnostic" if literature_match_rows > 0 else "no matched evidence in current single-case feature set",
+            "scope_note": "single-case prototype; no group comparison or diagnostic inference",
+        })
+    return pd.DataFrame(rows).sort_values(["combined_support_score", "literature_match_rows"], ascending=False).reset_index(drop=True)
 
 def build_interpretive_report(
     structural_df: pd.DataFrame,
@@ -1314,7 +1310,7 @@ def build_interpretive_report(
     lines.extend(
         [
             "",
-            "## Literature-Linked Evidence",
+            "## Candidate Literature-Linked Evidence (manual review required)",
             f"- evidence-linked rows: {len(evidence_rows)}",
         ]
     )

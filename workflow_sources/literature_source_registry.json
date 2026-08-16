@@ -1,0 +1,289 @@
+[
+  {
+    "paper_id": "PMID21810890",
+    "source_label": "Gorno-Tempini 2011 PPA variants criteria",
+    "title": "Classification of primary progressive aphasia and its variants",
+    "year": 2011,
+    "doi": "10.1212/WNL.0b013e31821103e6",
+    "study_design": "international consensus clinical diagnostic criteria",
+    "diagnoses": [
+      "PPA",
+      "svPPA",
+      "nfvPPA",
+      "lvPPA",
+      "FTD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "anterior temporal cortex",
+      "temporal cortex",
+      "frontal cortex",
+      "insula",
+      "inferior parietal cortex",
+      "posterior cingulate cortex",
+      "hippocampus"
+    ],
+    "source_type": "pubmed",
+    "source_path_or_url": "https://pubmed.ncbi.nlm.nih.gov/21810890/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMID21325651",
+    "source_label": "Rascovsky 2011 bvFTD criteria",
+    "title": "Sensitivity of revised diagnostic criteria for the behavioural variant of frontotemporal dementia",
+    "year": 2011,
+    "doi": "10.1093/brain/awr179",
+    "study_design": "multicentre diagnostic criteria validation",
+    "diagnoses": [
+      "bvFTD",
+      "FTD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "frontal cortex",
+      "anterior temporal cortex",
+      "insula",
+      "anterior cingulate cortex",
+      "temporal cortex"
+    ],
+    "source_type": "pubmed",
+    "source_path_or_url": "https://pubmed.ncbi.nlm.nih.gov/21325651/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC3776065",
+    "source_label": "Spreng 2013 structural covariance default network",
+    "title": "Structural Covariance of the Default Network in Healthy and Pathological Aging",
+    "year": 2013,
+    "doi": "10.1523/JNEUROSCI.2261-13.2013",
+    "study_design": "cross-sectional OASIS and longitudinal ADNI structural covariance analysis",
+    "diagnoses": [
+      "Control",
+      "MCI",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "posterior cingulate cortex",
+      "inferior parietal cortex",
+      "temporal cortex",
+      "hippocampus",
+      "frontal cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3776065/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC4058576",
+    "source_label": "Grothe 2013 basal forebrain atrophy",
+    "title": "Longitudinal measures of cholinergic forebrain atrophy in the transition from healthy aging to Alzheimer disease",
+    "year": 2013,
+    "doi": "10.1016/j.neurobiolaging.2012.10.018",
+    "study_design": "longitudinal MRI volumetry study using OASIS-derived cohorts",
+    "diagnoses": [
+      "Control",
+      "MCI",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "hippocampus",
+      "frontal cortex",
+      "temporal cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4058576/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC3809512",
+    "source_label": "Malone 2013 MIRIAD dataset",
+    "title": "MIRIAD--Public release of a multiple time point Alzheimer MR imaging dataset",
+    "year": 2013,
+    "doi": "10.1016/j.neuroimage.2012.12.044",
+    "study_design": "public longitudinal MRI dataset descriptor",
+    "diagnoses": [
+      "Control",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "hippocampus",
+      "temporal cortex",
+      "frontal cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3809512/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC2733354",
+    "source_label": "Morra 2009 hippocampal atrophy mapping",
+    "title": "Automated mapping of hippocampal atrophy in 1-year repeat MRI data from 490 subjects with Alzheimer disease, mild cognitive impairment, and elderly controls",
+    "year": 2009,
+    "doi": "10.1016/j.neuroimage.2008.10.043",
+    "study_design": "longitudinal automated hippocampal segmentation and atrophy mapping",
+    "diagnoses": [
+      "Control",
+      "MCI",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "hippocampus"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2733354/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC2714061",
+    "source_label": "Desikan 2009 automated MRI measures",
+    "title": "Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer disease",
+    "year": 2009,
+    "doi": "10.1093/brain/awp123",
+    "study_design": "automated MRI diagnostic classification study",
+    "diagnoses": [
+      "Control",
+      "MCI",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "hippocampus",
+      "entorhinal cortex",
+      "temporal cortex",
+      "frontal cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2714061/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC2827264",
+    "source_label": "Rohrer 2009 FTLD language variants",
+    "title": "Patterns of cortical thinning in the language variants of frontotemporal lobar degeneration",
+    "year": 2009,
+    "doi": "10.1212/WNL.0b013e3181a4124e",
+    "study_design": "cross-sectional cortical thickness study using FreeSurfer",
+    "diagnoses": [
+      "FTD",
+      "PPA",
+      "svPPA",
+      "nfvPPA"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "temporal cortex",
+      "anterior temporal cortex",
+      "entorhinal cortex",
+      "parahippocampal gyrus",
+      "frontal cortex",
+      "insula",
+      "anterior cingulate cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2827264/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "PMC4754499",
+    "source_label": "Smith 2016 WMH vascular dementia",
+    "title": "Peripheral (deep) but not periventricular MRI white matter hyperintensities are increased in clinical vascular dementia compared to Alzheimer disease",
+    "year": 2016,
+    "doi": "10.1002/brb3.438",
+    "study_design": "clinical MRI white matter hyperintensity comparison study",
+    "diagnoses": [
+      "VaD",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI"
+    ],
+    "rois": [
+      "white matter",
+      "frontal cortex"
+    ],
+    "source_type": "pmc",
+    "source_path_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4754499/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "OASIS3",
+    "source_label": "OASIS-3 dataset source",
+    "title": "OASIS-3: Longitudinal Neuroimaging, Clinical, and Cognitive Dataset for Normal Aging and Alzheimer Disease",
+    "year": 2019,
+    "doi": null,
+    "study_design": "open dataset source for structural MRI and clinical metadata",
+    "diagnoses": [
+      "Control",
+      "MCI",
+      "Dementia",
+      "AD"
+    ],
+    "modalities": [
+      "MRI",
+      "PET"
+    ],
+    "rois": [
+      "hippocampus",
+      "entorhinal cortex",
+      "temporal cortex",
+      "posterior cingulate cortex"
+    ],
+    "source_type": "dataset",
+    "source_path_or_url": "https://sites.wustl.edu/oasisbrains/home/oasis-3/",
+    "evidence_status": "candidate_requires_manual_review"
+  },
+  {
+    "paper_id": "ADNI",
+    "source_label": "ADNI data source",
+    "title": "Alzheimer Disease Neuroimaging Initiative data",
+    "year": null,
+    "doi": null,
+    "study_design": "multicentre longitudinal data resource",
+    "diagnoses": [
+      "AD",
+      "MCI",
+      "Control",
+      "Dementia"
+    ],
+    "modalities": [
+      "MRI",
+      "PET",
+      "DWI"
+    ],
+    "rois": [
+      "hippocampus",
+      "entorhinal cortex",
+      "posterior cingulate cortex",
+      "temporal cortex"
+    ],
+    "source_type": "dataset",
+    "source_path_or_url": "https://adni.loni.usc.edu/data-samples/adni-data/",
+    "evidence_status": "candidate_requires_manual_review"
+  }
+]
