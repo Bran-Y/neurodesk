@@ -974,6 +974,7 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
                     rows.append(
                         {
                             "paper_id": paper_id,
+                            "paper_code": f"P{paper_id:03d}",
                             "diagnosis": diagnosis,
                             "diagnosis_normalized": normalize_diagnosis_label(diagnosis) if diagnosis else None,
                             "roi_name": roi,
@@ -983,6 +984,7 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
                             "pattern_summary": " | ".join(record.findings or []),
                             "source_title": record.title,
                             "doi": record.doi,
+                            "source_detail_url": record.source_path_or_url,
                             "source_type": record.source_type,
                             "study_design": record.study_design,
                             "modalities": "; ".join(record.modalities or []),
@@ -990,9 +992,287 @@ def build_evidence_framework(records: list[dict[str, Any]] | list[LiteratureReco
                             "matching_rule": "exact_normalized_diagnosis_roi_metric",
                             "match_status": "candidate_evidence_match",
                             "manual_review_status": "candidate_requires_manual_review",
+                            "evidence_category": "roi_evidence" if roi or metric else "pathology_evidence",
                         }
                     )
     return pd.DataFrame(rows)
+
+
+def _record_to_dict(record: dict[str, Any] | LiteratureRecord) -> dict[str, Any]:
+    return record if isinstance(record, dict) else record.__dict__
+
+
+def build_pathology_evidence_table(records: list[dict[str, Any]] | list[LiteratureRecord]) -> pd.DataFrame:
+    """Build a paper-level disease/pathology evidence view.
+
+    This table is intentionally separate from ROI evidence so that the workflow
+    can show whether a paper supports disease/pathology concepts, regional MRI
+    findings, or both.
+    """
+    rows = []
+    for paper_id, record in enumerate(records, start=1):
+        rec = _record_to_dict(record)
+        diagnoses = normalize_diagnoses(coerce_list(rec.get("diagnoses"))) or [None]
+        symptoms = coerce_list(rec.get("symptoms"))
+        findings = coerce_list(rec.get("findings"))
+        evidence_terms = symptoms or findings or [rec.get("abstract_like_summary")]
+        for diagnosis in diagnoses:
+            for term in evidence_terms:
+                if term is None:
+                    continue
+                rows.append(
+                    {
+                        "paper_id": paper_id,
+                        "paper_code": f"P{paper_id:03d}",
+                        "source_title": rec.get("title"),
+                        "year": safe_int(rec.get("year")),
+                        "doi": rec.get("doi"),
+                        "source_detail_url": rec.get("source_path_or_url"),
+                        "diagnosis": diagnosis,
+                        "diagnosis_normalized": normalize_diagnosis_label(diagnosis) if diagnosis else None,
+                        "pathology_or_clinical_feature": str(term),
+                        "study_design": rec.get("study_design"),
+                        "evidence_category": "pathology_evidence",
+                        "note": "Paper-level disease/pathology evidence; does not require an ROI match.",
+                    }
+                )
+    return pd.DataFrame(rows)
+
+
+def build_roi_evidence_table(records: list[dict[str, Any]] | list[LiteratureRecord]) -> pd.DataFrame:
+    """Build a regional imaging evidence view with paper identifiers."""
+    evidence = build_evidence_framework(records)
+    if evidence.empty:
+        return evidence
+    roi_cols = [
+        "paper_id",
+        "paper_code",
+        "source_title",
+        "doi",
+        "source_detail_url",
+        "diagnosis",
+        "diagnosis_normalized",
+        "roi_name",
+        "roi_name_normalized",
+        "imaging_metric",
+        "imaging_metric_normalized",
+        "modalities",
+        "study_design",
+        "pattern_summary",
+        "limitations",
+    ]
+    out = evidence[[c for c in roi_cols if c in evidence.columns]].copy()
+    if "evidence_category" not in out.columns:
+        out["evidence_category"] = "roi_evidence"
+    out["matching_rule"] = "candidate match on normalized diagnosis + ROI + imaging metric"
+    out["manual_review_status"] = "candidate_requires_manual_review"
+    out["note"] = "ROI-level imaging evidence; paper_code links this row back to the source registry/detail URL."
+    return out
+
+
+def add_structural_table_notes(df: pd.DataFrame) -> pd.DataFrame:
+    """Add presentation notes for missing demographics and feature provenance."""
+    out = normalize_structural_dataframe(df)
+    notes = []
+    for _, row in out.iterrows():
+        row_notes = []
+        if "sex" not in out.columns or pd.isna(row.get("sex")) or str(row.get("sex")).strip().lower() in {"", "unknown", "nan", "none"}:
+            row_notes.append("sex unavailable")
+        if "age" not in out.columns or pd.isna(row.get("age")):
+            row_notes.append("age unavailable")
+        if "value_numeric" in out.columns and pd.isna(row.get("value_numeric")):
+            row_notes.append("numeric feature value unavailable")
+        if "source_pipeline" in out.columns and str(row.get("source_pipeline", "")).strip():
+            row_notes.append(f"feature source: {row.get('source_pipeline')}")
+        if not row_notes:
+            row_notes.append("metadata and numeric feature available")
+        notes.append("; ".join(row_notes))
+    out["note"] = notes
+    return out
+
+
+def metadata_completeness_report(df: pd.DataFrame) -> pd.DataFrame:
+    """Summarize whether fields needed for demographic/group interpretation exist."""
+    rows = []
+    for column in ["subject_id", "diagnosis", "sex", "age", "mmse", "cdr", "roi_name", "imaging_metric", "value_numeric", "source_pipeline"]:
+        if column in df.columns:
+            values = df[column]
+            missing = values.isna() | values.astype(str).str.strip().str.lower().isin({"", "unknown", "nan", "none"})
+            rows.append(
+                {
+                    "field": column,
+                    "exists": True,
+                    "n_rows": len(df),
+                    "n_missing_or_unknown": int(missing.sum()),
+                    "n_available": int((~missing).sum()),
+                    "note": "required for demographic interpretation" if column in {"sex", "age"} else "workflow field",
+                }
+            )
+        else:
+            rows.append(
+                {
+                    "field": column,
+                    "exists": False,
+                    "n_rows": len(df),
+                    "n_missing_or_unknown": len(df),
+                    "n_available": 0,
+                    "note": "missing field; do not interpret this dimension",
+                }
+            )
+    return pd.DataFrame(rows)
+
+
+def _metadata_value(metadata: dict[str, Any] | None, key: str) -> Any:
+    if not metadata:
+        return None
+    return metadata.get(key)
+
+
+def parse_freesurfer_aseg_stats(
+    stats_path: str | Path,
+    subject_id: str,
+    diagnosis: str | None = None,
+    metadata: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    """Parse FreeSurfer aseg.stats into the vertical feature-table format."""
+    path = Path(stats_path)
+    if not path.exists():
+        return []
+
+    rows: list[dict[str, Any]] = []
+    for line in path.read_text(errors="ignore").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split()
+        if len(parts) < 5:
+            continue
+        try:
+            value_numeric = float(parts[3])
+        except ValueError:
+            continue
+        rows.append(
+            {
+                "subject_id": subject_id,
+                "diagnosis": diagnosis,
+                "sex": _metadata_value(metadata, "sex"),
+                "age": _metadata_value(metadata, "age"),
+                "mmse": _metadata_value(metadata, "mmse"),
+                "cdr": _metadata_value(metadata, "cdr"),
+                "roi_name": parts[4],
+                "imaging_metric": "roi_volume",
+                "value_numeric": value_numeric,
+                "source_pipeline": "FreeSurfer",
+                "source_file": str(path),
+                "data_level": "subject",
+                "statistic_type": "raw_measure",
+                "hemisphere": None,
+            }
+        )
+    return rows
+
+
+def parse_freesurfer_aparc_stats(
+    stats_path: str | Path,
+    subject_id: str,
+    diagnosis: str | None = None,
+    hemisphere: str | None = None,
+    metadata: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
+    """Parse FreeSurfer aparc.stats cortical volume/thickness rows."""
+    path = Path(stats_path)
+    if not path.exists():
+        return []
+
+    rows: list[dict[str, Any]] = []
+    for line in path.read_text(errors="ignore").splitlines():
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split()
+        if len(parts) < 5:
+            continue
+        roi_name = parts[0]
+        metric_positions = {
+            "roi_volume": 3,
+            "cortical_thickness": 4,
+        }
+        for metric_name, position in metric_positions.items():
+            try:
+                value_numeric = float(parts[position])
+            except (IndexError, ValueError):
+                continue
+            rows.append(
+                {
+                    "subject_id": subject_id,
+                    "diagnosis": diagnosis,
+                    "sex": _metadata_value(metadata, "sex"),
+                    "age": _metadata_value(metadata, "age"),
+                    "mmse": _metadata_value(metadata, "mmse"),
+                    "cdr": _metadata_value(metadata, "cdr"),
+                    "roi_name": roi_name,
+                    "imaging_metric": metric_name,
+                    "value_numeric": value_numeric,
+                    "source_pipeline": "FreeSurfer",
+                    "source_file": str(path),
+                    "data_level": "subject",
+                    "statistic_type": "raw_measure",
+                    "hemisphere": hemisphere,
+                }
+            )
+    return rows
+
+
+def extract_features_from_freesurfer_subject(
+    subject_dir: str | Path,
+    subject_id: str | None = None,
+    diagnosis: str | None = None,
+    metadata: dict[str, Any] | None = None,
+) -> pd.DataFrame:
+    """Extract a vertical ROI feature table from one FreeSurfer subject folder.
+
+    Expected input folder:
+    ``<SUBJECTS_DIR>/<subject_id>/stats``
+
+    Parsed by default:
+    - ``aseg.stats`` for subcortical/whole-brain volume rows
+    - ``lh.aparc.stats`` and ``rh.aparc.stats`` for cortical volume/thickness rows
+    """
+    subject_path = Path(subject_dir)
+    sid = subject_id or subject_path.name
+    stats_dir = subject_path / "stats"
+    rows: list[dict[str, Any]] = []
+    rows.extend(parse_freesurfer_aseg_stats(stats_dir / "aseg.stats", sid, diagnosis=diagnosis, metadata=metadata))
+    rows.extend(parse_freesurfer_aparc_stats(stats_dir / "lh.aparc.stats", sid, diagnosis=diagnosis, hemisphere="lh", metadata=metadata))
+    rows.extend(parse_freesurfer_aparc_stats(stats_dir / "rh.aparc.stats", sid, diagnosis=diagnosis, hemisphere="rh", metadata=metadata))
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return add_structural_table_notes(normalize_structural_dataframe(out))
+
+
+def write_freesurfer_vertical_csv(
+    subject_dirs: list[str | Path],
+    output_csv_path: str | Path,
+    diagnosis_by_subject: dict[str, str] | None = None,
+    metadata_by_subject: dict[str, dict[str, Any]] | None = None,
+) -> pd.DataFrame:
+    """Extract FreeSurfer features for multiple subjects and save one CSV."""
+    frames = []
+    for subject_dir in subject_dirs:
+        subject_path = Path(subject_dir)
+        subject_id = subject_path.name
+        frames.append(
+            extract_features_from_freesurfer_subject(
+                subject_path,
+                subject_id=subject_id,
+                diagnosis=(diagnosis_by_subject or {}).get(subject_id),
+                metadata=(metadata_by_subject or {}).get(subject_id),
+            )
+        )
+    out = pd.concat([frame for frame in frames if not frame.empty], ignore_index=True) if frames else pd.DataFrame()
+    output_path = Path(output_csv_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    out.to_csv(output_path, index=False)
+    return out
 
 
 def normalize_structural_dataframe(df: pd.DataFrame) -> pd.DataFrame:
