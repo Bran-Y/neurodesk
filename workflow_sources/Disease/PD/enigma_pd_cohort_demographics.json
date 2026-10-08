@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "paper_code": "PD-ENIGMA-2021",
+  "doi": "10.1002/mds.28706",
+  "source_title": "International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease",
+  "source_url": "https://movementdisorders.onlinelibrary.wiley.com/doi/10.1002/mds.28706",
+  "source_location": "Table 1",
+  "table_title": "Demographic characteristics of 2357 Parkinson's disease patients and 1182 controls stratified by cohort",
+  "transcription_status": "manually_transcribed_from_published_table",
+  "correction_log": [
+    {
+      "date": "2026-10-03",
+      "cohort": "Milan",
+      "field": "parkinson_disease.disease_duration_sd",
+      "old_value": 6.38,
+      "corrected_value": 3.38,
+      "reason": "Published Table 1 and user-supplied transcription both report 11.4 (3.38).",
+      "verification_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8595579/#T1",
+      "review_type": "automated source verification; not student manual sign-off"
+    }
+  ],
+  "intended_use": [
+    "study_population_description",
+    "case_applicability_review",
+    "cohort_overlap_review"
+  ],
+  "not_permitted_use": [
+    "individual_normative_range",
+    "patient_level_disease_probability",
+    "roi_effect_size"
+  ],
+  "units": {
+    "age": "years",
+    "female": "percent",
+    "disease_duration": "years"
+  },
+  "cohorts": [
+    {
+      "site": "Amsterdam",
+      "cohort": "Amsterdam I",
+      "healthy_controls": {"n": 44, "age_mean": 56.5, "age_sd": 9.48, "female_percent": 39},
+      "parkinson_disease": {"n": 138, "age_mean": 63.1, "age_sd": 10.81, "female_percent": 38, "disease_duration_mean": 2.1, "disease_duration_sd": 3.39}
+    },
+    {
+      "site": "Amsterdam",
+      "cohort": "Amsterdam II",
+      "healthy_controls": {"n": 0, "age_mean": null, "age_sd": null, "female_percent": null},
+      "parkinson_disease": {"n": 61, "age_mean": 62.5, "age_sd": 7.08, "female_percent": 39, "disease_duration_mean": 5.3, "disease_duration_sd": 3.54}
+    },
+    {
+      "site": "Bern",
+      "cohort": "BE I",
+      "healthy_controls": {"n": 23, "age_mean": 54.1, "age_sd": 9.78, "female_percent": 30},
+      "parkinson_disease": {"n": 52, "age_mean": 62.9, "age_sd": 10.38, "female_percent": 52, "disease_duration_mean": 12.4, "disease_duration_sd": 4.29}
+    },
+    {
+      "site": "Bern",
+      "cohort": "BE II",
+      "healthy_controls": {"n": 30, "age_mean": 68.2, "age_sd": 4.59, "female_percent": 70},
+      "parkinson_disease": {"n": 3, "age_mean": 59.7, "age_sd": 6.66, "female_percent": 67, "disease_duration_mean": 11.3, "disease_duration_sd": 7.57}
+    },
+    {
+      "site": "Campinas",
+      "cohort": "UNICAMP",
+      "healthy_controls": {"n": 138, "age_mean": 58.9, "age_sd": 7.91, "female_percent": 63},
+      "parkinson_disease": {"n": 110, "age_mean": 59.9, "age_sd": 10.2, "female_percent": 34, "disease_duration_mean": 7.3, "disease_duration_sd": 6.41}
+    },
+    {
+      "site": "Chang Gung",
+      "cohort": "CGU",
+      "healthy_controls": {"n": 223, "age_mean": 61.0, "age_sd": 7.28, "female_percent": 54},
+      "parkinson_disease": {"n": 327, "age_mean": 60.1, "age_sd": 9.63, "female_percent": 43, "disease_duration_mean": 8.7, "disease_duration_sd": 6.33}
+    },
+    {
+      "site": "Charlottesville",
+      "cohort": "UVA I",
+      "healthy_controls": {"n": 0, "age_mean": null, "age_sd": null, "female_percent": null},
+      "parkinson_disease": {"n": 116, "age_mean": 63.7, "age_sd": 8.52, "female_percent": 28, "disease_duration_mean": 9.7, "disease_duration_sd": 5.09}
+    },
+    {
+      "site": "Charlottesville",
+      "cohort": "UVA II",
+      "healthy_controls": {"n": 0, "age_mean": null, "age_sd": null, "female_percent": null},
+      "parkinson_disease": {"n": 37, "age_mean": 62.4, "age_sd": 9.59, "female_percent": 14, "disease_duration_mean": 8.7, "disease_duration_sd": 3.64}
+    },
+    {
+      "site": "Charlottesville",
+      "cohort": "UVA III",
+      "healthy_controls": {"n": 0, "age_mean": null, "age_sd": null, "female_percent": null},
+      "parkinson_disease": {"n": 24, "age_mean": 70.8, "age_sd": 6.77, "female_percent": 29, "disease_duration_mean": 7.7, "disease_duration_sd": 3.23}
+    },
+    {
+      "site": "Christchurch",
+      "cohort": "PDNZ",
+      "healthy_controls": {"n": 39, "age_mean": 67.5, "age_sd": 8.52, "female_percent": 33},
+      "parkinson_disease": {"n": 209, "age_mean": 69.4, "age_sd": 7.77, "female_percent": 26, "disease_duration_mean": 5.7, "disease_duration_sd": 5.57}
+    },
+    {
+      "site": "Donders",
+      "cohort": "Donders",
+      "healthy_controls": {"n": 23, "age_mean": 62.7, "age_sd": 10.29, "female_percent": 48},
+      "parkinson_disease": {"n": 59, "age_mean": 60.8, "age_sd": 10.07, "female_percent": 44, "disease_duration_mean": 4.4, "disease_duration_sd": 3.79}
+    },
+    {
+      "site": "Graz",
+      "cohort": "PROMOVE/ASPS I",
+      "healthy_controls": {"n": 124, "age_mean": 63.4, "age_sd": 10.07, "female_percent": 27},
+      "parkinson_disease": {"n": 100, "age_mean": 63.2, "age_sd": 10.15, "female_percent": 29, "disease_duration_mean": 4.7, "disease_duration_sd": 4.77}
+    },
+    {
+      "site": "Graz",
+      "cohort": "PROMOVE/ASPS II",
+      "healthy_controls": {"n": 0, "age_mean": null, "age_sd": null, "female_percent": null},
+      "parkinson_disease": {"n": 23, "age_mean": 64.0, "age_sd": 9.9, "female_percent": 22, "disease_duration_mean": 4.0, "disease_duration_sd": 5.69}
+    },
+    {
+      "site": "Liege",
+      "cohort": "Liege I",
+      "healthy_controls": {"n": 33, "age_mean": 65.8, "age_sd": 4.29, "female_percent": 45},
+      "parkinson_disease": {"n": 30, "age_mean": 65.9, "age_sd": 6.61, "female_percent": 37, "disease_duration_mean": 7.2, "disease_duration_sd": 5.32}
+    },
+    {
+      "site": "Liege",
+      "cohort": "Liege II",
+      "healthy_controls": {"n": 43, "age_mean": 64.8, "age_sd": 8.33, "female_percent": 49},
+      "parkinson_disease": {"n": 45, "age_mean": 66.9, "age_sd": 8.24, "female_percent": 44, "disease_duration_mean": 6.0, "disease_duration_sd": 3.93}
+    },
+    {
+      "site": "Milan",
+      "cohort": "Milan",
+      "healthy_controls": {"n": 10, "age_mean": 53.3, "age_sd": 10.53, "female_percent": 70},
+      "parkinson_disease": {"n": 44, "age_mean": 57.8, "age_sd": 7.71, "female_percent": 32, "disease_duration_mean": 11.4, "disease_duration_sd": 3.38}
+    },
+    {
+      "site": "NEUROCON",
+      "cohort": "NEUROCON",
+      "healthy_controls": {"n": 15, "age_mean": 66.7, "age_sd": 11.74, "female_percent": 80},
+      "parkinson_disease": {"n": 27, "age_mean": 68.7, "age_sd": 10.55, "female_percent": 37, "disease_duration_mean": null, "disease_duration_sd": null}
+    },
+    {
+      "site": "NW-England",
+      "cohort": "NW-England I",
+      "healthy_controls": {"n": 22, "age_mean": 70.0, "age_sd": 7.27, "female_percent": 45},
+      "parkinson_disease": {"n": 32, "age_mean": 69.9, "age_sd": 8.58, "female_percent": 19, "disease_duration_mean": 6.8, "disease_duration_sd": 4.42}
+    },
+    {
+      "site": "NW-England",
+      "cohort": "NW-England II",
+      "healthy_controls": {"n": 13, "age_mean": 64.6, "age_sd": 4.13, "female_percent": 38},
+      "parkinson_disease": {"n": 14, "age_mean": 65.0, "age_sd": 5.67, "female_percent": 29, "disease_duration_mean": 9.2, "disease_duration_sd": 6.02}
+    },
+    {
+      "site": "ON Japan",
+      "cohort": "ON Japan",
+      "healthy_controls": {"n": 15, "age_mean": 63.3, "age_sd": 5.25, "female_percent": 53},
+      "parkinson_disease": {"n": 30, "age_mean": 67.6, "age_sd": 6.81, "female_percent": 57, "disease_duration_mean": null, "disease_duration_sd": null}
+    },
+    {
+      "site": "Oxford",
+      "cohort": "Oxford DISCOVERY",
+      "healthy_controls": {"n": 57, "age_mean": 65.6, "age_sd": 8.2, "female_percent": 39},
+      "parkinson_disease": {"n": 115, "age_mean": 63.9, "age_sd": 10.05, "female_percent": 36, "disease_duration_mean": 2.3, "disease_duration_sd": 1.58}
+    },
+    {
+      "site": "Pennsylvania",
+      "cohort": "UDALL/U19",
+      "healthy_controls": {"n": 11, "age_mean": 70.1, "age_sd": 5.86, "female_percent": 55},
+      "parkinson_disease": {"n": 112, "age_mean": 66.4, "age_sd": 7.87, "female_percent": 32, "disease_duration_mean": 7.3, "disease_duration_sd": 5.48}
+    },
+    {
+      "site": "PPMI",
+      "cohort": "PPMI 1-21",
+      "healthy_controls": {"n": 163, "age_mean": 63.6, "age_sd": 16.73, "female_percent": 36},
+      "parkinson_disease": {"n": 347, "age_mean": 62.9, "age_sd": 8.19, "female_percent": 35, "disease_duration_mean": 0.6, "disease_duration_sd": 0.52}
+    },
+    {
+      "site": "Rome SLF",
+      "cohort": "Rome SLF",
+      "healthy_controls": {"n": 125, "age_mean": 36.6, "age_sd": 10.63, "female_percent": 41},
+      "parkinson_disease": {"n": 239, "age_mean": 62.7, "age_sd": 10.19, "female_percent": 37, "disease_duration_mean": 4.9, "disease_duration_sd": 4.17}
+    },
+    {
+      "site": "Stanford",
+      "cohort": "Stanford",
+      "healthy_controls": {"n": 11, "age_mean": 65.6, "age_sd": 6.47, "female_percent": 82},
+      "parkinson_disease": {"n": 44, "age_mean": 68.6, "age_sd": 8.49, "female_percent": 50, "disease_duration_mean": 5.6, "disease_duration_sd": 3.44}
+    },
+    {
+      "site": "Tao Wu",
+      "cohort": "Tao Wu",
+      "healthy_controls": {"n": 20, "age_mean": 64.8, "age_sd": 5.58, "female_percent": 40},
+      "parkinson_disease": {"n": 19, "age_mean": 65.0, "age_sd": 4.45, "female_percent": 47, "disease_duration_mean": 5.3, "disease_duration_sd": 4.0}
+    }
+  ],
+  "overall": {
+    "healthy_controls": {"n": 1182, "age_mean": 59.4, "age_sd": 12.31, "female_percent": 46},
+    "parkinson_disease": {"n": 2357, "age_mean": 63.4, "age_sd": 9.77, "female_percent": 36, "disease_duration_mean": 5.5, "disease_duration_sd": 5.47}
+  },
+  "applicability_notes": [
+    "The cohorts differ substantially in age, sex balance and disease duration.",
+    "PPMI contributed 347 PD participants and 163 controls; overlap with locally supplied PPMI test cases has not been excluded.",
+    "These cohort summaries do not provide individual reference intervals or diagnostic thresholds."
+  ]
+}

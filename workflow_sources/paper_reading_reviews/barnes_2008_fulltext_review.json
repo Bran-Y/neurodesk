@@ -1,0 +1,48 @@
+{
+  "doi": "10.1016/j.neurobiolaging.2007.02.011",
+  "source_pdf": "workflow_sources/paper_reading_reviews/raw/barnes_2008_S0197458007000504.pdf",
+  "source_pdf_sha256": "a9be06639d772b30e62aa8f00ef3e4f7674db1505c9524eb130530d402f4d8d1",
+  "verification_status": "completed",
+  "table_location": "Table 2 p.1201; Table 1 and Methods p.1200; Discussion/Conclusions pp.1201-1202",
+  "statistic_records": 12,
+  "group_comparisons": 6,
+  "independent_cohorts": 1,
+  "patient_numeric_use": false,
+  "patient_qc_changed": false,
+  "human_signatures_changed": false,
+  "permitted_use": "Verified Table 2 annualized hippocampal atrophy rates (%/year), not single-scan volumes. Serial MRI and matching manual MIDAS segmentation/annualization are required; MIDAS-to-FreeSurfer equivalence is not established. Context only; not individual diagnostic evidence.",
+  "total_definition": "Atrophy calculated from total left plus right hippocampal volume; do not add or average left/right percentage rates.",
+  "annualization": "Log-transformed volumes assuming constant proportionate hippocampal loss (Methods 2.3). Both 6-month and 12-month estimates are already annualized; do not multiply the 6-month table values by two.",
+  "annualization_equation": null,
+  "days_per_year_convention": null,
+  "six_month_scan_pair_aggregation": null,
+  "anatomical_definition": "Dentate gyrus, hippocampus proper, subiculum and alveus. Coronal posterior-to-anterior manual segmentation; minimum threshold 70% of mean brain intensity.",
+  "registration": "Triplets registered to MNI305 with 6 DOF; repeat scans to baseline with 9 DOF to correct voxel-size changes. Not a validated FreeSurfer normative adjustment.",
+  "cohort": {
+    "AD": 36,
+    "Control": 20,
+    "scanner": "1.5T GE Signa",
+    "visits_months": [
+      0,
+      6,
+      12
+    ]
+  },
+  "mean_interscan_days": {
+    "AD_6": 179,
+    "Control_6": 181,
+    "AD_12": 365,
+    "Control_12": 364
+  },
+  "interval_comparison_p": {
+    "AD_total_mean": 0.18,
+    "Control_total_mean": 0.69,
+    "Control_variance": 0.007,
+    "AD_variance": 0.98
+  },
+  "mean_ci": null,
+  "individual_diagnostic_threshold": null,
+  "source_text_discrepancy": "Discussion p.1201 says 6-month mean rates were lower in both groups; Table 2 controls are higher at 6 months (total 0.41 versus 0.28 at 12 months). Retain Table 2 exactly; do not adopt or repair that directional prose.",
+  "conclusion": "Group-level consistency across intervals does not establish individual agreement or diagnosis; the authors report overlap between AD and controls.",
+  "counting_policy": "Twelve group mean/SD estimates share six AD-versus-control comparisons from one cohort. Do not count estimates or intervals as independent disease votes."
+}

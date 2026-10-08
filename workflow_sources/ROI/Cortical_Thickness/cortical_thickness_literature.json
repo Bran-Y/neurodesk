@@ -1,0 +1,150 @@
+[
+  {
+    "paper_code": "ROI-004",
+    "source_title": "Improved maximum a posteriori cortical segmentation by iterative relaxation of priors",
+    "doi": null,
+    "year": 2009,
+    "diseases": [
+      "MRI methods"
+    ],
+    "primary_roi": "cerebral cortex",
+    "rois": [
+      "cerebral cortex"
+    ],
+    "imaging_metrics": [
+      "cortical_segmentation",
+      "cortical_thickness"
+    ],
+    "evidence_use": "Cortical segmentation method evidence"
+  },
+  {
+    "paper_code": "ROI-011",
+    "source_title": "Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer disease",
+    "doi": "10.1093/brain/awp123",
+    "year": 2009,
+    "diseases": [
+      "MCI",
+      "AD",
+      "Control"
+    ],
+    "primary_roi": "cerebral cortex",
+    "rois": [
+      "entorhinal cortex",
+      "temporal cortex",
+      "frontal cortex",
+      "hippocampus"
+    ],
+    "imaging_metrics": [
+      "cortical_thickness",
+      "roi_volume"
+    ],
+    "evidence_use": "Regional cortical and volumetric classification features",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1093/brain/awp123"
+  },
+  {
+    "paper_code": "QREF-002",
+    "source_title": "Cortical Complexity Analyses and Their Cognitive Correlate in Alzheimer's Disease and Frontotemporal Dementia",
+    "doi": "10.3233/JAD-200246",
+    "year": 2020,
+    "diseases": [
+      "AD",
+      "Control",
+      "FTD"
+    ],
+    "primary_roi": "whole brain cortex",
+    "rois": [
+      "whole brain cortex"
+    ],
+    "imaging_metrics": [
+      "cortical_thickness"
+    ],
+    "evidence_use": "Audited quantitative reference distributions; use only rows marked comparison_compatible after atlas, metric, hemisphere, and unit checks.",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7338220/",
+    "quantitative_evidence_source": "workflow_sources/quantitative_reference_statistics.json",
+    "quantitative_evidence_count": 3,
+    "quantitative_evidence": [
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "AD",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.5,
+        "standard_deviation": 0.14,
+        "unit": "mm",
+        "sample_size": 32,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "symptomatic AD-pathology group included probable AD and amyloid-positive MCI",
+        "evidence_note": "Whole-brain thickness is not sufficient by itself to distinguish AD from FTD.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      },
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "FTD",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.5,
+        "standard_deviation": 0.12,
+        "unit": "mm",
+        "sample_size": 24,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "clinical FTD group; not individual histopathology",
+        "evidence_note": "Whole-brain thickness is not sufficient by itself to distinguish FTD from AD.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      },
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "Control",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.64,
+        "standard_deviation": 0.1,
+        "unit": "mm",
+        "sample_size": 28,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "healthy-control research group",
+        "evidence_note": "Control whole-brain mean cortical thickness.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      }
+    ]
+  }
+]

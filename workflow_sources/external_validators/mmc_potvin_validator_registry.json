@@ -1,0 +1,30 @@
+[
+  {
+    "validator_id": "MMC-POTVIN-001",
+    "validator_name": "MMC / Potvin normative morphometric calculator",
+    "expected_local_workbook": "workflow_sources/external_validators/mmc1.xlsm",
+    "manual_export_template": "workflow_sources/external_validators/mmc_outputs_manual_export.template.csv",
+    "manual_export_expected_path": "workflow_sources/external_validators/mmc_outputs_manual_export.csv",
+    "workflow_role": "external normative cross-validation for typical-aging thresholding",
+    "not_used_for": "disease diagnosis or disease-candidate ranking",
+    "required_patient_inputs": [
+      "age",
+      "sex",
+      "scanner_field_strength",
+      "scanner_manufacturer",
+      "estimated_total_intracranial_volume",
+      "observed cortical ROI surface area",
+      "observed cortical ROI thickness",
+      "observed cortical ROI volume"
+    ],
+    "expected_outputs_to_record": [
+      "predicted normative value",
+      "95% prediction interval",
+      "ZOP",
+      "percentile",
+      "FDR-corrected significance flag where available"
+    ],
+    "atlas_note": "The provided mmc1.xlsm workbook title reports Desikan-Killiany atlas. Workflow rows using DKT should be flagged for atlas review before interpreting MMC output.",
+    "review_status": "external workbook structure inspected; macro execution and paper-level source verification still require manual review"
+  }
+]

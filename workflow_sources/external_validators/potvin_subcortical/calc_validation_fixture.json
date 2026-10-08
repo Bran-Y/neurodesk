@@ -1,0 +1,4692 @@
+{
+  "schema_version": 1,
+  "engine": "LibreOffice Calc",
+  "engine_version": "LibreOffice 26.8.0.3 bce0998afefdbc355585ca324285661a2170ba77",
+  "workbook_sha256": "c8a8c9e08d5703923a45eefe2d29ef6dc9c553fc12771f2f35df0af872bfc19f",
+  "source_workbook_macros_executed": false,
+  "workbook_saved": false,
+  "harness_sha256": "7472f4ee0222d080e0dda1ccf19fbad76e23bb105d07f00bd075f3e8284fcd28",
+  "source_cells": {
+    "Left_Hippocampus": "Statistics!C18:E18",
+    "Right_Hippocampus": "Statistics!C19:E19",
+    "Left_Amygdala": "Statistics!C13:E13",
+    "Right_Amygdala": "Statistics!C14:E14"
+  },
+  "blank_age_guard_passed": true,
+  "baseline_repeat_passed": true,
+  "cases": [
+    {
+      "case_id": "synthetic_000",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4018.34427097468,
+          "lower_95pi": 3267.15165226522,
+          "upper_95pi": 4769.53688968414
+        },
+        "Right_Hippocampus": {
+          "expected": 4175.08054231064,
+          "lower_95pi": 3431.59429878155,
+          "upper_95pi": 4918.56678583973
+        },
+        "Left_Amygdala": {
+          "expected": 1557.15087300007,
+          "lower_95pi": 1179.41842493185,
+          "upper_95pi": 1934.88332106829
+        },
+        "Right_Amygdala": {
+          "expected": 1608.22826583223,
+          "lower_95pi": 1187.89720782469,
+          "upper_95pi": 2028.55932383978
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_001",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3716.17423353485,
+          "lower_95pi": 2960.91026709512,
+          "upper_95pi": 4471.43819997459
+        },
+        "Right_Hippocampus": {
+          "expected": 3697.34944547243,
+          "lower_95pi": 2950.8846663838,
+          "upper_95pi": 4443.81422456106
+        },
+        "Left_Amygdala": {
+          "expected": 1419.36397150632,
+          "lower_95pi": 1039.0302112987,
+          "upper_95pi": 1799.69773171394
+        },
+        "Right_Amygdala": {
+          "expected": 1533.12678333778,
+          "lower_95pi": 1111.29007767512,
+          "upper_95pi": 1954.96348900043
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_002",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4080.22842966251,
+          "lower_95pi": 3327.16790970298,
+          "upper_95pi": 4833.28894962204
+        },
+        "Right_Hippocampus": {
+          "expected": 4083.41563907565,
+          "lower_95pi": 3338.14974935869,
+          "upper_95pi": 4828.6815287926
+        },
+        "Left_Amygdala": {
+          "expected": 1552.53868923134,
+          "lower_95pi": 1173.90253714018,
+          "upper_95pi": 1931.1748413225
+        },
+        "Right_Amygdala": {
+          "expected": 1647.70259267706,
+          "lower_95pi": 1226.53958572827,
+          "upper_95pi": 2068.86559962585
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_003",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4499.78980374118,
+          "lower_95pi": 3746.20782576508,
+          "upper_95pi": 5253.37178171727
+        },
+        "Right_Hippocampus": {
+          "expected": 4469.48183267886,
+          "lower_95pi": 3724.16652497958,
+          "upper_95pi": 5214.79714037814
+        },
+        "Left_Amygdala": {
+          "expected": 1708.18413414466,
+          "lower_95pi": 1328.47837128878,
+          "upper_95pi": 2087.88989700055
+        },
+        "Right_Amygdala": {
+          "expected": 1762.27840201635,
+          "lower_95pi": 1341.0867751938,
+          "upper_95pi": 2183.47002883889
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_004",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3740.37244432371,
+          "lower_95pi": 2984.31801981154,
+          "upper_95pi": 4496.42686883588
+        },
+        "Right_Hippocampus": {
+          "expected": 3738.95475017616,
+          "lower_95pi": 2992.06092364072,
+          "upper_95pi": 4485.8485767116
+        },
+        "Left_Amygdala": {
+          "expected": 1445.04976550443,
+          "lower_95pi": 1064.6198006798,
+          "upper_95pi": 1825.47973032906
+        },
+        "Right_Amygdala": {
+          "expected": 1494.2160220829,
+          "lower_95pi": 1072.08368870501,
+          "upper_95pi": 1916.34835546079
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_005",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4104.42664045136,
+          "lower_95pi": 3351.27811747352,
+          "upper_95pi": 4857.57516342921
+        },
+        "Right_Hippocampus": {
+          "expected": 4125.02094377938,
+          "lower_95pi": 3379.68242663773,
+          "upper_95pi": 4870.35946092102
+        },
+        "Left_Amygdala": {
+          "expected": 1534.62418755324,
+          "lower_95pi": 1155.90176961293,
+          "upper_95pi": 1913.34660549355
+        },
+        "Right_Amygdala": {
+          "expected": 1608.79183142218,
+          "lower_95pi": 1187.53347353312,
+          "upper_95pi": 2030.05018931125
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_006",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4523.98801453003,
+          "lower_95pi": 3770.96957711587,
+          "upper_95pi": 5277.00645194419
+        },
+        "Right_Hippocampus": {
+          "expected": 4511.08713738259,
+          "lower_95pi": 3766.05646438144,
+          "upper_95pi": 5256.11781038374
+        },
+        "Left_Amygdala": {
+          "expected": 1646.66933679035,
+          "lower_95pi": 1267.94786144414,
+          "upper_95pi": 2025.39081213656
+        },
+        "Right_Amygdala": {
+          "expected": 1723.36764076147,
+          "lower_95pi": 1302.28150087419,
+          "upper_95pi": 2144.45378064875
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_007",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3582.0696861215,
+          "lower_95pi": 2826.70522121043,
+          "upper_95pi": 4337.43415103257
+        },
+        "Right_Hippocampus": {
+          "expected": 3598.8307885872,
+          "lower_95pi": 2852.43114247948,
+          "upper_95pi": 4345.23043469493
+        },
+        "Left_Amygdala": {
+          "expected": 1392.54310953479,
+          "lower_95pi": 1012.95260500412,
+          "upper_95pi": 1772.13361406547
+        },
+        "Right_Amygdala": {
+          "expected": 1539.90398746447,
+          "lower_95pi": 1118.03392642614,
+          "upper_95pi": 1961.7740485028
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_008",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3946.12388224916,
+          "lower_95pi": 3193.3065286827,
+          "upper_95pi": 4698.94123581562
+        },
+        "Right_Hippocampus": {
+          "expected": 3984.89698219042,
+          "lower_95pi": 3239.83307824334,
+          "upper_95pi": 4729.9608861375
+        },
+        "Left_Amygdala": {
+          "expected": 1510.06796252848,
+          "lower_95pi": 1131.52310806265,
+          "upper_95pi": 1888.6128169943
+        },
+        "Right_Amygdala": {
+          "expected": 1654.47979680375,
+          "lower_95pi": 1233.36122712356,
+          "upper_95pi": 2075.59836648395
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_009",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4365.68525632782,
+          "lower_95pi": 3612.49649447849,
+          "upper_95pi": 5118.87401817715
+        },
+        "Right_Hippocampus": {
+          "expected": 4370.96317579364,
+          "lower_95pi": 3625.98660449794,
+          "upper_95pi": 5115.93974708933
+        },
+        "Left_Amygdala": {
+          "expected": 1650.06354271046,
+          "lower_95pi": 1271.35542885573,
+          "upper_95pi": 2028.77165656519
+        },
+        "Right_Amygdala": {
+          "expected": 1769.05560614304,
+          "lower_95pi": 1347.9862686653,
+          "upper_95pi": 2190.12494362078
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_010",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4119.38398413416,
+          "lower_95pi": 3363.30998332211,
+          "upper_95pi": 4875.45798494622
+        },
+        "Right_Hippocampus": {
+          "expected": 4078.61280909126,
+          "lower_95pi": 3330.81614228261,
+          "upper_95pi": 4826.4094758999
+        },
+        "Left_Amygdala": {
+          "expected": 1483.42238137272,
+          "lower_95pi": 1102.47535960091,
+          "upper_95pi": 1864.36940314453
+        },
+        "Right_Amygdala": {
+          "expected": 1658.67740999756,
+          "lower_95pi": 1236.06307167987,
+          "upper_95pi": 2081.29174831526
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_011",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4447.90514710713,
+          "lower_95pi": 3693.561216149,
+          "upper_95pi": 5202.24907806527
+        },
+        "Right_Hippocampus": {
+          "expected": 4464.67900269448,
+          "lower_95pi": 3718.14065877935,
+          "upper_95pi": 5211.2173466096
+        },
+        "Left_Amygdala": {
+          "expected": 1616.59709909774,
+          "lower_95pi": 1237.31202041343,
+          "upper_95pi": 1995.88217778204
+        },
+        "Right_Amygdala": {
+          "expected": 1773.25321933685,
+          "lower_95pi": 1351.34269309352,
+          "upper_95pi": 2195.16374558018
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_012",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4831.93348803111,
+          "lower_95pi": 4077.25329799798,
+          "upper_95pi": 5586.61367806424
+        },
+        "Right_Hippocampus": {
+          "expected": 4850.74519629769,
+          "lower_95pi": 4104.21909190451,
+          "upper_95pi": 5597.27130069087
+        },
+        "Left_Amygdala": {
+          "expected": 1772.24254401106,
+          "lower_95pi": 1391.88581557383,
+          "upper_95pi": 2152.59927244828
+        },
+        "Right_Amygdala": {
+          "expected": 1887.82902867614,
+          "lower_95pi": 1465.92128844898,
+          "upper_95pi": 2309.73676890329
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_013",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4024.20870622344,
+          "lower_95pi": 3268.72149184187,
+          "upper_95pi": 4779.69592060501
+        },
+        "Right_Hippocampus": {
+          "expected": 3940.54980960312,
+          "lower_95pi": 3193.40447298875,
+          "upper_95pi": 4687.69514621748
+        },
+        "Left_Amygdala": {
+          "expected": 1587.41748900365,
+          "lower_95pi": 1207.02610434654,
+          "upper_95pi": 1967.80887366076
+        },
+        "Right_Amygdala": {
+          "expected": 1654.49405479202,
+          "lower_95pi": 1232.11166438407,
+          "upper_95pi": 2076.87644519998
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_014",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4352.72986919641,
+          "lower_95pi": 3599.07244000463,
+          "upper_95pi": 5106.38729838818
+        },
+        "Right_Hippocampus": {
+          "expected": 4326.61600320633,
+          "lower_95pi": 3580.79417101041,
+          "upper_95pi": 5072.43783540226
+        },
+        "Left_Amygdala": {
+          "expected": 1676.99191105246,
+          "lower_95pi": 1298.02924147335,
+          "upper_95pi": 2055.95458063156
+        },
+        "Right_Amygdala": {
+          "expected": 1769.06986413131,
+          "lower_95pi": 1347.45139124098,
+          "upper_95pi": 2190.68833702164
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_015",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4736.75821012039,
+          "lower_95pi": 3983.01194666419,
+          "upper_95pi": 5490.50447357658
+        },
+        "Right_Hippocampus": {
+          "expected": 4712.68219680955,
+          "lower_95pi": 3966.93670517377,
+          "upper_95pi": 5458.42768844532
+        },
+        "Left_Amygdala": {
+          "expected": 1789.03706028956,
+          "lower_95pi": 1409.87392710706,
+          "upper_95pi": 2168.20019347207
+        },
+        "Right_Amygdala": {
+          "expected": 1883.64567347059,
+          "lower_95pi": 1462.08971568628,
+          "upper_95pi": 2305.20163125491
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_016",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3853.99603226225,
+          "lower_95pi": 3099.84492100433,
+          "upper_95pi": 4608.14714352018
+        },
+        "Right_Hippocampus": {
+          "expected": 3897.19718515242,
+          "lower_95pi": 3151.35560390518,
+          "upper_95pi": 4643.03876639966
+        },
+        "Left_Amygdala": {
+          "expected": 1564.93992205352,
+          "lower_95pi": 1185.67121143094,
+          "upper_95pi": 1944.20863267609
+        },
+        "Right_Amygdala": {
+          "expected": 1619.27640616196,
+          "lower_95pi": 1197.72702199451,
+          "upper_95pi": 2040.82579032941
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_017",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4182.51719523522,
+          "lower_95pi": 3430.12931194699,
+          "upper_95pi": 4934.90507852345
+        },
+        "Right_Hippocampus": {
+          "expected": 4283.26337875564,
+          "lower_95pi": 3538.63955092172,
+          "upper_95pi": 5027.88720658955
+        },
+        "Left_Amygdala": {
+          "expected": 1682.4647750472,
+          "lower_95pi": 1304.13645189038,
+          "upper_95pi": 2060.79309820402
+        },
+        "Right_Amygdala": {
+          "expected": 1733.85221550124,
+          "lower_95pi": 1312.9858003246,
+          "upper_95pi": 2154.71863067789
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_018",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4566.5455361592,
+          "lower_95pi": 3813.7500099097,
+          "upper_95pi": 5319.3410624087
+        },
+        "Right_Hippocampus": {
+          "expected": 4669.32957235885,
+          "lower_95pi": 3924.67414385639,
+          "upper_95pi": 5413.98500086131
+        },
+        "Left_Amygdala": {
+          "expected": 1822.46035522919,
+          "lower_95pi": 1443.92197547591,
+          "upper_95pi": 2200.99873498246
+        },
+        "Right_Amygdala": {
+          "expected": 1848.42802484053,
+          "lower_95pi": 1427.54177956662,
+          "upper_95pi": 2269.31427011443
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_019",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3637.31708764077,
+          "lower_95pi": 2883.04981056484,
+          "upper_95pi": 4391.58436471669
+        },
+        "Right_Hippocampus": {
+          "expected": 3623.52225313477,
+          "lower_95pi": 2878.16182694252,
+          "upper_95pi": 4368.88267932702
+        },
+        "Left_Amygdala": {
+          "expected": 1313.80991541004,
+          "lower_95pi": 934.078799803733,
+          "upper_95pi": 1693.54103101635
+        },
+        "Right_Amygdala": {
+          "expected": 1431.75640946183,
+          "lower_95pi": 1010.45406644352,
+          "upper_95pi": 1853.05875248014
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_020",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4001.37128376842,
+          "lower_95pi": 3248.58198289853,
+          "upper_95pi": 4754.16058463831
+        },
+        "Right_Hippocampus": {
+          "expected": 4009.58844673798,
+          "lower_95pi": 3264.55059392504,
+          "upper_95pi": 4754.62629955092
+        },
+        "Left_Amygdala": {
+          "expected": 1446.98463313506,
+          "lower_95pi": 1068.47248848654,
+          "upper_95pi": 1825.49677778358
+        },
+        "Right_Amygdala": {
+          "expected": 1546.33221880112,
+          "lower_95pi": 1125.22229070753,
+          "upper_95pi": 1967.4421468947
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_021",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4420.93265784709,
+          "lower_95pi": 3666.63699683344,
+          "upper_95pi": 5175.22831886074
+        },
+        "Right_Hippocampus": {
+          "expected": 4395.6546403412,
+          "lower_95pi": 3649.69035106574,
+          "upper_95pi": 5141.61892961666
+        },
+        "Left_Amygdala": {
+          "expected": 1602.63007804838,
+          "lower_95pi": 1222.46345501924,
+          "upper_95pi": 1982.79670107753
+        },
+        "Right_Amygdala": {
+          "expected": 1660.9080281404,
+          "lower_95pi": 1239.28792099335,
+          "upper_95pi": 2082.52813528745
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_022",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3661.51529842962,
+          "lower_95pi": 2906.52464018339,
+          "upper_95pi": 4416.50595667586
+        },
+        "Right_Hippocampus": {
+          "expected": 3665.1275578385,
+          "lower_95pi": 2919.38471811479,
+          "upper_95pi": 4410.87039756221
+        },
+        "Left_Amygdala": {
+          "expected": 1339.49570940815,
+          "lower_95pi": 959.600527910852,
+          "upper_95pi": 1719.39089090546
+        },
+        "Right_Amygdala": {
+          "expected": 1392.84564820695,
+          "lower_95pi": 971.371725099197,
+          "upper_95pi": 1814.31957131471
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_023",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4025.56949455728,
+          "lower_95pi": 3272.76047668117,
+          "upper_95pi": 4778.37851243338
+        },
+        "Right_Hippocampus": {
+          "expected": 4051.19375144171,
+          "lower_95pi": 3306.13056133488,
+          "upper_95pi": 4796.25694154855
+        },
+        "Left_Amygdala": {
+          "expected": 1429.07013145696,
+          "lower_95pi": 1050.50574318445,
+          "upper_95pi": 1807.63451972948
+        },
+        "Right_Amygdala": {
+          "expected": 1507.42145754624,
+          "lower_95pi": 1086.34070496235,
+          "upper_95pi": 1928.50221013013
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_024",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4445.13086863594,
+          "lower_95pi": 3691.46645476945,
+          "upper_95pi": 5198.79528250244
+        },
+        "Right_Hippocampus": {
+          "expected": 4437.25994504493,
+          "lower_95pi": 3691.62731897182,
+          "upper_95pi": 5182.89257111804
+        },
+        "Left_Amygdala": {
+          "expected": 1541.11528069407,
+          "lower_95pi": 1162.06759568794,
+          "upper_95pi": 1920.1629657002
+        },
+        "Right_Amygdala": {
+          "expected": 1621.99726688553,
+          "lower_95pi": 1200.60698645796,
+          "upper_95pi": 2043.38754731309
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_025",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3503.21254022741,
+          "lower_95pi": 2748.78852629528,
+          "upper_95pi": 4257.63655415954
+        },
+        "Right_Hippocampus": {
+          "expected": 3525.00359624954,
+          "lower_95pi": 2779.63833178843,
+          "upper_95pi": 4270.36886071065
+        },
+        "Left_Amygdala": {
+          "expected": 1286.98905343852,
+          "lower_95pi": 907.848310381309,
+          "upper_95pi": 1666.12979649572
+        },
+        "Right_Amygdala": {
+          "expected": 1438.53361358852,
+          "lower_95pi": 1017.28463051361,
+          "upper_95pi": 1859.78259666343
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_026",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3867.26673635507,
+          "lower_95pi": 3114.66444809446,
+          "upper_95pi": 4619.86902461568
+        },
+        "Right_Hippocampus": {
+          "expected": 3911.06978985276,
+          "lower_95pi": 3166.16387367598,
+          "upper_95pi": 4655.97570602954
+        },
+        "Left_Amygdala": {
+          "expected": 1404.5139064322,
+          "lower_95pi": 1026.06583686419,
+          "upper_95pi": 1782.96197600021
+        },
+        "Right_Amygdala": {
+          "expected": 1553.10942292781,
+          "lower_95pi": 1132.13075102258,
+          "upper_95pi": 1974.08809483304
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_027",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4286.82811043374,
+          "lower_95pi": 3532.8691530948,
+          "upper_95pi": 5040.78706777268
+        },
+        "Right_Hippocampus": {
+          "expected": 4297.13598345597,
+          "lower_95pi": 3551.4400990603,
+          "upper_95pi": 5042.83186785165
+        },
+        "Left_Amygdala": {
+          "expected": 1544.50948661418,
+          "lower_95pi": 1165.43893567279,
+          "upper_95pi": 1923.58003755558
+        },
+        "Right_Amygdala": {
+          "expected": 1667.68523226709,
+          "lower_95pi": 1246.27401437894,
+          "upper_95pi": 2089.09645015525
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_028",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4040.52683824008,
+          "lower_95pi": 3285.3797509052,
+          "upper_95pi": 4795.67392557495
+        },
+        "Right_Hippocampus": {
+          "expected": 4004.7856167536,
+          "lower_95pi": 3257.99659029294,
+          "upper_95pi": 4751.57464321425
+        },
+        "Left_Amygdala": {
+          "expected": 1377.86832527644,
+          "lower_95pi": 997.482625308638,
+          "upper_95pi": 1758.25402524424
+        },
+        "Right_Amygdala": {
+          "expected": 1557.30703612162,
+          "lower_95pi": 1135.27284212463,
+          "upper_95pi": 1979.34123011861
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_029",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4369.04800121305,
+          "lower_95pi": 3614.89783675257,
+          "upper_95pi": 5123.19816567352
+        },
+        "Right_Hippocampus": {
+          "expected": 4390.85181035681,
+          "lower_95pi": 3644.44632315678,
+          "upper_95pi": 5137.25729755685
+        },
+        "Left_Amygdala": {
+          "expected": 1511.04304300146,
+          "lower_95pi": 1131.84128242298,
+          "upper_95pi": 1890.24480357994
+        },
+        "Right_Amygdala": {
+          "expected": 1671.88284546091,
+          "lower_95pi": 1250.0720949645,
+          "upper_95pi": 2093.69359595731
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_030",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4753.07634213703,
+          "lower_95pi": 3997.59847179217,
+          "upper_95pi": 5508.55421248188
+        },
+        "Right_Hippocampus": {
+          "expected": 4776.91800396003,
+          "lower_95pi": 4029.64928779288,
+          "upper_95pi": 5524.18672012718
+        },
+        "Left_Amygdala": {
+          "expected": 1666.68848791478,
+          "lower_95pi": 1285.83138594066,
+          "upper_95pi": 2047.5455898889
+        },
+        "Right_Amygdala": {
+          "expected": 1786.45865480019,
+          "lower_95pi": 1364.16989876773,
+          "upper_95pi": 2208.74741083265
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_031",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3945.35156032935,
+          "lower_95pi": 3190.53413310397,
+          "upper_95pi": 4700.16898755474
+        },
+        "Right_Hippocampus": {
+          "expected": 3866.72261726546,
+          "lower_95pi": 3120.32727925364,
+          "upper_95pi": 4613.11795527727
+        },
+        "Left_Amygdala": {
+          "expected": 1481.86343290737,
+          "lower_95pi": 1101.80913010848,
+          "upper_95pi": 1861.91773570626
+        },
+        "Right_Amygdala": {
+          "expected": 1553.12368091608,
+          "lower_95pi": 1131.27000894781,
+          "upper_95pi": 1974.97735288435
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_032",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4273.87272330232,
+          "lower_95pi": 3520.15101504318,
+          "upper_95pi": 5027.59443156146
+        },
+        "Right_Hippocampus": {
+          "expected": 4252.78881086867,
+          "lower_95pi": 3506.84128644345,
+          "upper_95pi": 4998.7363352939
+        },
+        "Left_Amygdala": {
+          "expected": 1571.43785495618,
+          "lower_95pi": 1192.43481022131,
+          "upper_95pi": 1950.44089969105
+        },
+        "Right_Amygdala": {
+          "expected": 1667.69949025536,
+          "lower_95pi": 1246.1290825686,
+          "upper_95pi": 2089.26989794213
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_033",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4657.9010642263,
+          "lower_95pi": 3903.09828099795,
+          "upper_95pi": 5412.70384745465
+        },
+        "Right_Hippocampus": {
+          "expected": 4638.85500447189,
+          "lower_95pi": 3892.10772503528,
+          "upper_95pi": 5385.60228390849
+        },
+        "Left_Amygdala": {
+          "expected": 1683.48300419328,
+          "lower_95pi": 1303.79609376435,
+          "upper_95pi": 2063.16991462221
+        },
+        "Right_Amygdala": {
+          "expected": 1782.27529959465,
+          "lower_95pi": 1360.28628003763,
+          "upper_95pi": 2204.26431915167
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_034",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3775.13888636817,
+          "lower_95pi": 3021.75831435767,
+          "upper_95pi": 4528.51945837867
+        },
+        "Right_Hippocampus": {
+          "expected": 3823.36999281476,
+          "lower_95pi": 3078.3846159616,
+          "upper_95pi": 4568.35536966793
+        },
+        "Left_Amygdala": {
+          "expected": 1459.38586595724,
+          "lower_95pi": 1080.47816618336,
+          "upper_95pi": 1838.29356573112
+        },
+        "Right_Amygdala": {
+          "expected": 1517.90603228601,
+          "lower_95pi": 1096.87203919377,
+          "upper_95pi": 1938.94002537825
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_035",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4103.66004934114,
+          "lower_95pi": 3351.30747895525,
+          "upper_95pi": 4856.01261972702
+        },
+        "Right_Hippocampus": {
+          "expected": 4209.43618641798,
+          "lower_95pi": 3464.79140558583,
+          "upper_95pi": 4954.08096725012
+        },
+        "Left_Amygdala": {
+          "expected": 1576.91071895092,
+          "lower_95pi": 1198.58996509996,
+          "upper_95pi": 1955.23147280189
+        },
+        "Right_Amygdala": {
+          "expected": 1632.4818416253,
+          "lower_95pi": 1211.64919721743,
+          "upper_95pi": 2053.31448603316
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_036",
+      "inputs": {
+        "age": 18.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4487.68839026511,
+          "lower_95pi": 3733.93452688626,
+          "upper_95pi": 5241.44225364396
+        },
+        "Right_Hippocampus": {
+          "expected": 4595.50238002119,
+          "lower_95pi": 3849.94851270135,
+          "upper_95pi": 5341.05624734103
+        },
+        "Left_Amygdala": {
+          "expected": 1716.90629913291,
+          "lower_95pi": 1337.91620663397,
+          "upper_95pi": 2095.89639163184
+        },
+        "Right_Amygdala": {
+          "expected": 1747.05765096458,
+          "lower_95pi": 1325.72329233135,
+          "upper_95pi": 2168.39200959782
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_037",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3736.18524076722,
+          "lower_95pi": 2981.25898236185,
+          "upper_95pi": 4491.11149917259
+        },
+        "Right_Hippocampus": {
+          "expected": 3739.52730599744,
+          "lower_95pi": 2993.45824104231,
+          "upper_95pi": 4485.59637095257
+        },
+        "Left_Amygdala": {
+          "expected": 1342.25333783273,
+          "lower_95pi": 962.01272551385,
+          "upper_95pi": 1722.49395015161
+        },
+        "Right_Amygdala": {
+          "expected": 1431.81649568892,
+          "lower_95pi": 1010.05642422273,
+          "upper_95pi": 1853.5765671551
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_038",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4100.23943689488,
+          "lower_95pi": 3347.40656909775,
+          "upper_95pi": 4853.072304692
+        },
+        "Right_Hippocampus": {
+          "expected": 4125.59349960066,
+          "lower_95pi": 3380.5108117809,
+          "upper_95pi": 4870.67618742041
+        },
+        "Left_Amygdala": {
+          "expected": 1475.42805555775,
+          "lower_95pi": 1096.9096471866,
+          "upper_95pi": 1853.9464639289
+        },
+        "Right_Amygdala": {
+          "expected": 1546.3923050282,
+          "lower_95pi": 1125.18658285099,
+          "upper_95pi": 1967.59802720541
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_039",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4519.80081097354,
+          "lower_95pi": 3766.22684803931,
+          "upper_95pi": 5273.37477390778
+        },
+        "Right_Hippocampus": {
+          "expected": 4511.65969320387,
+          "lower_95pi": 3766.31450119288,
+          "upper_95pi": 5257.00488521486
+        },
+        "Left_Amygdala": {
+          "expected": 1631.07350047107,
+          "lower_95pi": 1251.46429680245,
+          "upper_95pi": 2010.6827041397
+        },
+        "Right_Amygdala": {
+          "expected": 1660.96811436749,
+          "lower_95pi": 1239.61434517593,
+          "upper_95pi": 2082.32188355904
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_040",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3760.38345155607,
+          "lower_95pi": 3005.77880076439,
+          "upper_95pi": 4514.98810234776
+        },
+        "Right_Hippocampus": {
+          "expected": 3781.13261070117,
+          "lower_95pi": 3035.75771225752,
+          "upper_95pi": 4526.50750914482
+        },
+        "Left_Amygdala": {
+          "expected": 1367.93913183084,
+          "lower_95pi": 988.256206493873,
+          "upper_95pi": 1747.62205716781
+        },
+        "Right_Amygdala": {
+          "expected": 1392.90573443404,
+          "lower_95pi": 971.493888750151,
+          "upper_95pi": 1814.31758011793
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_041",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4124.43764768373,
+          "lower_95pi": 3372.63330656697,
+          "upper_95pi": 4876.24198880049
+        },
+        "Right_Hippocampus": {
+          "expected": 4167.19880430439,
+          "lower_95pi": 3423.1689404562,
+          "upper_95pi": 4911.22866815257
+        },
+        "Left_Amygdala": {
+          "expected": 1457.51355387965,
+          "lower_95pi": 1079.46557076772,
+          "upper_95pi": 1835.56153699158
+        },
+        "Right_Amygdala": {
+          "expected": 1507.48154377333,
+          "lower_95pi": 1086.8255427168,
+          "upper_95pi": 1928.13754482985
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_042",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4543.9990217624,
+          "lower_95pi": 3792.10502876068,
+          "upper_95pi": 5295.89301476411
+        },
+        "Right_Hippocampus": {
+          "expected": 4553.2649979076,
+          "lower_95pi": 3809.3300417955,
+          "upper_95pi": 5297.19995401971
+        },
+        "Left_Amygdala": {
+          "expected": 1569.55870311676,
+          "lower_95pi": 1191.39056424543,
+          "upper_95pi": 1947.72684198808
+        },
+        "Right_Amygdala": {
+          "expected": 1622.05735311261,
+          "lower_95pi": 1201.45417353301,
+          "upper_95pi": 2042.66053269221
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_043",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3602.08069335387,
+          "lower_95pi": 2847.60080082785,
+          "upper_95pi": 4356.56058587988
+        },
+        "Right_Hippocampus": {
+          "expected": 3641.00864911222,
+          "lower_95pi": 2895.56326269482,
+          "upper_95pi": 4386.45403552961
+        },
+        "Left_Amygdala": {
+          "expected": 1315.4324758612,
+          "lower_95pi": 936.354718883283,
+          "upper_95pi": 1694.51023283912
+        },
+        "Right_Amygdala": {
+          "expected": 1438.59369981561,
+          "lower_95pi": 1017.13751575224,
+          "upper_95pi": 1860.04988387898
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_044",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3966.13488948152,
+          "lower_95pi": 3214.09394332715,
+          "upper_95pi": 4718.1758356359
+        },
+        "Right_Hippocampus": {
+          "expected": 4027.07484271543,
+          "lower_95pi": 3282.75354419171,
+          "upper_95pi": 4771.39614123915
+        },
+        "Left_Amygdala": {
+          "expected": 1432.95732885489,
+          "lower_95pi": 1054.79954504647,
+          "upper_95pi": 1811.11511266331
+        },
+        "Right_Amygdala": {
+          "expected": 1553.16950915489,
+          "lower_95pi": 1132.34597517883,
+          "upper_95pi": 1973.99304313095
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_045",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4385.69626356019,
+          "lower_95pi": 3633.06377169832,
+          "upper_95pi": 5138.32875542206
+        },
+        "Right_Hippocampus": {
+          "expected": 4413.14103631865,
+          "lower_95pi": 3668.69382643699,
+          "upper_95pi": 5157.58824620031
+        },
+        "Left_Amygdala": {
+          "expected": 1572.95290903687,
+          "lower_95pi": 1194.45960437401,
+          "upper_95pi": 1951.44621369974
+        },
+        "Right_Amygdala": {
+          "expected": 1667.74531849418,
+          "lower_95pi": 1246.85149065112,
+          "upper_95pi": 2088.63914633724
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_046",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4139.39499136653,
+          "lower_95pi": 3384.50306765878,
+          "upper_95pi": 4894.28691507428
+        },
+        "Right_Hippocampus": {
+          "expected": 4120.79066961627,
+          "lower_95pi": 3374.15701452544,
+          "upper_95pi": 4867.42432470711
+        },
+        "Left_Amygdala": {
+          "expected": 1406.31174769913,
+          "lower_95pi": 1025.83909384469,
+          "upper_95pi": 1786.78440155356
+        },
+        "Right_Amygdala": {
+          "expected": 1557.36712234871,
+          "lower_95pi": 1135.28096033044,
+          "upper_95pi": 1979.45328436697
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_047",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4467.9161543395,
+          "lower_95pi": 3714.55991868016,
+          "upper_95pi": 5221.27238999884
+        },
+        "Right_Hippocampus": {
+          "expected": 4506.85686321949,
+          "lower_95pi": 3761.27048927637,
+          "upper_95pi": 5252.4432371626
+        },
+        "Left_Amygdala": {
+          "expected": 1539.48646542415,
+          "lower_95pi": 1160.70199696056,
+          "upper_95pi": 1918.27093388773
+        },
+        "Right_Amygdala": {
+          "expected": 1671.94293168799,
+          "lower_95pi": 1250.44207557456,
+          "upper_95pi": 2093.44378780143
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_048",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4851.94449526348,
+          "lower_95pi": 4097.9461350518,
+          "upper_95pi": 5605.94285547515
+        },
+        "Right_Hippocampus": {
+          "expected": 4892.9230568227,
+          "lower_95pi": 4147.13599025177,
+          "upper_95pi": 5638.71012339364
+        },
+        "Left_Amygdala": {
+          "expected": 1695.13191033747,
+          "lower_95pi": 1315.25354182633,
+          "upper_95pi": 2075.0102788486
+        },
+        "Right_Amygdala": {
+          "expected": 1786.51874102728,
+          "lower_95pi": 1364.9013183004,
+          "upper_95pi": 2208.13616375415
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_049",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4044.2197134558,
+          "lower_95pi": 3290.24085352818,
+          "upper_95pi": 4798.19857338343
+        },
+        "Right_Hippocampus": {
+          "expected": 3982.72767012813,
+          "lower_95pi": 3237.06901752813,
+          "upper_95pi": 4728.38632272813
+        },
+        "Left_Amygdala": {
+          "expected": 1510.30685533006,
+          "lower_95pi": 1130.63557662293,
+          "upper_95pi": 1889.97813403719
+        },
+        "Right_Amygdala": {
+          "expected": 1553.18376714316,
+          "lower_95pi": 1131.52542031792,
+          "upper_95pi": 1974.84211396841
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_050",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4372.74087642877,
+          "lower_95pi": 3620.39810843145,
+          "upper_95pi": 5125.0836444261
+        },
+        "Right_Hippocampus": {
+          "expected": 4368.79386373135,
+          "lower_95pi": 3624.24805613945,
+          "upper_95pi": 5113.33967132324
+        },
+        "Left_Amygdala": {
+          "expected": 1599.88127737886,
+          "lower_95pi": 1221.56550805813,
+          "upper_95pi": 1978.1970466996
+        },
+        "Right_Amygdala": {
+          "expected": 1667.75957648245,
+          "lower_95pi": 1246.74693446695,
+          "upper_95pi": 2088.77221849794
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_051",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4756.76921735275,
+          "lower_95pi": 4004.03152333436,
+          "upper_95pi": 5509.50691137114
+        },
+        "Right_Hippocampus": {
+          "expected": 4754.86005733456,
+          "lower_95pi": 4010.17745745217,
+          "upper_95pi": 5499.54265721695
+        },
+        "Left_Amygdala": {
+          "expected": 1711.92642661597,
+          "lower_95pi": 1333.2889012285,
+          "upper_95pi": 2090.56395200344
+        },
+        "Right_Amygdala": {
+          "expected": 1782.33538582173,
+          "lower_95pi": 1361.26583820308,
+          "upper_95pi": 2203.40493344039
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_052",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3874.00703949462,
+          "lower_95pi": 3121.16396715226,
+          "upper_95pi": 4626.85011183698
+        },
+        "Right_Hippocampus": {
+          "expected": 3939.37504567743,
+          "lower_95pi": 3194.81287234448,
+          "upper_95pi": 4683.93721901039
+        },
+        "Left_Amygdala": {
+          "expected": 1487.82928837993,
+          "lower_95pi": 1109.24411194531,
+          "upper_95pi": 1866.41446481454
+        },
+        "Right_Amygdala": {
+          "expected": 1517.9661185131,
+          "lower_95pi": 1097.01274063854,
+          "upper_95pi": 1938.91949638766
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_053",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4202.52820246759,
+          "lower_95pi": 3451.25378540052,
+          "upper_95pi": 4953.80261953466
+        },
+        "Right_Hippocampus": {
+          "expected": 4325.44123928065,
+          "lower_95pi": 3581.88532835743,
+          "upper_95pi": 5068.99715020387
+        },
+        "Left_Amygdala": {
+          "expected": 1605.35414137361,
+          "lower_95pi": 1227.58382892416,
+          "upper_95pi": 1983.12445382306
+        },
+        "Right_Amygdala": {
+          "expected": 1632.54192785238,
+          "lower_95pi": 1212.15278335705,
+          "upper_95pi": 2052.93107234771
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_054",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4586.55654339157,
+          "lower_95pi": 3834.56763821955,
+          "upper_95pi": 5338.54544856358
+        },
+        "Right_Hippocampus": {
+          "expected": 4711.50743288386,
+          "lower_95pi": 3967.70635938441,
+          "upper_95pi": 5455.30850638332
+        },
+        "Left_Amygdala": {
+          "expected": 1745.34972155559,
+          "lower_95pi": 1367.19679300075,
+          "upper_95pi": 2123.50265011044
+        },
+        "Right_Amygdala": {
+          "expected": 1747.11773719167,
+          "lower_95pi": 1326.58907564709,
+          "upper_95pi": 2167.64639873625
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_055",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3703.81038707404,
+          "lower_95pi": 2949.76454580273,
+          "upper_95pi": 4457.85622834536
+        },
+        "Right_Hippocampus": {
+          "expected": 3712.02103973918,
+          "lower_95pi": 2966.81775908496,
+          "upper_95pi": 4457.2243203934
+        },
+        "Left_Amygdala": {
+          "expected": 1250.27480911446,
+          "lower_95pi": 870.486762657747,
+          "upper_95pi": 1630.06285557117
+        },
+        "Right_Amygdala": {
+          "expected": 1330.44612181297,
+          "lower_95pi": 909.139371242226,
+          "upper_95pi": 1751.75287238372
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_056",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4067.8645832017,
+          "lower_95pi": 3315.03568401066,
+          "upper_95pi": 4820.69348239274
+        },
+        "Right_Hippocampus": {
+          "expected": 4098.0872333424,
+          "lower_95pi": 3353.0127873198,
+          "upper_95pi": 4843.16167936499
+        },
+        "Left_Amygdala": {
+          "expected": 1383.44952683948,
+          "lower_95pi": 1004.92976180894,
+          "upper_95pi": 1761.96929187002
+        },
+        "Right_Amygdala": {
+          "expected": 1445.02193115226,
+          "lower_95pi": 1023.78812942621,
+          "upper_95pi": 1866.2557328783
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_057",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4487.42595728037,
+          "lower_95pi": 3732.91738356017,
+          "upper_95pi": 5241.93453100057
+        },
+        "Right_Hippocampus": {
+          "expected": 4484.15342694561,
+          "lower_95pi": 3737.95907404991,
+          "upper_95pi": 5230.34777984131
+        },
+        "Left_Amygdala": {
+          "expected": 1539.0949717528,
+          "lower_95pi": 1158.99393451587,
+          "upper_95pi": 1919.19600898973
+        },
+        "Right_Amygdala": {
+          "expected": 1559.59774049154,
+          "lower_95pi": 1137.73462375565,
+          "upper_95pi": 1981.46085722743
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_058",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3728.0085978629,
+          "lower_95pi": 2974.47370317249,
+          "upper_95pi": 4481.5434925533
+        },
+        "Right_Hippocampus": {
+          "expected": 3753.62634444291,
+          "lower_95pi": 3009.28030556763,
+          "upper_95pi": 4497.97238331819
+        },
+        "Left_Amygdala": {
+          "expected": 1275.96060311257,
+          "lower_95pi": 896.749981995762,
+          "upper_95pi": 1655.17122422938
+        },
+        "Right_Amygdala": {
+          "expected": 1291.53536055809,
+          "lower_95pi": 870.70182236942,
+          "upper_95pi": 1712.36889874677
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_059",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4092.06279399055,
+          "lower_95pi": 3340.45187379677,
+          "upper_95pi": 4843.67371418434
+        },
+        "Right_Hippocampus": {
+          "expected": 4139.69253804613,
+          "lower_95pi": 3395.83330185304,
+          "upper_95pi": 4883.55177423921
+        },
+        "Left_Amygdala": {
+          "expected": 1365.53502516138,
+          "lower_95pi": 987.571569958104,
+          "upper_95pi": 1743.49848036465
+        },
+        "Right_Amygdala": {
+          "expected": 1406.11116989738,
+          "lower_95pi": 985.551745398299,
+          "upper_95pi": 1826.67059439646
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_060",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4511.62416806922,
+          "lower_95pi": 3758.98266620532,
+          "upper_95pi": 5264.26566993312
+        },
+        "Right_Hippocampus": {
+          "expected": 4525.75873164934,
+          "lower_95pi": 3781.13521435372,
+          "upper_95pi": 5270.38224894496
+        },
+        "Left_Amygdala": {
+          "expected": 1477.58017439848,
+          "lower_95pi": 1099.0707351001,
+          "upper_95pi": 1856.08961369686
+        },
+        "Right_Amygdala": {
+          "expected": 1520.68697923667,
+          "lower_95pi": 1099.69810989326,
+          "upper_95pi": 1941.67584858007
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_061",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3569.70583966069,
+          "lower_95pi": 2816.2077930613,
+          "upper_95pi": 4323.20388626008
+        },
+        "Right_Hippocampus": {
+          "expected": 3613.50238285395,
+          "lower_95pi": 2869.00454626529,
+          "upper_95pi": 4358.00021944262
+        },
+        "Left_Amygdala": {
+          "expected": 1223.45394714293,
+          "lower_95pi": 844.841023798339,
+          "upper_95pi": 1602.06687048752
+        },
+        "Right_Amygdala": {
+          "expected": 1337.22332593966,
+          "lower_95pi": 916.307616288269,
+          "upper_95pi": 1758.13903559106
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_062",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3933.76003578835,
+          "lower_95pi": 3181.82417934266,
+          "upper_95pi": 4685.69589223403
+        },
+        "Right_Hippocampus": {
+          "expected": 3999.56857645717,
+          "lower_95pi": 3255.33659743274,
+          "upper_95pi": 4743.8005554816
+        },
+        "Left_Amygdala": {
+          "expected": 1340.97880013661,
+          "lower_95pi": 962.87335138603,
+          "upper_95pi": 1719.0842488872
+        },
+        "Right_Amygdala": {
+          "expected": 1451.79913527895,
+          "lower_95pi": 1031.03435369354,
+          "upper_95pi": 1872.56391686435
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_063",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4353.32140986701,
+          "lower_95pi": 3599.85405098179,
+          "upper_95pi": 5106.78876875224
+        },
+        "Right_Hippocampus": {
+          "expected": 4385.63477006039,
+          "lower_95pi": 3640.41833835779,
+          "upper_95pi": 5130.85120176298
+        },
+        "Left_Amygdala": {
+          "expected": 1480.9743803186,
+          "lower_95pi": 1102.08408285245,
+          "upper_95pi": 1859.86467778475
+        },
+        "Right_Amygdala": {
+          "expected": 1566.37494461823,
+          "lower_95pi": 1145.05795692449,
+          "upper_95pi": 1987.69193231198
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_064",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4107.02013767336,
+          "lower_95pi": 3352.97949954597,
+          "upper_95pi": 4861.06077580074
+        },
+        "Right_Hippocampus": {
+          "expected": 4093.28440335801,
+          "lower_95pi": 3347.55203677428,
+          "upper_95pi": 4839.01676994174
+        },
+        "Left_Amygdala": {
+          "expected": 1314.33321898085,
+          "lower_95pi": 934.333647668308,
+          "upper_95pi": 1694.3327902934
+        },
+        "Right_Amygdala": {
+          "expected": 1455.99674847276,
+          "lower_95pi": 1034.41037259801,
+          "upper_95pi": 1877.58312434751
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_065",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4435.54130064632,
+          "lower_95pi": 3682.24023858451,
+          "upper_95pi": 5188.84236270814
+        },
+        "Right_Hippocampus": {
+          "expected": 4479.35059696122,
+          "lower_95pi": 3733.80862813702,
+          "upper_95pi": 5224.89256578543
+        },
+        "Left_Amygdala": {
+          "expected": 1447.50793670587,
+          "lower_95pi": 1068.74297332607,
+          "upper_95pi": 1826.27290008568
+        },
+        "Right_Amygdala": {
+          "expected": 1570.57255781205,
+          "lower_95pi": 1149.09046923805,
+          "upper_95pi": 1992.05464638604
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_066",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4819.5696415703,
+          "lower_95pi": 4064.7685416789,
+          "upper_95pi": 5574.3707414617
+        },
+        "Right_Hippocampus": {
+          "expected": 4865.41679056444,
+          "lower_95pi": 4118.81718331468,
+          "upper_95pi": 5612.0163978142
+        },
+        "Left_Amygdala": {
+          "expected": 1603.15338161919,
+          "lower_95pi": 1222.80430149245,
+          "upper_95pi": 1983.50246174594
+        },
+        "Right_Amygdala": {
+          "expected": 1685.14836715133,
+          "lower_95pi": 1263.06867614544,
+          "upper_95pi": 2107.22805815723
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_067",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4011.84485976263,
+          "lower_95pi": 3258.53983704005,
+          "upper_95pi": 4765.14988248521
+        },
+        "Right_Hippocampus": {
+          "expected": 3955.22140386987,
+          "lower_95pi": 3210.29382860127,
+          "upper_95pi": 4700.14897913847
+        },
+        "Left_Amygdala": {
+          "expected": 1418.32832661179,
+          "lower_95pi": 1038.98833408925,
+          "upper_95pi": 1797.66831913432
+        },
+        "Right_Amygdala": {
+          "expected": 1451.81339326722,
+          "lower_95pi": 1030.60351627157,
+          "upper_95pi": 1873.02327026287
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_068",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4340.3660227356,
+          "lower_95pi": 3587.89982321068,
+          "upper_95pi": 5092.83222226052
+        },
+        "Right_Hippocampus": {
+          "expected": 4341.28759747308,
+          "lower_95pi": 3596.61480730726,
+          "upper_95pi": 5085.9603876389
+        },
+        "Left_Amygdala": {
+          "expected": 1507.90274866059,
+          "lower_95pi": 1129.53005418135,
+          "upper_95pi": 1886.27544313983
+        },
+        "Right_Amygdala": {
+          "expected": 1566.3892026065,
+          "lower_95pi": 1145.34350568443,
+          "upper_95pi": 1987.43489952858
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_069",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4724.39436365958,
+          "lower_95pi": 3970.67420487089,
+          "upper_95pi": 5478.11452244826
+        },
+        "Right_Hippocampus": {
+          "expected": 4727.3537910763,
+          "lower_95pi": 3981.68622574263,
+          "upper_95pi": 5473.02135640996
+        },
+        "Left_Amygdala": {
+          "expected": 1619.9478978977,
+          "lower_95pi": 1240.82838021408,
+          "upper_95pi": 1999.06741558131
+        },
+        "Right_Amygdala": {
+          "expected": 1680.96501194579,
+          "lower_95pi": 1259.38081724687,
+          "upper_95pi": 2102.54920664471
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_070",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3841.63218580144,
+          "lower_95pi": 3089.50073435884,
+          "upper_95pi": 4593.76363724405
+        },
+        "Right_Hippocampus": {
+          "expected": 3911.86877941917,
+          "lower_95pi": 3168.07096161533,
+          "upper_95pi": 4655.66659722302
+        },
+        "Left_Amygdala": {
+          "expected": 1395.85075966165,
+          "lower_95pi": 1017.63557628907,
+          "upper_95pi": 1774.06594303423
+        },
+        "Right_Amygdala": {
+          "expected": 1416.59574463715,
+          "lower_95pi": 996.07719736942,
+          "upper_95pi": 1837.11429190488
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_071",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4170.15334877441,
+          "lower_95pi": 3418.79212855938,
+          "upper_95pi": 4921.51456898944
+        },
+        "Right_Hippocampus": {
+          "expected": 4297.93497302239,
+          "lower_95pi": 3554.28411738333,
+          "upper_95pi": 5041.58582866145
+        },
+        "Left_Amygdala": {
+          "expected": 1513.37561265534,
+          "lower_95pi": 1135.56214132651,
+          "upper_95pi": 1891.18908398417
+        },
+        "Right_Amygdala": {
+          "expected": 1531.17155397644,
+          "lower_95pi": 1110.73491167452,
+          "upper_95pi": 1951.60819627836
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_072",
+      "inputs": {
+        "age": 40.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4554.18168969839,
+          "lower_95pi": 3801.2460696723,
+          "upper_95pi": 5307.11730972449
+        },
+        "Right_Hippocampus": {
+          "expected": 4684.0011666256,
+          "lower_95pi": 3939.24612100647,
+          "upper_95pi": 5428.75621224473
+        },
+        "Left_Amygdala": {
+          "expected": 1653.37119283732,
+          "lower_95pi": 1274.72557693324,
+          "upper_95pi": 2032.0168087414
+        },
+        "Right_Amygdala": {
+          "expected": 1645.74736331572,
+          "lower_95pi": 1224.68902093369,
+          "upper_95pi": 2066.80570569776
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_073",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3552.00130927431,
+          "lower_95pi": 2797.37282960832,
+          "upper_95pi": 4306.6297889403
+        },
+        "Right_Hippocampus": {
+          "expected": 3589.16660902744,
+          "lower_95pi": 2843.55970130881,
+          "upper_95pi": 4334.77351674606
+        },
+        "Left_Amygdala": {
+          "expected": 1294.05006945919,
+          "lower_95pi": 914.010282387646,
+          "upper_95pi": 1674.08985653073
+        },
+        "Right_Amygdala": {
+          "expected": 1407.50283366877,
+          "lower_95pi": 985.976260230137,
+          "upper_95pi": 1829.0294071074
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_074",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3916.05550540197,
+          "lower_95pi": 3163.65576895671,
+          "upper_95pi": 4668.45524184722
+        },
+        "Right_Hippocampus": {
+          "expected": 3975.23280263065,
+          "lower_95pi": 3230.57550231698,
+          "upper_95pi": 4719.89010294432
+        },
+        "Left_Amygdala": {
+          "expected": 1427.22478718421,
+          "lower_95pi": 1048.92269791164,
+          "upper_95pi": 1805.52687645678
+        },
+        "Right_Amygdala": {
+          "expected": 1522.07864300805,
+          "lower_95pi": 1101.09235393631,
+          "upper_95pi": 1943.0649320798
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_075",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4335.61687948064,
+          "lower_95pi": 3582.42037983964,
+          "upper_95pi": 5088.81337912163
+        },
+        "Right_Hippocampus": {
+          "expected": 4361.29899623387,
+          "lower_95pi": 3616.34167494447,
+          "upper_95pi": 5106.25631752326
+        },
+        "Left_Amygdala": {
+          "expected": 1582.87023209753,
+          "lower_95pi": 1203.43832204871,
+          "upper_95pi": 1962.30214214635
+        },
+        "Right_Amygdala": {
+          "expected": 1636.65445234734,
+          "lower_95pi": 1215.50567226681,
+          "upper_95pi": 2057.80323242787
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_076",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3576.19952006317,
+          "lower_95pi": 2821.51916023843,
+          "upper_95pi": 4330.8798798879
+        },
+        "Right_Hippocampus": {
+          "expected": 3630.77191373117,
+          "lower_95pi": 2885.48384664142,
+          "upper_95pi": 4376.05998082091
+        },
+        "Left_Amygdala": {
+          "expected": 1319.7358634573,
+          "lower_95pi": 940.165719784245,
+          "upper_95pi": 1699.30600713036
+        },
+        "Right_Amygdala": {
+          "expected": 1368.59207241389,
+          "lower_95pi": 947.233448461958,
+          "upper_95pi": 1789.95069636582
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_077",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3940.25371619082,
+          "lower_95pi": 3188.50802534522,
+          "upper_95pi": 4691.99940703642
+        },
+        "Right_Hippocampus": {
+          "expected": 4016.83810733438,
+          "lower_95pi": 3272.857815874,
+          "upper_95pi": 4760.81839879476
+        },
+        "Left_Amygdala": {
+          "expected": 1409.31028550611,
+          "lower_95pi": 1031.31124249348,
+          "upper_95pi": 1787.30932851874
+        },
+        "Right_Amygdala": {
+          "expected": 1483.16788175318,
+          "lower_95pi": 1062.55081305452,
+          "upper_95pi": 1903.78495045184
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_078",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4359.81509026949,
+          "lower_95pi": 3607.92440274451,
+          "upper_95pi": 5111.70577779447
+        },
+        "Right_Hippocampus": {
+          "expected": 4402.9043009376,
+          "lower_95pi": 3658.98150469052,
+          "upper_95pi": 5146.82709718467
+        },
+        "Left_Amygdala": {
+          "expected": 1521.35543474321,
+          "lower_95pi": 1143.1188132236,
+          "upper_95pi": 1899.59205626283
+        },
+        "Right_Amygdala": {
+          "expected": 1597.74369109246,
+          "lower_95pi": 1177.16506242943,
+          "upper_95pi": 2018.3223197555
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_079",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3417.89676186096,
+          "lower_95pi": 2663.53871204238,
+          "upper_95pi": 4172.25481167954
+        },
+        "Right_Hippocampus": {
+          "expected": 3490.64795214221,
+          "lower_95pi": 2745.48623699208,
+          "upper_95pi": 4235.80966729234
+        },
+        "Left_Amygdala": {
+          "expected": 1267.22920748766,
+          "lower_95pi": 888.21894013059,
+          "upper_95pi": 1646.23947484473
+        },
+        "Right_Amygdala": {
+          "expected": 1414.28003779546,
+          "lower_95pi": 992.99932917005,
+          "upper_95pi": 1835.56074642087
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_080",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3781.95095798862,
+          "lower_95pi": 3030.16688415693,
+          "upper_95pi": 4533.7350318203
+        },
+        "Right_Hippocampus": {
+          "expected": 3876.71414574542,
+          "lower_95pi": 3132.63953584561,
+          "upper_95pi": 4620.78875564524
+        },
+        "Left_Amygdala": {
+          "expected": 1384.75406048135,
+          "lower_95pi": 1006.72381343098,
+          "upper_95pi": 1762.78430753171
+        },
+        "Right_Amygdala": {
+          "expected": 1528.85584713475,
+          "lower_95pi": 1108.19366903623,
+          "upper_95pi": 1949.51802523326
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_081",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4201.51233206728,
+          "lower_95pi": 3449.081212514,
+          "upper_95pi": 4953.94345162056
+        },
+        "Right_Hippocampus": {
+          "expected": 4262.78033934864,
+          "lower_95pi": 3518.54237335312,
+          "upper_95pi": 5007.01830534416
+        },
+        "Left_Amygdala": {
+          "expected": 1524.74964066333,
+          "lower_95pi": 1146.39050701137,
+          "upper_95pi": 1903.10877431529
+        },
+        "Right_Amygdala": {
+          "expected": 1643.43165647403,
+          "lower_95pi": 1222.684776972,
+          "upper_95pi": 2064.17853597606
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_082",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3955.21105987362,
+          "lower_95pi": 3200.40949933828,
+          "upper_95pi": 4710.01262040897
+        },
+        "Right_Hippocampus": {
+          "expected": 3970.42997264626,
+          "lower_95pi": 3223.94509778163,
+          "upper_95pi": 4716.9148475109
+        },
+        "Left_Amygdala": {
+          "expected": 1358.10847932558,
+          "lower_95pi": 977.674623195856,
+          "upper_95pi": 1738.54233545531
+        },
+        "Right_Amygdala": {
+          "expected": 1533.05346032856,
+          "lower_95pi": 1111.05333306906,
+          "upper_95pi": 1955.05358758806
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_083",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4283.73222284659,
+          "lower_95pi": 3530.49351733116,
+          "upper_95pi": 5036.97092836203
+        },
+        "Right_Hippocampus": {
+          "expected": 4356.49616624948,
+          "lower_95pi": 3611.02144061216,
+          "upper_95pi": 5101.9708918868
+        },
+        "Left_Amygdala": {
+          "expected": 1491.2831970506,
+          "lower_95pi": 1112.55226237619,
+          "upper_95pi": 1870.01413172502
+        },
+        "Right_Amygdala": {
+          "expected": 1647.62926966784,
+          "lower_95pi": 1226.20021050853,
+          "upper_95pi": 2069.05832882716
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_084",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4667.76056377057,
+          "lower_95pi": 3913.71714972093,
+          "upper_95pi": 5421.80397782022
+        },
+        "Right_Hippocampus": {
+          "expected": 4742.56235985269,
+          "lower_95pi": 3996.84958251419,
+          "upper_95pi": 5488.2751371912
+        },
+        "Left_Amygdala": {
+          "expected": 1646.92864196393,
+          "lower_95pi": 1267.06529314753,
+          "upper_95pi": 2026.79199078032
+        },
+        "Right_Amygdala": {
+          "expected": 1762.20507900713,
+          "lower_95pi": 1340.64508054164,
+          "upper_95pi": 2183.76507747262
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_085",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3860.0357819629,
+          "lower_95pi": 3106.07140374002,
+          "upper_95pi": 4614.00016018578
+        },
+        "Right_Hippocampus": {
+          "expected": 3832.36697315812,
+          "lower_95pi": 3086.7447120139,
+          "upper_95pi": 4577.98923430234
+        },
+        "Left_Amygdala": {
+          "expected": 1462.10358695652,
+          "lower_95pi": 1082.51919754938,
+          "upper_95pi": 1841.68797636365
+        },
+        "Right_Amygdala": {
+          "expected": 1528.87010512301,
+          "lower_95pi": 1107.27053912777,
+          "upper_95pi": 1950.46967111826
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_086",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4188.55694493587,
+          "lower_95pi": 3436.25570650708,
+          "upper_95pi": 4940.85818336466
+        },
+        "Right_Hippocampus": {
+          "expected": 4218.43316676134,
+          "lower_95pi": 3473.88641753314,
+          "upper_95pi": 4962.97991598953
+        },
+        "Left_Amygdala": {
+          "expected": 1551.67800900532,
+          "lower_95pi": 1173.38516089536,
+          "upper_95pi": 1929.97085711528
+        },
+        "Right_Amygdala": {
+          "expected": 1643.4459144623,
+          "lower_95pi": 1222.47777042208,
+          "upper_95pi": 2064.41405850252
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_087",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4572.58528585985,
+          "lower_95pi": 3819.72636005121,
+          "upper_95pi": 5325.44421166848
+        },
+        "Right_Hippocampus": {
+          "expected": 4604.49936036455,
+          "lower_95pi": 3859.77844027554,
+          "upper_95pi": 5349.22028045357
+        },
+        "Left_Amygdala": {
+          "expected": 1663.72315824243,
+          "lower_95pi": 1284.99128096821,
+          "upper_95pi": 2042.45503551665
+        },
+        "Right_Amygdala": {
+          "expected": 1758.02172380159,
+          "lower_95pi": 1336.98229755816,
+          "upper_95pi": 2179.06115004501
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_088",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3689.82310800171,
+          "lower_95pi": 2937.03466370568,
+          "upper_95pi": 4442.61155229774
+        },
+        "Right_Hippocampus": {
+          "expected": 3789.01434870743,
+          "lower_95pi": 3044.55913881271,
+          "upper_95pi": 4533.46955860215
+        },
+        "Left_Amygdala": {
+          "expected": 1439.62602000638,
+          "lower_95pi": 1061.01882532028,
+          "upper_95pi": 1818.23321469249
+        },
+        "Right_Amygdala": {
+          "expected": 1493.65245649295,
+          "lower_95pi": 1072.77146274245,
+          "upper_95pi": 1914.53345024344
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_089",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4018.34427097468,
+          "lower_95pi": 3267.15165226522,
+          "upper_95pi": 4769.53688968414
+        },
+        "Right_Hippocampus": {
+          "expected": 4175.08054231064,
+          "lower_95pi": 3431.59429878155,
+          "upper_95pi": 4918.56678583973
+        },
+        "Left_Amygdala": {
+          "expected": 1557.15087300007,
+          "lower_95pi": 1179.41842493185,
+          "upper_95pi": 1934.88332106829
+        },
+        "Right_Amygdala": {
+          "expected": 1608.22826583223,
+          "lower_95pi": 1187.89720782469,
+          "upper_95pi": 2028.55932383978
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_090",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4402.37261189866,
+          "lower_95pi": 3650.30251705649,
+          "upper_95pi": 5154.44270674083
+        },
+        "Right_Hippocampus": {
+          "expected": 4561.14673591386,
+          "lower_95pi": 3817.37788025095,
+          "upper_95pi": 5304.91559157676
+        },
+        "Left_Amygdala": {
+          "expected": 1697.14645318205,
+          "lower_95pi": 1319.03810251622,
+          "upper_95pi": 2075.25480384789
+        },
+        "Right_Amygdala": {
+          "expected": 1722.80407517152,
+          "lower_95pi": 1302.31909130584,
+          "upper_95pi": 2143.2890590372
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_091",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3561.88308485469,
+          "lower_95pi": 2808.22339816404,
+          "upper_95pi": 4315.54277154535
+        },
+        "Right_Hippocampus": {
+          "expected": 3603.77027556863,
+          "lower_95pi": 2858.97977335028,
+          "upper_95pi": 4348.56077778698
+        },
+        "Left_Amygdala": {
+          "expected": 1214.41292926638,
+          "lower_95pi": 834.7811914728,
+          "upper_95pi": 1594.04466705995
+        },
+        "Right_Amygdala": {
+          "expected": 1306.13245979282,
+          "lower_95pi": 885.098410373784,
+          "upper_95pi": 1727.16650921186
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_092",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3925.93728098235,
+          "lower_95pi": 3173.49290410445,
+          "upper_95pi": 4678.38165786024
+        },
+        "Right_Hippocampus": {
+          "expected": 3989.83646917184,
+          "lower_95pi": 3245.15508352289,
+          "upper_95pi": 4734.51785482079
+        },
+        "Left_Amygdala": {
+          "expected": 1347.5876469914,
+          "lower_95pi": 969.262320132754,
+          "upper_95pi": 1725.91297385004
+        },
+        "Right_Amygdala": {
+          "expected": 1420.70826913211,
+          "lower_95pi": 999.732843043943,
+          "upper_95pi": 1841.68369522027
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_093",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4345.49865506101,
+          "lower_95pi": 3591.36023505993,
+          "upper_95pi": 5099.6370750621
+        },
+        "Right_Hippocampus": {
+          "expected": 4375.90266277506,
+          "lower_95pi": 3630.08102080634,
+          "upper_95pi": 5121.72430474378
+        },
+        "Left_Amygdala": {
+          "expected": 1503.23309190472,
+          "lower_95pi": 1123.37283580878,
+          "upper_95pi": 1883.09334800066
+        },
+        "Right_Amygdala": {
+          "expected": 1535.28407847139,
+          "lower_95pi": 1113.66460089063,
+          "upper_95pi": 1956.90355605216
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_094",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3586.08129564355,
+          "lower_95pi": 2832.66839460828,
+          "upper_95pi": 4339.49419667882
+        },
+        "Right_Hippocampus": {
+          "expected": 3645.37558027236,
+          "lower_95pi": 2901.17103537612,
+          "upper_95pi": 4389.5801251686
+        },
+        "Left_Amygdala": {
+          "expected": 1240.09872326449,
+          "lower_95pi": 861.035231263682,
+          "upper_95pi": 1619.16221526529
+        },
+        "Right_Amygdala": {
+          "expected": 1267.22169853795,
+          "lower_95pi": 846.480434074464,
+          "upper_95pi": 1687.96296300143
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_095",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3950.1354917712,
+          "lower_95pi": 3198.64461789532,
+          "upper_95pi": 4701.62636564708
+        },
+        "Right_Hippocampus": {
+          "expected": 4031.44177387557,
+          "lower_95pi": 3287.70430968275,
+          "upper_95pi": 4775.1792380684
+        },
+        "Left_Amygdala": {
+          "expected": 1329.67314531329,
+          "lower_95pi": 951.783826483102,
+          "upper_95pi": 1707.56246414349
+        },
+        "Right_Amygdala": {
+          "expected": 1381.79750787723,
+          "lower_95pi": 961.316027604021,
+          "upper_95pi": 1802.27898815044
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_096",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4369.69686584987,
+          "lower_95pi": 3617.16170497125,
+          "upper_95pi": 5122.23202672849
+        },
+        "Right_Hippocampus": {
+          "expected": 4417.50796747879,
+          "lower_95pi": 3672.98630345333,
+          "upper_95pi": 5162.02963150425
+        },
+        "Left_Amygdala": {
+          "expected": 1441.7182945504,
+          "lower_95pi": 1063.21926101791,
+          "upper_95pi": 1820.21732808289
+        },
+        "Right_Amygdala": {
+          "expected": 1496.37331721652,
+          "lower_95pi": 1075.44793809498,
+          "upper_95pi": 1917.29869633806
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_097",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3427.77853744134,
+          "lower_95pi": 2674.6334231031,
+          "upper_95pi": 4180.92365177958
+        },
+        "Right_Hippocampus": {
+          "expected": 3505.2516186834,
+          "lower_95pi": 2761.12536528179,
+          "upper_95pi": 4249.37787208501
+        },
+        "Left_Amygdala": {
+          "expected": 1187.59206729485,
+          "lower_95pi": 809.151990992105,
+          "upper_95pi": 1566.03214359759
+        },
+        "Right_Amygdala": {
+          "expected": 1312.90966391951,
+          "lower_95pi": 892.208637693085,
+          "upper_95pi": 1733.61069014594
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_098",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3791.83273356899,
+          "lower_95pi": 3040.24828358014,
+          "upper_95pi": 4543.41718355785
+        },
+        "Right_Hippocampus": {
+          "expected": 3891.31781228662,
+          "lower_95pi": 3147.43773845868,
+          "upper_95pi": 4635.19788611456
+        },
+        "Left_Amygdala": {
+          "expected": 1305.11692028853,
+          "lower_95pi": 927.19076652515,
+          "upper_95pi": 1683.04307405192
+        },
+        "Right_Amygdala": {
+          "expected": 1427.4854732588,
+          "lower_95pi": 1006.92106532695,
+          "upper_95pi": 1848.04988119065
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_099",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4211.39410764766,
+          "lower_95pi": 3458.26391038539,
+          "upper_95pi": 4964.52430490993
+        },
+        "Right_Hippocampus": {
+          "expected": 4277.38400588983,
+          "lower_95pi": 3532.49923021341,
+          "upper_95pi": 5022.26878156625
+        },
+        "Left_Amygdala": {
+          "expected": 1445.11250047052,
+          "lower_95pi": 1066.41705892664,
+          "upper_95pi": 1823.80794201439
+        },
+        "Right_Amygdala": {
+          "expected": 1542.06128259809,
+          "lower_95pi": 1120.93003835752,
+          "upper_95pi": 1963.19252683865
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_100",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3965.092835454,
+          "lower_95pi": 3211.2667065374,
+          "upper_95pi": 4718.91896437061
+        },
+        "Right_Hippocampus": {
+          "expected": 3985.03363918746,
+          "lower_95pi": 3239.51951788758,
+          "upper_95pi": 4730.54776048733
+        },
+        "Left_Amygdala": {
+          "expected": 1278.47133913277,
+          "lower_95pi": 898.521526471395,
+          "upper_95pi": 1658.42115179415
+        },
+        "Right_Amygdala": {
+          "expected": 1431.68308645261,
+          "lower_95pi": 1010.22175960885,
+          "upper_95pi": 1853.14441329637
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_101",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4293.61399842697,
+          "lower_95pi": 3540.49855554712,
+          "upper_95pi": 5046.72944130682
+        },
+        "Right_Hippocampus": {
+          "expected": 4371.09983279067,
+          "lower_95pi": 3625.7563931036,
+          "upper_95pi": 5116.44327247774
+        },
+        "Left_Amygdala": {
+          "expected": 1411.64605685779,
+          "lower_95pi": 1032.96858493352,
+          "upper_95pi": 1790.32352878206
+        },
+        "Right_Amygdala": {
+          "expected": 1546.2588957919,
+          "lower_95pi": 1124.88752793427,
+          "upper_95pi": 1967.63026364953
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_102",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4677.64233935095,
+          "lower_95pi": 3922.9861953083,
+          "upper_95pi": 5432.2984833936
+        },
+        "Right_Hippocampus": {
+          "expected": 4757.16602639389,
+          "lower_95pi": 4010.74492361672,
+          "upper_95pi": 5503.58712917106
+        },
+        "Left_Amygdala": {
+          "expected": 1567.29150177111,
+          "lower_95pi": 1187.07665692563,
+          "upper_95pi": 1947.5063466166
+        },
+        "Right_Amygdala": {
+          "expected": 1660.83470513118,
+          "lower_95pi": 1238.85123960088,
+          "upper_95pi": 2082.81817066149
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_103",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3869.91755754328,
+          "lower_95pi": 3116.823800258,
+          "upper_95pi": 4623.01131482856
+        },
+        "Right_Hippocampus": {
+          "expected": 3846.97063969931,
+          "lower_95pi": 3102.22850630641,
+          "upper_95pi": 4591.71277309222
+        },
+        "Left_Amygdala": {
+          "expected": 1382.4664467637,
+          "lower_95pi": 1003.29951458436,
+          "upper_95pi": 1761.63337894305
+        },
+        "Right_Amygdala": {
+          "expected": 1427.49973124707,
+          "lower_95pi": 1006.38764220113,
+          "upper_95pi": 1848.61182029301
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_104",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4198.43872051625,
+          "lower_95pi": 3446.15488914588,
+          "upper_95pi": 4950.72255188661
+        },
+        "Right_Hippocampus": {
+          "expected": 4233.03683330253,
+          "lower_95pi": 3488.52975436525,
+          "upper_95pi": 4977.54391223981
+        },
+        "Left_Amygdala": {
+          "expected": 1472.04086881251,
+          "lower_95pi": 1093.76827335326,
+          "upper_95pi": 1850.31346427176
+        },
+        "Right_Amygdala": {
+          "expected": 1542.07554058636,
+          "lower_95pi": 1121.11329653309,
+          "upper_95pi": 1963.03778463962
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_105",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4582.46706144022,
+          "lower_95pi": 3828.88861534344,
+          "upper_95pi": 5336.04550753701
+        },
+        "Right_Hippocampus": {
+          "expected": 4619.10302690575,
+          "lower_95pi": 3873.58118451322,
+          "upper_95pi": 5364.62486929827
+        },
+        "Left_Amygdala": {
+          "expected": 1584.08601804962,
+          "lower_95pi": 1205.00287655298,
+          "upper_95pi": 1963.16915954626
+        },
+        "Right_Amygdala": {
+          "expected": 1656.65134992564,
+          "lower_95pi": 1235.13614711378,
+          "upper_95pi": 2078.1665527375
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_106",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3699.70488358209,
+          "lower_95pi": 2947.76793853606,
+          "upper_95pi": 4451.64182862812
+        },
+        "Right_Hippocampus": {
+          "expected": 3803.61801524862,
+          "lower_95pi": 3060.01026339103,
+          "upper_95pi": 4547.22576710621
+        },
+        "Left_Amygdala": {
+          "expected": 1359.98887981357,
+          "lower_95pi": 981.851426075976,
+          "upper_95pi": 1738.12633355117
+        },
+        "Right_Amygdala": {
+          "expected": 1392.282082617,
+          "lower_95pi": 971.875004162641,
+          "upper_95pi": 1812.68916107136
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_107",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4028.22604655506,
+          "lower_95pi": 3277.03035711733,
+          "upper_95pi": 4779.42173599279
+        },
+        "Right_Hippocampus": {
+          "expected": 4189.68420885183,
+          "lower_95pi": 3446.20363528924,
+          "upper_95pi": 4933.16478241442
+        },
+        "Left_Amygdala": {
+          "expected": 1477.51373280726,
+          "lower_95pi": 1099.78429286624,
+          "upper_95pi": 1855.24317274827
+        },
+        "Right_Amygdala": {
+          "expected": 1506.85789195629,
+          "lower_95pi": 1086.51834567459,
+          "upper_95pi": 1927.19743823799
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_108",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4412.25438747904,
+          "lower_95pi": 3659.4435588944,
+          "upper_95pi": 5165.06521606368
+        },
+        "Right_Hippocampus": {
+          "expected": 4575.75040245505,
+          "lower_95pi": 3831.14559487809,
+          "upper_95pi": 5320.35521003201
+        },
+        "Left_Amygdala": {
+          "expected": 1617.50931298924,
+          "lower_95pi": 1238.96348256364,
+          "upper_95pi": 1996.05514341484
+        },
+        "Right_Amygdala": {
+          "expected": 1621.43370129558,
+          "lower_95pi": 1200.45793877769,
+          "upper_95pi": 2042.40946381346
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_109",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2302.58788307784,
+          "lower_95pi": 1535.91317881299,
+          "upper_95pi": 3069.26258734268
+        },
+        "Right_Hippocampus": {
+          "expected": 2318.52980081812,
+          "lower_95pi": 1561.20678070848,
+          "upper_95pi": 3075.85282092776
+        },
+        "Left_Amygdala": {
+          "expected": 911.953412564405,
+          "lower_95pi": 526.029366679337,
+          "upper_95pi": 1297.87745844947
+        },
+        "Right_Amygdala": {
+          "expected": 1092.50579512205,
+          "lower_95pi": 664.752354126571,
+          "upper_95pi": 1520.25923611753
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_110",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2666.64207920549,
+          "lower_95pi": 1902.31348606453,
+          "upper_95pi": 3430.97067234645
+        },
+        "Right_Hippocampus": {
+          "expected": 2704.59599442134,
+          "lower_95pi": 1948.34066218218,
+          "upper_95pi": 3460.8513266605
+        },
+        "Left_Amygdala": {
+          "expected": 1045.12813028942,
+          "lower_95pi": 660.952972004359,
+          "upper_95pi": 1429.30328857449
+        },
+        "Right_Amygdala": {
+          "expected": 1207.08160446134,
+          "lower_95pi": 779.932334322492,
+          "upper_95pi": 1634.23087460018
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_111",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3086.20345328416,
+          "lower_95pi": 2321.13210192641,
+          "upper_95pi": 3851.27480464191
+        },
+        "Right_Hippocampus": {
+          "expected": 3090.66218802455,
+          "lower_95pi": 2334.24419521116,
+          "upper_95pi": 3847.08018083795
+        },
+        "Left_Amygdala": {
+          "expected": 1200.77357520275,
+          "lower_95pi": 815.392696342139,
+          "upper_95pi": 1586.15445406335
+        },
+        "Right_Amygdala": {
+          "expected": 1321.65741380062,
+          "lower_95pi": 894.419742729515,
+          "upper_95pi": 1748.89508487173
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_112",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2326.78609386669,
+          "lower_95pi": 1559.16139578349,
+          "upper_95pi": 3094.41079194989
+        },
+        "Right_Hippocampus": {
+          "expected": 2360.13510552185,
+          "lower_95pi": 1602.27796901022,
+          "upper_95pi": 3117.99224203349
+        },
+        "Left_Amygdala": {
+          "expected": 937.639206562516,
+          "lower_95pi": 551.420257784524,
+          "upper_95pi": 1323.85815534051
+        },
+        "Right_Amygdala": {
+          "expected": 1053.59503386717,
+          "lower_95pi": 625.598727841082,
+          "upper_95pi": 1481.59133989327
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_113",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2690.84028999434,
+          "lower_95pi": 1926.25302201218,
+          "upper_95pi": 3455.42755797651
+        },
+        "Right_Hippocampus": {
+          "expected": 2746.20129912507,
+          "lower_95pi": 1989.76296907021,
+          "upper_95pi": 3502.63962917992
+        },
+        "Left_Amygdala": {
+          "expected": 1027.21362861132,
+          "lower_95pi": 642.876372417154,
+          "upper_95pi": 1411.55088480549
+        },
+        "Right_Amygdala": {
+          "expected": 1168.17084320646,
+          "lower_95pi": 740.976325803492,
+          "upper_95pi": 1595.36536060943
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_114",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3110.40166407301,
+          "lower_95pi": 2345.71343783354,
+          "upper_95pi": 3875.08989031248
+        },
+        "Right_Hippocampus": {
+          "expected": 3132.26749272828,
+          "lower_95pi": 2376.01850162136,
+          "upper_95pi": 3888.51648383521
+        },
+        "Left_Amygdala": {
+          "expected": 1139.25877784843,
+          "lower_95pi": 754.894532289032,
+          "upper_95pi": 1523.62302340783
+        },
+        "Right_Amygdala": {
+          "expected": 1282.74665254575,
+          "lower_95pi": 855.661755444745,
+          "upper_95pi": 1709.83154964675
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_115",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2168.48333566448,
+          "lower_95pi": 1402.04064079422,
+          "upper_95pi": 2934.92603053474
+        },
+        "Right_Hippocampus": {
+          "expected": 2220.0111439329,
+          "lower_95pi": 1463.13682540714,
+          "upper_95pi": 2976.88546245865
+        },
+        "Left_Amygdala": {
+          "expected": 885.132550592878,
+          "lower_95pi": 500.221708340944,
+          "upper_95pi": 1270.04339284481
+        },
+        "Right_Amygdala": {
+          "expected": 1099.28299924874,
+          "lower_95pi": 671.854535073269,
+          "upper_95pi": 1526.71146342422
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_116",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2532.53753179214,
+          "lower_95pi": 1768.78069489034,
+          "upper_95pi": 3296.29436869393
+        },
+        "Right_Hippocampus": {
+          "expected": 2606.07733753611,
+          "lower_95pi": 1850.40616956993,
+          "upper_95pi": 3361.7485055023
+        },
+        "Left_Amygdala": {
+          "expected": 1002.65740358656,
+          "lower_95pi": 618.759313420378,
+          "upper_95pi": 1386.55549375275
+        },
+        "Right_Amygdala": {
+          "expected": 1213.85880858803,
+          "lower_95pi": 787.111794731743,
+          "upper_95pi": 1640.60582244431
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_117",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2952.0989058708,
+          "lower_95pi": 2187.74677980165,
+          "upper_95pi": 3716.45103193996
+        },
+        "Right_Hippocampus": {
+          "expected": 2992.14353113933,
+          "lower_95pi": 2236.44440072668,
+          "upper_95pi": 3747.84266155197
+        },
+        "Left_Amygdala": {
+          "expected": 1142.65298376855,
+          "lower_95pi": 758.347602508178,
+          "upper_95pi": 1526.95836502892
+        },
+        "Right_Amygdala": {
+          "expected": 1328.43461792731,
+          "lower_95pi": 901.675937185433,
+          "upper_95pi": 1755.1932986692
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_118",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2705.79763367715,
+          "lower_95pi": 1938.33710576796,
+          "upper_95pi": 3473.25816158633
+        },
+        "Right_Hippocampus": {
+          "expected": 2699.79316443695,
+          "lower_95pi": 1941.16790946105,
+          "upper_95pi": 3458.41841941285
+        },
+        "Left_Amygdala": {
+          "expected": 976.011822430801,
+          "lower_95pi": 589.558031075779,
+          "upper_95pi": 1362.46561378582
+        },
+        "Right_Amygdala": {
+          "expected": 1218.05642178184,
+          "lower_95pi": 789.701820284398,
+          "upper_95pi": 1646.41102327928
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_119",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3034.31879665011,
+          "lower_95pi": 2268.6964524705,
+          "upper_95pi": 3799.94114082972
+        },
+        "Right_Hippocampus": {
+          "expected": 3085.85935804017,
+          "lower_95pi": 2328.36063703195,
+          "upper_95pi": 3843.35807904838
+        },
+        "Left_Amygdala": {
+          "expected": 1109.18654015582,
+          "lower_95pi": 724.446774986247,
+          "upper_95pi": 1493.92630532539
+        },
+        "Right_Amygdala": {
+          "expected": 1332.63223112113,
+          "lower_95pi": 904.911880487564,
+          "upper_95pi": 1760.35258175469
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_120",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3418.34713757409,
+          "lower_95pi": 2652.12344135072,
+          "upper_95pi": 4184.57083379747
+        },
+        "Right_Hippocampus": {
+          "expected": 3471.92555164338,
+          "lower_95pi": 2714.32511029556,
+          "upper_95pi": 4229.5259929912
+        },
+        "Left_Amygdala": {
+          "expected": 1264.83198506914,
+          "lower_95pi": 878.884455306221,
+          "upper_95pi": 1650.77951483206
+        },
+        "Right_Amygdala": {
+          "expected": 1447.20804046041,
+          "lower_95pi": 1019.43033186212,
+          "upper_95pi": 1874.9857490587
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_121",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2610.62235576642,
+          "lower_95pi": 1843.46027072157,
+          "upper_95pi": 3377.78444081127
+        },
+        "Right_Hippocampus": {
+          "expected": 2561.73016494881,
+          "lower_95pi": 1803.5028903926,
+          "upper_95pi": 3319.95743950502
+        },
+        "Left_Amygdala": {
+          "expected": 1080.00693006173,
+          "lower_95pi": 693.757594461382,
+          "upper_95pi": 1466.25626566208
+        },
+        "Right_Amygdala": {
+          "expected": 1213.8730665763,
+          "lower_95pi": 785.655538696979,
+          "upper_95pi": 1642.09059445562
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_122",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2939.14351873939,
+          "lower_95pi": 2173.9172157732,
+          "upper_95pi": 3704.36982170558
+        },
+        "Right_Hippocampus": {
+          "expected": 2947.79635855202,
+          "lower_95pi": 2190.75934358324,
+          "upper_95pi": 3704.83337352081
+        },
+        "Left_Amygdala": {
+          "expected": 1169.58135211054,
+          "lower_95pi": 784.938677600188,
+          "upper_95pi": 1554.22402662089
+        },
+        "Right_Amygdala": {
+          "expected": 1328.44887591558,
+          "lower_95pi": 900.924695713394,
+          "upper_95pi": 1755.97305611777
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_123",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3323.17185966337,
+          "lower_95pi": 2557.58779534281,
+          "upper_95pi": 4088.75592398393
+        },
+        "Right_Hippocampus": {
+          "expected": 3333.86255215524,
+          "lower_95pi": 2576.78688503586,
+          "upper_95pi": 4090.93821927462
+        },
+        "Left_Amygdala": {
+          "expected": 1281.62650134765,
+          "lower_95pi": 896.75844030275,
+          "upper_95pi": 1666.49456239254
+        },
+        "Right_Amygdala": {
+          "expected": 1443.02468525487,
+          "lower_95pi": 1015.50201446714,
+          "upper_95pi": 1870.5473560426
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_124",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2440.40968180524,
+          "lower_95pi": 1674.80928606837,
+          "upper_95pi": 3206.0100775421
+        },
+        "Right_Hippocampus": {
+          "expected": 2518.37754049811,
+          "lower_95pi": 1761.65454683031,
+          "upper_95pi": 3275.10053416591
+        },
+        "Left_Amygdala": {
+          "expected": 1057.5293631116,
+          "lower_95pi": 672.744195884257,
+          "upper_95pi": 1442.31453033894
+        },
+        "Right_Amygdala": {
+          "expected": 1178.65541794623,
+          "lower_95pi": 751.312306692807,
+          "upper_95pi": 1605.99852919966
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_125",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2768.9308447782,
+          "lower_95pi": 2005.20141965511,
+          "upper_95pi": 3532.66026990129
+        },
+        "Right_Hippocampus": {
+          "expected": 2904.44373410133,
+          "lower_95pi": 2148.80687647551,
+          "upper_95pi": 3660.08059172715
+        },
+        "Left_Amygdala": {
+          "expected": 1175.05421610528,
+          "lower_95pi": 791.177515065788,
+          "upper_95pi": 1558.93091714478
+        },
+        "Right_Amygdala": {
+          "expected": 1293.23122728552,
+          "lower_95pi": 866.501557135569,
+          "upper_95pi": 1719.96089743547
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_126",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3152.95918570218,
+          "lower_95pi": 2388.55747984771,
+          "upper_95pi": 3917.36089155665
+        },
+        "Right_Hippocampus": {
+          "expected": 3290.50992770454,
+          "lower_95pi": 2534.72787339312,
+          "upper_95pi": 4046.29198201597
+        },
+        "Left_Amygdala": {
+          "expected": 1315.04979628727,
+          "lower_95pi": 930.719781560172,
+          "upper_95pi": 1699.37981101437
+        },
+        "Right_Amygdala": {
+          "expected": 1407.8070366248,
+          "lower_95pi": 980.997566319547,
+          "upper_95pi": 1834.61650693006
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_127",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2384.30592842326,
+          "lower_95pi": 1618.66284501476,
+          "upper_95pi": 3149.94901183175
+        },
+        "Right_Hippocampus": {
+          "expected": 2404.72035311839,
+          "lower_95pi": 1648.10316589113,
+          "upper_95pi": 3161.33754034564
+        },
+        "Left_Amygdala": {
+          "expected": 853.296632864874,
+          "lower_95pi": 467.620280193001,
+          "upper_95pi": 1238.97298553675
+        },
+        "Right_Amygdala": {
+          "expected": 991.135421246106,
+          "lower_95pi": 563.753175267783,
+          "upper_95pi": 1418.51766722443
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_128",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2748.36012455091,
+          "lower_95pi": 1983.83689927344,
+          "upper_95pi": 3512.88334982839
+        },
+        "Right_Hippocampus": {
+          "expected": 2790.7865467216,
+          "lower_95pi": 2034.43898061631,
+          "upper_95pi": 3547.1341128269
+        },
+        "Left_Amygdala": {
+          "expected": 986.471350589894,
+          "lower_95pi": 602.157187309901,
+          "upper_95pi": 1370.78551386989
+        },
+        "Right_Amygdala": {
+          "expected": 1105.71123058539,
+          "lower_95pi": 678.458481030066,
+          "upper_95pi": 1532.96398014072
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_129",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3167.92149862958,
+          "lower_95pi": 2401.84217324665,
+          "upper_95pi": 3934.00082401251
+        },
+        "Right_Hippocampus": {
+          "expected": 3176.85274032482,
+          "lower_95pi": 2419.54448402581,
+          "upper_95pi": 3934.16099662382
+        },
+        "Left_Amygdala": {
+          "expected": 1142.11679550322,
+          "lower_95pi": 756.341653160237,
+          "upper_95pi": 1527.89193784619
+        },
+        "Right_Amygdala": {
+          "expected": 1220.28703992468,
+          "lower_95pi": 792.471336924966,
+          "upper_95pi": 1648.10274292439
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_130",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2408.50413921211,
+          "lower_95pi": 1642.38699333397,
+          "upper_95pi": 3174.62128509025
+        },
+        "Right_Hippocampus": {
+          "expected": 2446.32565782212,
+          "lower_95pi": 1689.61084405416,
+          "upper_95pi": 3203.04047159007
+        },
+        "Left_Amygdala": {
+          "expected": 878.982426862986,
+          "lower_95pi": 493.239348042046,
+          "upper_95pi": 1264.72550568393
+        },
+        "Right_Amygdala": {
+          "expected": 952.22465999123,
+          "lower_95pi": 524.722006368628,
+          "upper_95pi": 1379.72731361383
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_131",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2772.55833533977,
+          "lower_95pi": 2008.25484251397,
+          "upper_95pi": 3536.86182816556
+        },
+        "Right_Hippocampus": {
+          "expected": 2832.39185142533,
+          "lower_95pi": 2076.29865665105,
+          "upper_95pi": 3588.48504619961
+        },
+        "Left_Amygdala": {
+          "expected": 968.556848911793,
+          "lower_95pi": 584.290111625717,
+          "upper_95pi": 1352.82358619787
+        },
+        "Right_Amygdala": {
+          "expected": 1066.80046933052,
+          "lower_95pi": 639.625245669338,
+          "upper_95pi": 1493.97569299169
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_132",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3192.11970941843,
+          "lower_95pi": 2426.90077437467,
+          "upper_95pi": 3957.33864446219
+        },
+        "Right_Hippocampus": {
+          "expected": 3218.45804502855,
+          "lower_95pi": 2461.75558662657,
+          "upper_95pi": 3975.16050343052
+        },
+        "Left_Amygdala": {
+          "expected": 1080.6019981489,
+          "lower_95pi": 696.031984574689,
+          "upper_95pi": 1465.17201172311
+        },
+        "Right_Amygdala": {
+          "expected": 1181.3762786698,
+          "lower_95pi": 753.835800503079,
+          "upper_95pi": 1608.91675683652
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_133",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2250.2013810099,
+          "lower_95pi": 1485.26968807459,
+          "upper_95pi": 3015.13307394522
+        },
+        "Right_Hippocampus": {
+          "expected": 2306.20169623316,
+          "lower_95pi": 1550.47893186247,
+          "upper_95pi": 3061.92446060385
+        },
+        "Left_Amygdala": {
+          "expected": 826.475770893347,
+          "lower_95pi": 442.22313555079,
+          "upper_95pi": 1210.7284062359
+        },
+        "Right_Amygdala": {
+          "expected": 997.912625372798,
+          "lower_95pi": 570.941233785294,
+          "upper_95pi": 1424.8840169603
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_134",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2614.25557713756,
+          "lower_95pi": 1850.78394640379,
+          "upper_95pi": 3377.72720787133
+        },
+        "Right_Hippocampus": {
+          "expected": 2692.26788983637,
+          "lower_95pi": 1936.94995768253,
+          "upper_95pi": 3447.58582199022
+        },
+        "Left_Amygdala": {
+          "expected": 944.000623887031,
+          "lower_95pi": 560.212058388959,
+          "upper_95pi": 1327.7891893851
+        },
+        "Right_Amygdala": {
+          "expected": 1112.48843471208,
+          "lower_95pi": 685.723480421718,
+          "upper_95pi": 1539.25338900245
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_135",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 1.5,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3033.81695121623,
+          "lower_95pi": 2268.93500342138,
+          "upper_95pi": 3798.69889901108
+        },
+        "Right_Hippocampus": {
+          "expected": 3078.33408343959,
+          "lower_95pi": 2322.188897488,
+          "upper_95pi": 3834.47926939118
+        },
+        "Left_Amygdala": {
+          "expected": 1083.99620406902,
+          "lower_95pi": 699.382106177925,
+          "upper_95pi": 1468.61030196011
+        },
+        "Right_Amygdala": {
+          "expected": 1227.06424405137,
+          "lower_95pi": 799.812422414307,
+          "upper_95pi": 1654.31606568843
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_136",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2787.51567902257,
+          "lower_95pi": 2021.15272673239,
+          "upper_95pi": 3553.87863131274
+        },
+        "Right_Hippocampus": {
+          "expected": 2785.98371673721,
+          "lower_95pi": 2028.41519331275,
+          "upper_95pi": 3543.55224016168
+        },
+        "Left_Amygdala": {
+          "expected": 917.35504273127,
+          "lower_95pi": 531.316865136867,
+          "upper_95pi": 1303.39322032567
+        },
+        "Right_Amygdala": {
+          "expected": 1116.6860479059,
+          "lower_95pi": 688.748241115441,
+          "upper_95pi": 1544.62385469635
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_137",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3116.03684199554,
+          "lower_95pi": 2350.58038304216,
+          "upper_95pi": 3881.49330094891
+        },
+        "Right_Hippocampus": {
+          "expected": 3172.04991034043,
+          "lower_95pi": 2414.811371623,
+          "upper_95pi": 3929.28844905786
+        },
+        "Left_Amygdala": {
+          "expected": 1050.52976045629,
+          "lower_95pi": 665.820035278016,
+          "upper_95pi": 1435.23948563456
+        },
+        "Right_Amygdala": {
+          "expected": 1231.26185724518,
+          "lower_95pi": 803.484303683607,
+          "upper_95pi": 1659.03941080676
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_138",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "GE",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3500.06518291952,
+          "lower_95pi": 2733.48724498137,
+          "upper_95pi": 4266.64312085766
+        },
+        "Right_Hippocampus": {
+          "expected": 3558.11610394364,
+          "lower_95pi": 2799.97863427618,
+          "upper_95pi": 4316.25357361111
+        },
+        "Left_Amygdala": {
+          "expected": 1206.17520536961,
+          "lower_95pi": 820.002191969879,
+          "upper_95pi": 1592.34821876934
+        },
+        "Right_Amygdala": {
+          "expected": 1345.83766658447,
+          "lower_95pi": 917.52873591985,
+          "upper_95pi": 1774.14659724909
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_139",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2692.34040111184,
+          "lower_95pi": 1926.29359104559,
+          "upper_95pi": 3458.38721117809
+        },
+        "Right_Hippocampus": {
+          "expected": 2647.92071724907,
+          "lower_95pi": 1890.79370695669,
+          "upper_95pi": 3405.04772754146
+        },
+        "Left_Amygdala": {
+          "expected": 1021.3501503622,
+          "lower_95pi": 635.575737962711,
+          "upper_95pi": 1407.12456276169
+        },
+        "Right_Amygdala": {
+          "expected": 1112.50269270035,
+          "lower_95pi": 684.651073660463,
+          "upper_95pi": 1540.35431174024
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_140",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3020.86156408481,
+          "lower_95pi": 2255.81852664462,
+          "upper_95pi": 3785.904601525
+        },
+        "Right_Hippocampus": {
+          "expected": 3033.98691085229,
+          "lower_95pi": 2277.25323652575,
+          "upper_95pi": 3790.72058517883
+        },
+        "Left_Amygdala": {
+          "expected": 1110.92457241101,
+          "lower_95pi": 726.351448691373,
+          "upper_95pi": 1495.49769613064
+        },
+        "Right_Amygdala": {
+          "expected": 1227.07850203964,
+          "lower_95pi": 799.446047099688,
+          "upper_95pi": 1654.71095697959
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_141",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Philips",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3404.88990500879,
+          "lower_95pi": 2638.96857774409,
+          "upper_95pi": 4170.81123227349
+        },
+        "Right_Hippocampus": {
+          "expected": 3420.0531044555,
+          "lower_95pi": 2662.48298917593,
+          "upper_95pi": 4177.62321973508
+        },
+        "Left_Amygdala": {
+          "expected": 1222.96972164812,
+          "lower_95pi": 837.895250881927,
+          "upper_95pi": 1608.04419241431
+        },
+        "Right_Amygdala": {
+          "expected": 1341.65431137892,
+          "lower_95pi": 913.549112828001,
+          "upper_95pi": 1769.75950992985
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_142",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1200000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2522.12772715066,
+          "lower_95pi": 1757.52900279356,
+          "upper_95pi": 3286.72645150776
+        },
+        "Right_Hippocampus": {
+          "expected": 2604.56809279838,
+          "lower_95pi": 1848.80320777652,
+          "upper_95pi": 3360.33297782023
+        },
+        "Left_Amygdala": {
+          "expected": 998.872583412069,
+          "lower_95pi": 614.637028500986,
+          "upper_95pi": 1383.10813832315
+        },
+        "Right_Amygdala": {
+          "expected": 1077.28504407029,
+          "lower_95pi": 650.294418074112,
+          "upper_95pi": 1504.27567006646
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_143",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 2850.64889012363,
+          "lower_95pi": 2086.98706572948,
+          "upper_95pi": 3614.31071451777
+        },
+        "Right_Hippocampus": {
+          "expected": 2990.63428640159,
+          "lower_95pi": 2235.15693076298,
+          "upper_95pi": 3746.1116420402
+        },
+        "Left_Amygdala": {
+          "expected": 1116.39743640575,
+          "lower_95pi": 732.521354277889,
+          "upper_95pi": 1500.27351853362
+        },
+        "Right_Amygdala": {
+          "expected": 1191.86085340957,
+          "lower_95pi": 765.008529452483,
+          "upper_95pi": 1618.71317736666
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_144",
+      "inputs": {
+        "age": 94.0,
+        "sex": "Female",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1800000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 3234.6772310476,
+          "lower_95pi": 2469.8218978085,
+          "upper_95pi": 3999.53256428671
+        },
+        "Right_Hippocampus": {
+          "expected": 3376.70048000481,
+          "lower_95pi": 2620.27891110766,
+          "upper_95pi": 4133.12204890196
+        },
+        "Left_Amygdala": {
+          "expected": 1256.39301658774,
+          "lower_95pi": 871.64563985064,
+          "upper_95pi": 1641.14039332484
+        },
+        "Right_Amygdala": {
+          "expected": 1306.43666274886,
+          "lower_95pi": 879.029533477513,
+          "upper_95pi": 1733.8437920202
+        }
+      }
+    },
+    {
+      "case_id": "synthetic_145",
+      "inputs": {
+        "age": 60.0,
+        "sex": "Male",
+        "scanner_field_strength": 3.0,
+        "scanner_manufacturer": "Siemens",
+        "estimated_total_intracranial_volume": 1500000.0
+      },
+      "outputs": {
+        "Left_Hippocampus": {
+          "expected": 4018.34427097468,
+          "lower_95pi": 3267.15165226522,
+          "upper_95pi": 4769.53688968414
+        },
+        "Right_Hippocampus": {
+          "expected": 4175.08054231064,
+          "lower_95pi": 3431.59429878155,
+          "upper_95pi": 4918.56678583973
+        },
+        "Left_Amygdala": {
+          "expected": 1557.15087300007,
+          "lower_95pi": 1179.41842493185,
+          "upper_95pi": 1934.88332106829
+        },
+        "Right_Amygdala": {
+          "expected": 1608.22826583223,
+          "lower_95pi": 1187.89720782469,
+          "upper_95pi": 2028.55932383978
+        }
+      }
+    }
+  ],
+  "limitation": "Independent formula recalculation only; not native Excel or clinical validation."
+}

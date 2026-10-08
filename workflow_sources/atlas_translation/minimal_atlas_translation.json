@@ -1,0 +1,179 @@
+{
+  "registry_name": "Minimal atlas translation registry",
+  "version": "0.1",
+  "purpose": "Translate source-specific FreeSurfer and literature ROI names into workflow-standard ROI names for transparent patient-to-paper comparison.",
+  "scope": "Minimal pilot coverage for OASIS FreeSurfer outputs, hippocampal/MTL dementia evidence, and MMC/Potvin cross-validation preparation.",
+  "mappings": [
+    {
+      "source_atlas_name": "FreeSurfer aseg",
+      "source_file_pattern": "aseg.stats",
+      "source_roi_name": "Left-Hippocampus",
+      "standard_roi_name": "hippocampus",
+      "hemisphere": "lh",
+      "roi_category": "subcortical",
+      "translation_rule": "FreeSurfer aseg exact label to bilateral anatomical concept",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Subcortical hippocampal volume; compatible with hippocampus evidence only when atlas/method and unit are also compatible."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aseg",
+      "source_file_pattern": "aseg.stats",
+      "source_roi_name": "Right-Hippocampus",
+      "standard_roi_name": "hippocampus",
+      "hemisphere": "rh",
+      "roi_category": "subcortical",
+      "translation_rule": "FreeSurfer aseg exact label to bilateral anatomical concept",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Subcortical hippocampal volume; compatible with hippocampus evidence only when atlas/method and unit are also compatible."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aseg",
+      "source_file_pattern": "aseg.stats",
+      "source_roi_name": "Left-Amygdala",
+      "standard_roi_name": "amygdala",
+      "hemisphere": "lh",
+      "roi_category": "subcortical",
+      "translation_rule": "FreeSurfer aseg exact label to bilateral anatomical concept",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Subcortical amygdala volume."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aseg",
+      "source_file_pattern": "aseg.stats",
+      "source_roi_name": "Right-Amygdala",
+      "standard_roi_name": "amygdala",
+      "hemisphere": "rh",
+      "roi_category": "subcortical",
+      "translation_rule": "FreeSurfer aseg exact label to bilateral anatomical concept",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Subcortical amygdala volume."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aparc / DKT cortical atlas",
+      "source_file_pattern": "aparc",
+      "source_roi_name": "entorhinal",
+      "standard_roi_name": "entorhinal cortex",
+      "hemisphere": null,
+      "roi_category": "cortical",
+      "translation_rule": "FreeSurfer cortical parcel alias to anatomical ROI",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Use hemisphere from source row. Atlas family must still be checked before quantitative comparison."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aparc / DKT cortical atlas",
+      "source_file_pattern": "aparc",
+      "source_roi_name": "parahippocampal",
+      "standard_roi_name": "parahippocampal gyrus",
+      "hemisphere": null,
+      "roi_category": "cortical",
+      "translation_rule": "FreeSurfer cortical parcel alias to anatomical ROI",
+      "translation_confidence": "high",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Use hemisphere from source row. Atlas family must still be checked before quantitative comparison."
+    },
+    {
+      "source_atlas_name": "FreeSurfer aparc / DKT cortical atlas",
+      "source_file_pattern": "aparc",
+      "source_roi_name": "inferiortemporal",
+      "standard_roi_name": "inferior temporal cortex",
+      "hemisphere": null,
+      "roi_category": "cortical",
+      "translation_rule": "FreeSurfer cortical parcel alias to anatomical ROI",
+      "translation_confidence": "medium",
+      "manual_review_status": "accepted",
+      "note": "Broad literature term may not equal one parcel; quantitative use requires source ROI definition review.",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use",
+      "approval_record": {
+        "approved_at": "2026-09-15T05:45:53.769535+00:00",
+        "approved_by": "project_user",
+        "basis": "Explicit user request: approve the currently pending records",
+        "scope": "Research use subject to measurement compatibility checks",
+        "independent_source_reverification": false
+      }
+    },
+    {
+      "source_atlas_name": "FreeSurfer aparc / DKT cortical atlas",
+      "source_file_pattern": "aparc",
+      "source_roi_name": "middletemporal",
+      "standard_roi_name": "middle temporal cortex",
+      "hemisphere": null,
+      "roi_category": "cortical",
+      "translation_rule": "FreeSurfer cortical parcel alias to anatomical ROI",
+      "translation_confidence": "medium",
+      "manual_review_status": "accepted",
+      "note": "Broad literature term may not equal one parcel; quantitative use requires source ROI definition review.",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use",
+      "approval_record": {
+        "approved_at": "2026-09-15T05:45:53.769535+00:00",
+        "approved_by": "project_user",
+        "basis": "Explicit user request: approve the currently pending records",
+        "scope": "Research use subject to measurement compatibility checks",
+        "independent_source_reverification": false
+      }
+    },
+    {
+      "source_atlas_name": "FreeSurfer aparc / DKT cortical atlas",
+      "source_file_pattern": "aparc",
+      "source_roi_name": "superiortemporal",
+      "standard_roi_name": "superior temporal cortex",
+      "hemisphere": null,
+      "roi_category": "cortical",
+      "translation_rule": "FreeSurfer cortical parcel alias to anatomical ROI",
+      "translation_confidence": "medium",
+      "manual_review_status": "accepted",
+      "note": "Broad literature term may not equal one parcel; quantitative use requires source ROI definition review.",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use",
+      "approval_record": {
+        "approved_at": "2026-09-15T05:45:53.769535+00:00",
+        "approved_by": "project_user",
+        "basis": "Explicit user request: approve the currently pending records",
+        "scope": "Research use subject to measurement compatibility checks",
+        "independent_source_reverification": false
+      }
+    },
+    {
+      "source_atlas_name": "Derived workflow feature",
+      "source_file_pattern": "*",
+      "source_roi_name": "medial temporal lobe",
+      "standard_roi_name": "medial temporal lobe",
+      "hemisphere": "bilateral",
+      "roi_category": "derived_composite",
+      "translation_rule": "Prespecified workflow composite of bilateral hippocampus, amygdala, entorhinal and parahippocampal volumes",
+      "translation_confidence": "medium",
+      "manual_review_status": "reviewed_for_pilot",
+      "note": "Derived value can only be compared with papers using the same MTL definition."
+    },
+    {
+      "source_atlas_name": "Derived workflow feature",
+      "source_file_pattern": "*",
+      "source_roi_name": "whole brain cortex",
+      "standard_roi_name": "whole brain cortex",
+      "hemisphere": "bilateral",
+      "roi_category": "derived_composite",
+      "translation_rule": "Unweighted mean of available cortical thickness parcels",
+      "translation_confidence": "low",
+      "manual_review_status": "accepted",
+      "note": "This is a workflow summary, not an atlas-native ROI. Use for descriptive screening only unless paper definition matches.",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use",
+      "approval_record": {
+        "approved_at": "2026-09-15T05:45:53.769535+00:00",
+        "approved_by": "project_user",
+        "basis": "Explicit user request: approve the currently pending records",
+        "scope": "Research use subject to measurement compatibility checks",
+        "independent_source_reverification": false
+      }
+    }
+  ],
+  "status_scheme": {
+    "accepted": "User approved research use; mapping relation, anatomical equivalence and quantitative compatibility remain independently checked."
+  }
+}

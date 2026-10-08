@@ -1,0 +1,17 @@
+{
+  "model_id": "potvin_2016_subcortical_candidate",
+  "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5094268/",
+  "primary_doi": "10.1016/j.neuroimage.2016.05.016",
+  "title": "Normative data for subcortical regional volumes over the lifetime of the adult human brain",
+  "reference_sample_size": 2799,
+  "reference_age_min": 18,
+  "reference_age_max": 94,
+  "required_inputs": ["age", "sex", "eTIV", "scanner manufacturer", "magnetic field strength", "hemisphere-specific subcortical volume"],
+  "supplement_locator": "Companion article Appendix A, mmc2.zip",
+  "status": "downloaded_four_model_preview_integrated_not_validated",
+  "local_workbook": "workflow_sources/external_validators/potvin_subcortical/mmc2.xlsm",
+  "preview_models": ["Left_Hippocampus", "Right_Hippocampus", "Left_Amygdala", "Right_Amygdala"],
+  "enabled_for_calculation": false,
+  "missing_requirements": ["Independently cross-check numeric port against Excel outputs", "Verify exact segmentation release and ROI definitions", "Verify participant scanner and eTIV metadata", "Extend beyond the four preview models"],
+  "note": "This is not the cortical mmc1 model. Do not assume all 45 currently unassessed features are covered. No normal classification is produced by this registry."
+}

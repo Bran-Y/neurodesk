@@ -1,0 +1,3 @@
+[
+  {"paper_code":"ROI-001","source_title":"ADNI data page","doi":null,"year":null,"diseases":["AD","MCI","Control"],"primary_roi":"multi-region","rois":["hippocampus","entorhinal cortex","temporal cortex","posterior cingulate cortex"],"imaging_metrics":["roi_volume","cortical_thickness","multimodal_imaging"],"evidence_use":"External dataset provenance only; excluded from the current OASIS analysis cohort"}
+]

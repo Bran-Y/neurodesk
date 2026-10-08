@@ -1,0 +1,39 @@
+[
+  {
+    "paper_code": "READ-ZHENG-2023",
+    "source_title": "Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test",
+    "doi": "10.1371/journal.pone.0279574",
+    "year": 2023,
+    "input_value": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0279574",
+    "diseases": [
+      "AD",
+      "Control"
+    ],
+    "rois": [
+      "hippocampus",
+      "amygdala",
+      "entorhinal cortex",
+      "parahippocampal gyrus",
+      "medial temporal lobe"
+    ],
+    "evidence_category": "roi_evidence",
+    "note": "Source review only; numerical comparison not approved.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1371/journal.pone.0279574"
+  },
+  {
+    "paper_code": "ROI-011",
+    "source_label": "Automated MRI measures for MCI and AD",
+    "input_value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2714061/",
+    "source_group": "Automated structural MRI measurement",
+    "evidence_category": "roi_evidence",
+    "disease_focus": "Control / MCI / Alzheimer's disease",
+    "source_title": "Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer disease",
+    "year": 2009,
+    "doi": "10.1093/brain/awp123",
+    "evidence_use": "Supports automated hippocampal, entorhinal, temporal, and frontal MRI measurements.",
+    "note": "Use for ROI-feature rationale, not as an accepted single-subject classifier.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1093/brain/awp123"
+  }
+]

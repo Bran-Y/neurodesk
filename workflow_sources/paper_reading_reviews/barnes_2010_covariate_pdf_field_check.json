@@ -1,0 +1,626 @@
+{
+  "source_pdf_sha256": "ea13d433c0850f669c18821b6544d911b7d6e0cfacbef5f2ede6b46a0b9db740",
+  "page": 1248,
+  "records": [
+    {
+      "record_id": "ROI-008-TABLE2-01",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.25",
+        "(-0.40,-0.10)",
+        "p=0.002",
+        "0.121"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-02",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "7.59",
+        "(3.68,11.64)",
+        "p<0.001",
+        "0.169"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-03",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.82",
+        "(0.68,0.96)",
+        "p<0.001",
+        "0.649"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-04",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.34",
+        "(-0.39,-0.28)",
+        "p<0.001",
+        "0.218"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-05",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-3.53",
+        "(-5.25,-1.79)",
+        "p<0.001",
+        "0.024"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-06",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.02",
+        "(0.91,1.12)",
+        "p<0.001",
+        "0.574"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-07",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.89",
+        "(-0.58,2.39)",
+        "p=0.233",
+        "0.002"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-08",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.32",
+        "(-0.46,-0.17)",
+        "p<0.001",
+        "0.184"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-09",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "6.20",
+        "(2.23,10.32)",
+        "p=0.002",
+        "0.105"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-10",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.65",
+        "(0.47,0.83)",
+        "p<0.001",
+        "0.378"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-11",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.39",
+        "(-0.48,-0.30)",
+        "p<0.001",
+        "0.271"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-12",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-2.53",
+        "(-5.28,0.29)",
+        "p=0.078",
+        "0.011"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-13",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.82",
+        "(0.66,0.99)",
+        "p<0.001",
+        "0.346"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-14",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-4.66",
+        "(-6.87,-2.40)",
+        "p<0.001",
+        "0.057"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-15",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.14",
+        "(-0.34,0.07)",
+        "p=0.196",
+        "0.022"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-16",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "8.41",
+        "(3.29,13.79)",
+        "p=0.001",
+        "0.126"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-17",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.01",
+        "(0.82,1.19)",
+        "p<0.001",
+        "0.601"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-18",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.24",
+        "(-0.35,-0.13)",
+        "p<0.001",
+        "0.068"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-19",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-5.76",
+        "(-9.17,-2.21)",
+        "p=0.002",
+        "0.040"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-20",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.27",
+        "(1.06,1.49)",
+        "p<0.001",
+        "0.553"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-21",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.45",
+        "(-1.58,4.57)",
+        "p=0.347",
+        "0.004"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-22",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "2.43",
+        "(1.63,3.24)",
+        "p<0.001",
+        "0.323"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-23",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "50.56",
+        "(21.01,87.34)",
+        "p<0.001",
+        "0.152"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-24",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "2.75",
+        "(1.55,3.95)",
+        "p<0.001",
+        "0.211"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-25",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "2.21",
+        "(1.50,2.93)",
+        "p<0.001",
+        "0.262"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-26",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "19.61",
+        "(-4.44,49.72)",
+        "p=0.116",
+        "0.017"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-27",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.66",
+        "(0.37,2.95)",
+        "p=0.012",
+        "0.044"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-28",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "3.58",
+        "(-13.83,24.51)",
+        "p=0.704",
+        "0.001"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-29",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.32",
+        "(-0.48,-0.17)",
+        "p<0.001",
+        "0.181"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-30",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "1.78",
+        "(-2.50,6.24)",
+        "p=0.416",
+        "0.009"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-31",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.32",
+        "(0.08,0.55)",
+        "p=0.009",
+        "0.087"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-32",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.36",
+        "(-0.51,-0.22)",
+        "p<0.001",
+        "0.224"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-33",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-3.32",
+        "(-7.77,1.34)",
+        "p=0.157",
+        "0.019"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-34",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.51",
+        "(0.24,0.78)",
+        "p<0.001",
+        "0.130"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-35",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-1.17",
+        "(-4.91,2.71)",
+        "p=0.544",
+        "0.003"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-36",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.13",
+        "(-0.34,0.08)",
+        "p=0.235",
+        "0.017"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-37",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "5.35",
+        "(0.10,10.88)",
+        "p=0.046",
+        "0.047"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-38",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.66",
+        "(0.40,0.92)",
+        "p<0.001",
+        "0.228"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-39",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.20",
+        "(-0.38,-0.02)",
+        "p=0.033",
+        "0.040"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-40",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-3.90",
+        "(-9.32,1.84)",
+        "p=0.176",
+        "0.016"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-41",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.84",
+        "(0.51,1.18)",
+        "p<0.001",
+        "0.215"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-42",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-5.49",
+        "(-9.88,-0.88)",
+        "p=0.021",
+        "0.047"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-43",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.12",
+        "(-0.34,0.10)",
+        "p=0.267",
+        "0.016"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-44",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "8.61",
+        "(3.22,14.27)",
+        "p=0.002",
+        "0.121"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-45",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.68",
+        "(0.42,0.95)",
+        "p<0.001",
+        "0.255"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-46",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.19",
+        "(-0.38,-0.00)",
+        "p=0.046",
+        "0.039"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-47",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.73",
+        "(-5.19,7.02)",
+        "p=0.812",
+        "<0.001"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-48",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.70",
+        "(0.35,1.04)",
+        "p<0.001",
+        "0.150"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-49",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.28",
+        "(-4.58,5.39)",
+        "p=0.910",
+        "<0.001"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-50",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.30",
+        "(-0.49,-0.10)",
+        "p=0.003",
+        "0.109"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-51",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "5.33",
+        "(0.28,10.63)",
+        "p=0.038",
+        "0.055"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-52",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.45",
+        "(0.18,0.72)",
+        "p=0.001",
+        "0.124"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-53",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "-0.35",
+        "(-0.52,-0.17)",
+        "p<0.001",
+        "0.147"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-54",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.01",
+        "(-5.56,5.91)",
+        "p=0.996",
+        "<0.001"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-55",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "0.51",
+        "(0.19,0.84)",
+        "p=0.003",
+        "0.094"
+      ]
+    },
+    {
+      "record_id": "ROI-008-TABLE2-56",
+      "fields_checked": 7,
+      "differences": {},
+      "raw_pdf_cells": [
+        "2.68",
+        "(-2.03,7.62)",
+        "p=0.265",
+        "0.012"
+      ]
+    }
+  ],
+  "total_rows": 56,
+  "field_checks": 392,
+  "difference_rows": 0,
+  "method": "pdfplumber coordinate extraction compared to separately transcribed/visually inspected Table 2; not human signoff"
+}

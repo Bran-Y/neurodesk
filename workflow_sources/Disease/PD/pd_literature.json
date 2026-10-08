@@ -1,0 +1,34 @@
+[
+  {
+    "paper_code": "PD-ENIGMA-2021",
+    "source_title": "International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease",
+    "doi": "10.1002/mds.28706",
+    "year": 2021,
+    "evidence_use": "Group PD/Control effect sizes; not individual normal ranges.",
+    "data_file": "workflow_sources/Disease/PD/enigma_pd_group_statistics.json",
+    "cohort_demographics_file": "workflow_sources/Disease/PD/enigma_pd_cohort_demographics.json",
+    "supplementary_stage_file": "workflow_sources/Disease/PD/enigma_pd_stage_statistics.json",
+    "supplement_audit_file": "workflow_sources/Disease/PD/enigma_pd_supplement_audit.json",
+    "source_label": "International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease",
+    "source_url": "https://doi.org/10.1002/mds.28706",
+    "input_value": "https://doi.org/10.1002/mds.28706",
+    "disease_focus": "PD",
+    "evidence_category": "disease_evidence",
+    "source_group": "Parkinson disease evidence"
+  },
+  {
+    "paper_code": "PD-PPMI-2011",
+    "source_title": "The Parkinson Progression Marker Initiative (PPMI)",
+    "doi": "10.1016/j.pneurobio.2011.09.005",
+    "year": 2011,
+    "evidence_use": "Dataset design/provenance, not an ROI disease threshold.",
+    "data_access_url": "https://www.ppmi-info.org/access-data-specimens/download-data",
+    "access_status": "Individual-level additional data require authorized PPMI access; not downloaded by this importer.",
+    "source_label": "The Parkinson Progression Marker Initiative (PPMI)",
+    "source_url": "https://doi.org/10.1016/j.pneurobio.2011.09.005",
+    "input_value": "https://doi.org/10.1016/j.pneurobio.2011.09.005",
+    "disease_focus": "PD",
+    "evidence_category": "disease_evidence",
+    "source_group": "Parkinson disease evidence"
+  }
+]

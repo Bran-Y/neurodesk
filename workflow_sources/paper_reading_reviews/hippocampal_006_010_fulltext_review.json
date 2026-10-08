@@ -1,0 +1,40 @@
+{
+  "review_type": "assistant_primary_source_check_not_human_signoff",
+  "source_sha256": {
+    "workflow_sources/paper_reading_reviews/raw/barnes_2007_fluid_registered.pdf": "0eb37a7d6b88e54220ce73b38a190bb85ab74f815654f6418902574ef178184b",
+    "workflow_sources/paper_reading_reviews/raw/morra_2009_pmc_article.txt": "f7b29ca928dde023b60b687e2e96b2920574292c1d781658013cc045df982393"
+  },
+  "statistics_count": 9,
+  "source_scope": {
+    "ROI-006": "User PDF pp.581-587; Methods, Tables 1-3, Results, Figures 1-4 and Discussion.",
+    "ROI-010": "PMC main article: Methods, Results, Discussion, Tables 1-9 and figure captions. Exact plot coordinates not digitized."
+  },
+  "findings": {
+    "ROI-006": {
+      "hemisphere": "Discussion p.586 explicitly says left and right atrophy rates were averaged; Methods p.583 and Figure 2 say left/right together. Do not label as a bilateral total volume.",
+      "analysis": "log(follow-up volume/baseline volume)/interval; reported means back-transformed, SD via variance transformation. Exact reconstruction is not attempted.",
+      "cohort": "32 probable AD: 14 familial, 18 sporadic; 55 controls. Twelve AD diagnoses confirmed (two postmortem, ten pathogenic familial mutations), not all 32.",
+      "scan_interval": "Table 2 reports AD 450 (305) days and controls 449 (275) days; rates are annualized, not fixed 12-month changes.",
+      "processing": "MIDAS brain masks; 9-df global and 6-df local registration; baseline manual hippocampi; fluid propagation with thresholding at 70% mean brain intensity; Jacobian integration is distinct.",
+      "mean_definition": "Do not silently treat reported back-transformed group means as ordinary arithmetic means for individual Gaussian reference intervals.",
+      "validation": "Reported sensitivities 56/84/72 percent at 91 percent specificity are study-sample discrimination, not calibrated individual probabilities or external validation."
+    },
+    "ROI-010": {
+      "dispersion": "Results gives 95% CI half-widths 0.96/0.79/1.44 for Control/MCI/AD. These are not SD; no explicit numeric SD for these three means was found in inspected main article.",
+      "intervals": "Derived endpoint arithmetic only: Control -0.30 to 1.62; MCI 2.33 to 3.91; AD 4.15 to 7.03 percent/year. Do not truncate the negative confidence endpoint.",
+      "table_scope": "Tables 1-2 have demographic/cognitive SD, Tables 3-8 correlations and Table 9 permutation p values. None supplies numeric SD for the three quoted volume-loss means.",
+      "metric_scope": "Volume loss and surface radial-distance change are distinct; surface p maps are not whole-ROI volume distributions.",
+      "correction_scope": "Surface permutation correction and exploratory covariate Bonferroni correction cannot be transferred to the group-mean confidence intervals.",
+      "cohort_method": "490 testing subjects (97 AD,245 MCI,148 controls), 980 baseline/follow-up scans at 1.5T. Separate training set 21 subjects / 42 scans. Not FreeSurfer.",
+      "hemisphere": "Do not infer that the unlabelled 0.66/3.12/5.59 summaries are unilateral values or a reproducible bilateral pooling formula."
+    }
+  },
+  "scopes": {
+    "ROI-006": "Verified bilateral-averaged hippocampal annual atrophy rates, not separate left/right volumes. Log-scale analysis, back-transformed means and variance-transformed SD; manual MIDAS, fluid propagation with intensity thresholding, and Jacobian integration are separate methods. Serial MRI required; equivalence to current FreeSurfer processing is not validated. Context only.",
+    "ROI-010": "Verified annual hippocampal volume-loss means and group-mean 95% confidence intervals, not SD or individual prediction intervals. Side-specific rates are graphed, but exact side values and the aggregation of the three quoted means are not specified in the inspected numerical text. AdaBoost/auto-context segmentation after 9-parameter ICBM alignment is not current FreeSurfer. Serial MRI required; context only, no individual diagnosis or numerical patient comparison."
+  },
+  "duplicate_abstract_statistics_superseded": 9,
+  "patient_comparison_enabled": false,
+  "human_signatures_changed": false,
+  "patient_qc_changed": false
+}

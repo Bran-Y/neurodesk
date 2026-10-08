@@ -1,0 +1,60 @@
+[
+  {
+    "paper_code": "QREF-001",
+    "source_label": "Audited quantitative reference QREF-001",
+    "input_value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9937475/",
+    "source_group": "Audited quantitative disease evidence",
+    "evidence_category": "quantitative_disease_evidence",
+    "disease_focus": "AD / Control",
+    "source_title": "Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test",
+    "doi": "10.1371/journal.pone.0279574",
+    "year": 2023,
+    "evidence_use": "Paper-level source for manually verified quantitative reference statistics. Numeric rows are stored in quantitative_reference_statistics.json.",
+    "note": "Retain paper_code when linking source metadata to audited table rows.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1371/journal.pone.0279574"
+  },
+  {
+    "paper_code": "READ-DESIKAN-2009",
+    "source_title": "Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer's disease",
+    "doi": "10.1093/brain/awp123",
+    "year": 2009,
+    "input_value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2714061/",
+    "diseases": [
+      "AD",
+      "MCI",
+      "Control"
+    ],
+    "rois": [
+      "entorhinal cortex",
+      "hippocampus",
+      "supramarginal gyrus"
+    ],
+    "evidence_category": "disease_evidence",
+    "note": "Source review only; numerical comparison not approved.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1093/brain/awp123"
+  },
+  {
+    "paper_code": "READ-DU-2007",
+    "source_title": "Different regional patterns of cortical thinning in Alzheimer's disease and frontotemporal dementia",
+    "doi": "10.1093/brain/awm016",
+    "year": 2007,
+    "input_value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1853284/",
+    "diseases": [
+      "AD",
+      "FTD",
+      "Control"
+    ],
+    "rois": [
+      "frontal lobe",
+      "temporal lobe",
+      "parietal lobe",
+      "precuneus"
+    ],
+    "evidence_category": "disease_evidence",
+    "note": "Source review only; numerical comparison not approved.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1093/brain/awm016"
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "doi": "10.1212/wnl.0b013e3181a4124e",
+  "review_type": "assistant_primary_source_check_not_human_signoff",
+  "reviewed_sections": [
+    "Subjects",
+    "Image acquisition and analysis",
+    "Statistical analysis",
+    "Table",
+    "Results",
+    "Discussion"
+  ],
+  "primary_source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2827264/",
+  "source_sha256": {
+    "workflow_sources/paper_reading_reviews/raw/rohrer_2009_pmc_article.txt": "d63dfe57eb7f32f4bb21874a00ae21ee77974b6457889a5634bb48a4a4ed71ec",
+    "workflow_sources/paper_reading_reviews/raw/rohrer_2009_table_browser.png": "ac924b1d169a21eaee596dbbfa71d95d6a93fa371428ca7c2df2dfe059edafe9"
+  },
+  "statistics_count": 42,
+  "original_cohort": {
+    "SemD": 44,
+    "PNFA": 32,
+    "Control": 29
+  },
+  "naming_analysis_cohort": {
+    "SemD": 28,
+    "PNFA": 28,
+    "Control": 29
+  },
+  "pathology_confirmed": {
+    "SemD": 11,
+    "PNFA": 4
+  },
+  "subgroup_definition": "Naming performance within six months of MRI; cross-sectional stratification, not serial scanning.",
+  "table_marker": "* p<0.05 disease group versus controls; table footnote does not specify correction.",
+  "vertex_model": "Age, sex and scanner covariates; surface maps FDR 0.05, 20 mm smoothing.",
+  "roi_model": "Between SemD and PNFA: thickness normalized by each patient average over their regions; FDR 0.05.",
+  "table_warning": "Absolute lobar mean/SD cannot be assigned to normalized ROI contrasts or each DK parcel. No individual prediction interval or complete lobar aggregation rule provided.",
+  "method": "Modified FreeSurfer 4.0.3, local semi-automated brain mask and ventricle-modified white mask; visual inspection and control-point editing as required.",
+  "main_patterns": {
+    "SemD": "Left-predominant anterior/inferior temporal thinning with less extensive right temporal involvement.",
+    "PNFA": "Predominantly left superior temporal, inferior/superior frontal and insular thinning; no significant right hemisphere thinning in whole-group versus controls."
+  },
+  "pathology_warning": "PNFA pathology is heterogeneous; four tau-positive cases are not all 32 PNFA patients. Do not infer molecular pathology or AD/PD from MRI.",
+  "naming_warning": "Equivalent naming-score conversion uses unpublished PhD data; do not reproduce a patient score conversion.",
+  "figure_scope": "Figures 1-4 captions and Results checked; exact per-cluster p values, coordinates and extents not extracted from colored overlays.",
+  "permitted_use": "Verified FTLD language-subtype lobar thickness mean/SD in mm, not single DK parcel references. SemD/PNFA naming-severity groups are cross-sectional, not longitudinal stages or AD/PD labels. Modified FreeSurfer 4.0.3 and lobar aggregation are not calibrated to current patient processing. Context only; no patient numerical comparison or disease classification.",
+  "human_signatures_changed": false,
+  "patient_qc_changed": false
+}

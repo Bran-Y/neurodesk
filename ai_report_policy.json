@@ -1,0 +1,9 @@
+{
+  "auto_generate": false,
+  "authorised_endpoint": "https://llm.chudian.site/v1",
+  "authorisation_basis": "User requested removal of patient AI reports on 2026-10-03. Automatic generation is disabled.",
+  "scope": "selected_subject_only_no_background_batch",
+  "send_raw_images": false,
+  "send_subject_identifiers": false,
+  "automatic_retry": false
+}

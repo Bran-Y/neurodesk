@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-10-03",
+  "approved_by": "project_user",
+  "basis": "Explicit user confirmation: the other four papers have passed human review and their data may be used.",
+  "scope": "Research use of extracted literature data; retain published statistical status and measurement compatibility metadata.",
+  "field_level_agreement_inferred": false,
+  "patient_segmentation_qc_inferred": false,
+  "papers": [
+    {
+      "paper": "Sokolowski 2024",
+      "doi": "10.1371/journal.pone.0295069",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use"
+    },
+    {
+      "paper": "Hanganu 2014",
+      "doi": "10.1093/brain/awu036",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use"
+    },
+    {
+      "paper": "Mak 2015 ICICLE-PD",
+      "doi": "10.1093/brain/awv211",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use"
+    },
+    {
+      "paper": "Cortical thickness, surface area and subcortical volume 2016",
+      "doi": "10.1371/journal.pone.0148852",
+      "human_review_status": "accepted",
+      "data_use_status": "user_approved_research_use"
+    }
+  ]
+}

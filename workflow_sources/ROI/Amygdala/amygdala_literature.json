@@ -1,0 +1,103 @@
+[
+  {
+    "paper_code": "QREF-001",
+    "source_title": "Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test",
+    "doi": "10.1371/journal.pone.0279574",
+    "year": 2023,
+    "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0279574",
+    "diseases": [
+      "AD",
+      "Control"
+    ],
+    "rois": [
+      "amygdala",
+      "entorhinal cortex",
+      "hippocampus",
+      "medial temporal lobe",
+      "parahippocampal gyrus"
+    ],
+    "imaging_metrics": [
+      "roi_volume"
+    ],
+    "evidence_use": "Audited quantitative reference distributions; use only rows marked comparison_compatible after atlas, metric, hemisphere, and unit checks.",
+    "quantitative_evidence_source": "workflow_sources/quantitative_reference_statistics.json",
+    "quantitative_evidence_count": 2,
+    "quantitative_evidence": [
+      {
+        "reference_id": "QREF-AD-HIPPO-2023",
+        "diagnosis": "AD",
+        "roi_name": "amygdala",
+        "hemisphere": "bilateral",
+        "imaging_metric": "roi_volume",
+        "mean": 2340.9,
+        "standard_deviation": 548.1,
+        "unit": "mm3",
+        "sample_size": 263,
+        "table_or_figure": "Table 2",
+        "processing_pipeline": "FreeSurfer",
+        "processing_software": "FreeSurfer",
+        "processing_software_version": "not reported in article",
+        "atlas_name": "FreeSurfer automated anatomical segmentation",
+        "atlas_version": "not reported in article",
+        "parcellation_method": "FreeSurfer segmentation of medial temporal lobe structures",
+        "atlas_compatibility_status": "compatible_family_version_unreported",
+        "comparison_compatible": false,
+        "pathology_confirmation": "clinical AD labels from ADNI; not individual histopathology",
+        "evidence_note": "AD group bilateral amygdala volume.",
+        "extraction_method": "AI-assisted PDF text extraction and visual table cross-check",
+        "manual_review_status": "accepted",
+        "reviewed_by": "Codex (AI; not a human reviewer)",
+        "reviewed_at": "2026-09-10",
+        "verification_note": "Table values match. N=263 per group from Methods p.3. Named atlas and FreeSurfer version unreported; no age/sex/head-size adjustment. Do not split bilateral totals into hemispheres.",
+        "human_review_status": "accepted",
+        "data_use_status": "user_approved_research_use",
+        "approval_record": {
+          "approved_at": "2026-09-15T04:47:15.862772+00:00",
+          "approved_by": "project_user",
+          "basis": "Explicit batch approval in conversation on 2026-09-15",
+          "scope": "Research use subject to measurement compatibility checks",
+          "independent_source_reverification": false
+        }
+      },
+      {
+        "reference_id": "QREF-AD-HIPPO-2023",
+        "diagnosis": "Control",
+        "roi_name": "amygdala",
+        "hemisphere": "bilateral",
+        "imaging_metric": "roi_volume",
+        "mean": 2957.1,
+        "standard_deviation": 476.6,
+        "unit": "mm3",
+        "sample_size": 263,
+        "table_or_figure": "Table 2",
+        "processing_pipeline": "FreeSurfer",
+        "processing_software": "FreeSurfer",
+        "processing_software_version": "not reported in article",
+        "atlas_name": "FreeSurfer automated anatomical segmentation",
+        "atlas_version": "not reported in article",
+        "parcellation_method": "FreeSurfer segmentation of medial temporal lobe structures",
+        "atlas_compatibility_status": "compatible_family_version_unreported",
+        "comparison_compatible": false,
+        "pathology_confirmation": "normal-control research group",
+        "evidence_note": "Control group bilateral amygdala volume.",
+        "extraction_method": "AI-assisted PDF text extraction and visual table cross-check",
+        "manual_review_status": "accepted",
+        "reviewed_by": "Codex (AI; not a human reviewer)",
+        "reviewed_at": "2026-09-10",
+        "verification_note": "Table values match. N=263 per group from Methods p.3. Named atlas and FreeSurfer version unreported; no age/sex/head-size adjustment. Do not split bilateral totals into hemispheres.",
+        "human_review_status": "accepted",
+        "data_use_status": "user_approved_research_use",
+        "approval_record": {
+          "approved_at": "2026-09-15T04:47:15.862772+00:00",
+          "approved_by": "project_user",
+          "basis": "Explicit batch approval in conversation on 2026-09-15",
+          "scope": "Research use subject to measurement compatibility checks",
+          "independent_source_reverification": false
+        }
+      }
+    ],
+    "primary_roi": "amygdala",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1371/journal.pone.0279574"
+  }
+]

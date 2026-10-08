@@ -1,0 +1,4 @@
+[
+  {"paper_code":"ROI-002","source_title":"Cerebral atrophy measurements using Jacobian integration: comparison with the boundary shift integral","doi":"10.1016/j.neuroimage.2006.02.052","year":2006,"diseases":["Cerebral atrophy"],"primary_roi":"whole brain","rois":["whole brain","gray matter"],"imaging_metrics":["jacobian_integration","boundary_shift_integral","atrophy_rate"],"evidence_use":"Whole-brain atrophy measurement validation"},
+  {"paper_code":"ROI-003","source_title":"Issues with threshold masking in voxel-based morphometry of atrophied brains","doi":"10.1016/j.neuroimage.2008.08.045","year":2009,"diseases":["Atrophied brain"],"primary_roi":"gray matter","rois":["gray matter","whole brain"],"imaging_metrics":["voxel_based_morphometry"],"evidence_use":"Methodological limitation for atrophied-brain VBM"}
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "reference_id": "QREF-AD-HIPPO-2023",
+    "reference_age_min": 55,
+    "reference_age_max": 97,
+    "reference_age_source": "Methods, page 3: 526 ADNI participants (263 AD and 263 normal controls) with mixed gender and ages from 55 to 97 years",
+    "source_title": "Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test",
+    "doi": "10.1371/journal.pone.0279574",
+    "source_url": "https://doi.org/10.1371/journal.pone.0279574",
+    "screening_role": "reference_population_applicability_only",
+    "interpretation_note": "Outside-range status prevents use of this paper's numerical model but does not rule out the disease."
+  }
+]

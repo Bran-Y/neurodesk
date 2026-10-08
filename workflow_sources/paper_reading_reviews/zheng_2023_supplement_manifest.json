@@ -1,0 +1,78 @@
+[
+  {
+    "group": "AD",
+    "sha256": "ba20e50576aa5f5f9eb5a1bb2eed37633ee51d2233c8065ada01dad4957d732d",
+    "total_archive_entries": 5274,
+    "selected_files": {
+      "aseg.stats": 263,
+      "lh.aparc.stats": 263,
+      "rh.aparc.stats": 263
+    },
+    "unique_scan_directories": 263,
+    "unique_persons_verified": false,
+    "program_version_headers": [
+      "# cvs_version $Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $",
+      "# cvs_version $Id: mris_anatomical_stats.c,v 1.79 2016/03/14 15:15:34 greve Exp $",
+      "# mrisurf.c-cvs_version $Id: mrisurf.c,v 1.781.2.6 2016/12/27 16:47:14 zkaufman Exp $"
+    ],
+    "software_release": "not established from program CVS headers",
+    "other_stats_filenames": [
+      "aseg.stats",
+      "lh.BA_exvivo.stats",
+      "lh.BA_exvivo.thresh.stats",
+      "lh.aparc.DKTatlas.stats",
+      "lh.aparc.a2009s.stats",
+      "lh.aparc.pial.stats",
+      "lh.aparc.stats",
+      "lh.curv.stats",
+      "lh.w-g.pct.stats",
+      "rh.BA_exvivo.stats",
+      "rh.BA_exvivo.thresh.stats",
+      "rh.aparc.DKTatlas.stats",
+      "rh.aparc.a2009s.stats",
+      "rh.aparc.pial.stats",
+      "rh.aparc.stats",
+      "rh.curv.stats",
+      "rh.w-g.pct.stats",
+      "wmparc.stats"
+    ]
+  },
+  {
+    "group": "Control",
+    "sha256": "97165552caa18480e5b63895f04937c934a09d02f0a67409176790fd3edb0615",
+    "total_archive_entries": 5286,
+    "selected_files": {
+      "aseg.stats": 263,
+      "lh.aparc.stats": 263,
+      "rh.aparc.stats": 263
+    },
+    "unique_scan_directories": 263,
+    "unique_persons_verified": false,
+    "program_version_headers": [
+      "# cvs_version $Id: mri_segstats.c,v 1.121 2016/05/31 17:27:11 greve Exp $",
+      "# cvs_version $Id: mris_anatomical_stats.c,v 1.79 2016/03/14 15:15:34 greve Exp $",
+      "# mrisurf.c-cvs_version $Id: mrisurf.c,v 1.781.2.6 2016/12/27 16:47:14 zkaufman Exp $"
+    ],
+    "software_release": "not established from program CVS headers",
+    "other_stats_filenames": [
+      "aseg.stats",
+      "lh.BA_exvivo.stats",
+      "lh.BA_exvivo.thresh.stats",
+      "lh.aparc.DKTatlas.stats",
+      "lh.aparc.a2009s.stats",
+      "lh.aparc.pial.stats",
+      "lh.aparc.stats",
+      "lh.curv.stats",
+      "lh.w-g.pct.stats",
+      "rh.BA_exvivo.stats",
+      "rh.BA_exvivo.thresh.stats",
+      "rh.aparc.DKTatlas.stats",
+      "rh.aparc.a2009s.stats",
+      "rh.aparc.pial.stats",
+      "rh.aparc.stats",
+      "rh.curv.stats",
+      "rh.w-g.pct.stats",
+      "wmparc.stats"
+    ]
+  }
+]

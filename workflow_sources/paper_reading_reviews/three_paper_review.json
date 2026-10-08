@@ -1,0 +1,265 @@
+[
+  {
+    "paper_code": "READ-ZHENG-2023",
+    "source_title": "Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test",
+    "doi": "10.1371/journal.pone.0279574",
+    "year": 2023,
+    "source_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0279574",
+    "read_status": "main_text_and_S1_S2_inspected",
+    "human_review_status": "accepted",
+    "diseases": [
+      "AD",
+      "Control"
+    ],
+    "rois": [
+      "hippocampus",
+      "amygdala",
+      "entorhinal cortex",
+      "parahippocampal gyrus",
+      "medial temporal lobe"
+    ],
+    "design": "ADNI model development; independent MIRIAD testing",
+    "development_n": {
+      "AD": 263,
+      "Control": 263
+    },
+    "test_n": {
+      "AD": 46,
+      "Control": 23
+    },
+    "age_range": [
+      55,
+      97
+    ],
+    "age_range_scope": "development sample pooled; not per-group or per-subject age metadata",
+    "methods": "Unadjusted FreeSurfer volumes; Gaussian likelihood-ratio method. No age/sex/head-size correction.",
+    "source_locations": [
+      "Methods and materials",
+      "Tables 1-2",
+      "Figures 3-4",
+      "Supporting information S1-S2"
+    ],
+    "supplement_statistics": "zheng_2023_supplement_statistics.json",
+    "supplement_audit": "zheng_2023_supplement_manifest.json",
+    "test_attachments_status": "S3/S4 not inspected in this update",
+    "issues": [
+      "Table 1 hemisphere sums and Table 2 hippocampal totals differ; preserve published and recomputed statistics separately.",
+      "MTL SD differs between Table 2 and Figure 4/text.",
+      "Individual demographic linkage and exact software release require further checking.",
+      "Not applicable numerically to ages 18-28 without external validation.",
+      "ADNI-derived external evidence is separate from OASIS pilot participants; project scope approval remains required."
+    ],
+    "comparison_compatible": false,
+    "next_action": "Reconcile supplementary aggregates against tables; review individual metadata, version and reuse terms before enabling comparisons.",
+    "data_use_status": "user_approved_research_use",
+    "approval_record": {
+      "approved_at": "2026-09-15T04:47:15.862772+00:00",
+      "approved_by": "project_user",
+      "basis": "Explicit batch approval in conversation on 2026-09-15",
+      "scope": "Research use subject to measurement compatibility checks",
+      "independent_source_reverification": false
+    }
+  },
+  {
+    "paper_code": "READ-DESIKAN-2009",
+    "source_title": "Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer's disease",
+    "doi": "10.1093/brain/awp123",
+    "year": 2009,
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2714061/",
+    "read_status": "main_text_methods_results_tables_1_3_inspected",
+    "human_review_status": "accepted",
+    "diseases": [
+      "AD",
+      "MCI",
+      "Control"
+    ],
+    "rois": [
+      "entorhinal cortex",
+      "hippocampus",
+      "supramarginal gyrus"
+    ],
+    "cohorts": [
+      {
+        "dataset": "OASIS",
+        "groups": {
+          "Control": 49,
+          "estimated_MCI": 48
+        },
+        "age_mean_sd": {
+          "Control": [
+            76.6,
+            4.9
+          ],
+          "estimated_MCI": [
+            78.0,
+            5.6
+          ]
+        }
+      },
+      {
+        "dataset": "ADNI",
+        "groups": {
+          "Control": 94,
+          "MCI": 57,
+          "AD": 65
+        },
+        "age_mean_sd": {
+          "Control": [
+            76.0,
+            5.0
+          ],
+          "MCI": [
+            76.4,
+            6.1
+          ],
+          "AD": [
+            76.6,
+            7.7
+          ]
+        }
+      }
+    ],
+    "methods": "FreeSurfer; Desikan 2006 gyral parcellation plus hippocampus/amygdala segmentation. Methods add left and right measures, including thickness, and correct volumes for eTIV. Age enters logistic regression.",
+    "group_definition_cautions": [
+      "OASIS CDR 0.5 is estimated MCI, explicitly not identical to amnestic MCI.",
+      "ADNI MCI selected for progression to probable AD within two years; not an unselected MCI population."
+    ],
+    "table_roles": {
+      "1": "demographics, not ROI distributions",
+      "2": "model coefficients and classification performance",
+      "3": "Spearman correlations, not reference intervals"
+    },
+    "issues": [
+      "Table 2 training n=98 conflicts with 49+48=97.",
+      "Training sensitivity differs between abstract and Table 2 (74% versus 73%).",
+      "Model scaling and eTIV correction must be reproduced before using coefficients.",
+      "OASIS parent dataset age range 18-96 is NOT this selected cohort's applicability range.",
+      "Possible OASIS subject overlap must be checked before claiming independent validation."
+    ],
+    "comparison_compatible": false,
+    "next_action": "Use directional evidence first; do not convert AUC or odds ratios to individual probabilities or ROI means.",
+    "data_use_status": "user_approved_research_use",
+    "approval_record": {
+      "approved_at": "2026-09-15T04:47:15.862772+00:00",
+      "approved_by": "project_user",
+      "basis": "Explicit batch approval in conversation on 2026-09-15",
+      "scope": "Research use subject to measurement compatibility checks",
+      "independent_source_reverification": false
+    }
+  },
+  {
+    "paper_code": "READ-DU-2007",
+    "source_title": "Different regional patterns of cortical thinning in Alzheimer's disease and frontotemporal dementia",
+    "doi": "10.1093/brain/awm016",
+    "year": 2007,
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1853284/",
+    "read_status": "main_text_methods_results_tables_1_3_inspected",
+    "human_review_status": "accepted",
+    "diseases": [
+      "AD",
+      "FTD",
+      "Control"
+    ],
+    "rois": [
+      "frontal lobe",
+      "temporal lobe",
+      "parietal lobe",
+      "precuneus"
+    ],
+    "sample_size": {
+      "Control": 23,
+      "AD": 22,
+      "FTD": 19
+    },
+    "age_mean_sd": {
+      "Control": [
+        61.9,
+        6.3
+      ],
+      "AD": [
+        62.8,
+        7.0
+      ],
+      "FTD": [
+        61.7,
+        7.5
+      ]
+    },
+    "methods": "1.5T Siemens Vision; FreeSurfer, Desikan 2006 ROI mapping; 10mm smoothing; age/sex ANCOVA. Vertex p<0.001 uncorrected. Logistic regression with leave-one-out validation.",
+    "table_2": {
+      "metric": "cortical_thickness",
+      "unit": "mm",
+      "scope": "lobar; do not assign to individual aparc ROIs or hemispheres",
+      "columns": [
+        "frontal lobe",
+        "temporal lobe",
+        "parietal lobe"
+      ],
+      "mean_sd": {
+        "Control": [
+          [
+            2.4,
+            0.2
+          ],
+          [
+            2.8,
+            0.2
+          ],
+          [
+            2.1,
+            0.2
+          ]
+        ],
+        "AD": [
+          [
+            2.0,
+            0.2
+          ],
+          [
+            2.2,
+            0.3
+          ],
+          [
+            1.5,
+            0.2
+          ]
+        ],
+        "FTD": [
+          [
+            1.9,
+            0.4
+          ],
+          [
+            2.3,
+            0.4
+          ],
+          [
+            1.9,
+            0.2
+          ]
+        ]
+      }
+    },
+    "directional_findings": [
+      "AD and FTD show thinning versus controls.",
+      "AD parietal thinning exceeds FTD; frontal and temporal AD-FTD differences are not significant.",
+      "FTD has no significantly thinner regions than AD in this sample."
+    ],
+    "issues": [
+      "Clinical diagnoses without autopsy confirmation.",
+      "Small sample and disease-severity differences.",
+      "No verified individual age bounds or exact software release.",
+      "Lobar thickness is not a direct reference for a single gyral ROI."
+    ],
+    "comparison_compatible": false,
+    "next_action": "Retain lobar quantitative evidence and qualitative differential pattern; establish aggregation and age compatibility before individual numerical use.",
+    "data_use_status": "user_approved_research_use",
+    "approval_record": {
+      "approved_at": "2026-09-15T04:47:15.862772+00:00",
+      "approved_by": "project_user",
+      "basis": "Explicit batch approval in conversation on 2026-09-15",
+      "scope": "Research use subject to measurement compatibility checks",
+      "independent_source_reverification": false
+    }
+  }
+]

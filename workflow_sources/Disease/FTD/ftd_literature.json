@@ -1,0 +1,259 @@
+[
+  {
+    "paper_code": "DIS-001",
+    "source_title": "Classification of primary progressive aphasia and its variants",
+    "doi": "10.1212/WNL.0b013e31821103e6",
+    "year": 2011,
+    "diseases": [
+      "FTD",
+      "PPA",
+      "svPPA",
+      "nfvPPA",
+      "lvPPA"
+    ],
+    "rois": [
+      "anterior temporal cortex",
+      "frontal cortex",
+      "insula",
+      "inferior parietal cortex",
+      "posterior cingulate cortex"
+    ],
+    "imaging_metrics": [
+      "regional_atrophy",
+      "cortical_thickness"
+    ],
+    "evidence_use": "Clinical and imaging-supported PPA subtype classification; not a numerical ROI reference distribution.",
+    "source_label": "PPA classification and variants",
+    "pmid": "21325651",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/21325651/",
+    "input_value": "https://pubmed.ncbi.nlm.nih.gov/21325651/",
+    "note": "Bibliographic identity corrected against the linked PubMed/PMC record. This correction does not extract results or approve case-level interpretations."
+  },
+  {
+    "paper_code": "DIS-002",
+    "source_title": "Sensitivity of revised diagnostic criteria for the behavioural variant of frontotemporal dementia",
+    "doi": "10.1093/brain/awr179",
+    "year": 2011,
+    "diseases": [
+      "FTD",
+      "bvFTD"
+    ],
+    "rois": [
+      "frontal cortex",
+      "anterior temporal cortex",
+      "insula",
+      "anterior cingulate cortex"
+    ],
+    "imaging_metrics": [
+      "regional_atrophy"
+    ],
+    "evidence_use": "Clinical bvFTD diagnostic criteria and imaging support; not a numerical ROI reference distribution.",
+    "source_label": "bvFTD diagnostic criteria",
+    "pmid": "21810890",
+    "source_url": "https://pubmed.ncbi.nlm.nih.gov/21810890/",
+    "input_value": "https://pubmed.ncbi.nlm.nih.gov/21810890/",
+    "note": "Bibliographic identity corrected against the linked PubMed/PMC record. This correction does not extract results or approve case-level interpretations."
+  },
+  {
+    "paper_code": "DIS-011",
+    "source_title": "Patterns of cortical thinning in the language variants of frontotemporal lobar degeneration",
+    "doi": "10.1212/WNL.0b013e3181a4124e",
+    "year": 2009,
+    "diseases": [
+      "FTD",
+      "PPA",
+      "svPPA",
+      "nfvPPA"
+    ],
+    "rois": [
+      "anterior temporal cortex",
+      "entorhinal cortex",
+      "parahippocampal cortex",
+      "frontal cortex",
+      "insula",
+      "anterior cingulate cortex"
+    ],
+    "imaging_metrics": [
+      "cortical_thickness"
+    ],
+    "evidence_use": "Subtype-specific cortical thinning pattern"
+  },
+  {
+    "paper_code": "QREF-002",
+    "source_title": "Cortical Complexity Analyses and Their Cognitive Correlate in Alzheimer's Disease and Frontotemporal Dementia",
+    "doi": "10.3233/JAD-200246",
+    "year": 2020,
+    "diseases": [
+      "AD",
+      "Control",
+      "FTD"
+    ],
+    "rois": [
+      "whole brain cortex"
+    ],
+    "imaging_metrics": [
+      "cortical_thickness"
+    ],
+    "evidence_use": "Audited quantitative reference distributions; use only rows marked comparison_compatible after atlas, metric, hemisphere, and unit checks.",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7338220/",
+    "quantitative_evidence_source": "workflow_sources/quantitative_reference_statistics.json",
+    "quantitative_evidence_count": 3,
+    "quantitative_evidence": [
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "AD",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.5,
+        "standard_deviation": 0.14,
+        "unit": "mm",
+        "sample_size": 32,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "symptomatic AD-pathology group included probable AD and amyloid-positive MCI",
+        "evidence_note": "Whole-brain thickness is not sufficient by itself to distinguish AD from FTD.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      },
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "FTD",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.5,
+        "standard_deviation": 0.12,
+        "unit": "mm",
+        "sample_size": 24,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "clinical FTD group; not individual histopathology",
+        "evidence_note": "Whole-brain thickness is not sufficient by itself to distinguish FTD from AD.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      },
+      {
+        "reference_id": "QREF-ADFTD-WBCT-2020",
+        "diagnosis": "Control",
+        "roi_name": "whole brain cortex",
+        "hemisphere": "bilateral",
+        "imaging_metric": "cortical_thickness",
+        "mean": 2.64,
+        "standard_deviation": 0.1,
+        "unit": "mm",
+        "sample_size": 28,
+        "table_or_figure": "Table 1",
+        "processing_pipeline": "surface-based morphometry",
+        "processing_software": "CAT12 / SPM12",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "not applicable to whole-brain vertex-wise mean",
+        "atlas_version": "not reported",
+        "parcellation_method": "surface-based morphometry; whole-brain mean cortical thickness",
+        "atlas_compatibility_status": "processing_method_not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "healthy-control research group",
+        "evidence_note": "Control whole-brain mean cortical thickness.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Table 1 values verified; patient FreeSurfer parcel mean is not treated as harmonized with the paper processing method."
+      }
+    ]
+  },
+  {
+    "paper_code": "QREF-003",
+    "source_title": "Pulsed Arterial Spin Labeling and Segmented Brain Volumetry in the Diagnostic Evaluation of Frontotemporal Dementia, Alzheimer's Disease and Mild Cognitive Impairment",
+    "doi": "10.3390/tomography8010018",
+    "year": 2022,
+    "diseases": [
+      "Control",
+      "FTD"
+    ],
+    "rois": [
+      "hippocampus"
+    ],
+    "imaging_metrics": [
+      "roi_volume"
+    ],
+    "evidence_use": "Audited quantitative reference distributions; use only rows marked comparison_compatible after atlas, metric, hemisphere, and unit checks.",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8788517/",
+    "quantitative_evidence_source": "workflow_sources/quantitative_reference_statistics.json",
+    "quantitative_evidence_count": 2,
+    "quantitative_evidence": [
+      {
+        "reference_id": "QREF-FTD-HIPPO-2022",
+        "diagnosis": "FTD",
+        "roi_name": "hippocampus",
+        "hemisphere": "lh",
+        "imaging_metric": "roi_volume",
+        "mean": 2868.4,
+        "standard_deviation": null,
+        "unit": "mm3",
+        "table_or_figure": "Table 2",
+        "processing_pipeline": "study-specific segmented volumetry",
+        "processing_software": "study-specific segmented volumetry",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "study-specific segmented brain volumetry",
+        "atlas_version": "not reported in registry source table",
+        "parcellation_method": "segmented volumetry",
+        "atlas_compatibility_status": "not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "clinical FTD group; not individual histopathology",
+        "evidence_note": "Mean-only directional evidence; SD is unavailable in the reported table, so it is excluded from likelihood ranking.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Mean is retained as directional context only; no SD was transcribed, so likelihood ranking is disabled."
+      },
+      {
+        "reference_id": "QREF-FTD-HIPPO-2022",
+        "diagnosis": "Control",
+        "roi_name": "hippocampus",
+        "hemisphere": "lh",
+        "imaging_metric": "roi_volume",
+        "mean": 3442.0,
+        "standard_deviation": null,
+        "unit": "mm3",
+        "table_or_figure": "Table 2",
+        "processing_pipeline": "study-specific segmented volumetry",
+        "processing_software": "study-specific segmented volumetry",
+        "processing_software_version": "not reported in quantitative registry",
+        "atlas_name": "study-specific segmented brain volumetry",
+        "atlas_version": "not reported in registry source table",
+        "parcellation_method": "segmented volumetry",
+        "atlas_compatibility_status": "not_harmonized",
+        "comparison_compatible": false,
+        "pathology_confirmation": "control research group",
+        "evidence_note": "Mean-only control context; excluded from likelihood ranking.",
+        "extraction_method": "manual table transcription with source-page verification",
+        "manual_review_status": "manually_verified_against_source",
+        "reviewed_by": "project_workflow_review",
+        "reviewed_at": "2026-08-26",
+        "verification_note": "Mean is retained as directional context only; no SD was transcribed, so likelihood ranking is disabled."
+      }
+    ]
+  }
+]

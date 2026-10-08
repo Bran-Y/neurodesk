@@ -1,0 +1,80 @@
+{
+  "review_type": "assistant_primary_source_check_not_human_signoff",
+  "source_pdf_sha256": "ea13d433c0850f669c18821b6544d911b7d6e0cfacbef5f2ede6b46a0b9db740",
+  "field_check_sha256": "98b3636df8a1aa5458eaec216d1f63ab977939f899cc9b0aff982e394a65e5c7",
+  "table_field_checks": 392,
+  "source_scope": "Complete user PDF pp.1244-1255, Methods, Tables 1-3, Results, Discussion and figure captions; Table 1/2/3 visually checked.",
+  "statistics_count": 56,
+  "source_conflicts": [
+    {
+      "location": "Table 1 p.1247",
+      "finding": "Female n printed as 4; total n=78 and male n=37. Female pre/post 25/16 sums to 41. Forty-one is an arithmetic inference, not a printed correction."
+    },
+    {
+      "location": "Lateral ventricles / age, model 1",
+      "finding": "Table 2: 2.43 (1.63,3.24); Results Age: 2.45 (1.65,3.25)."
+    },
+    {
+      "location": "Lateral ventricles / gender, model 2",
+      "finding": "Table 2: 50.56 (21.01,87.34); Results Gender: 49.76 (20.06,86.81)."
+    },
+    {
+      "location": "Putamen / gender, model 2",
+      "finding": "Table 2: 5.33 (0.28,10.63), p=0.038; Results Gender says men have larger volumes in all structures except hippocampus and putamen. The putamen exception conflicts with the positive coefficient and nominal significance in Table 2; retain both statements."
+    },
+    {
+      "location": "Lateral ventricles / age, model 4",
+      "finding": "Table 2: 2.21 (1.50,2.93); Results Age adjusted: 2.22 (1.52,2.93)."
+    },
+    {
+      "location": "Lateral ventricles / gender, model 4",
+      "finding": "Table 2: 19.61 (-4.44,49.72); Results Gender adjusted: 15.08 (-8.47,44.69)."
+    },
+    {
+      "location": "Whole brain / gender, model 4",
+      "finding": "Table 2: -3.53 (-5.25,-1.79); Results: 3.74 percent smaller (1.95,5.50 smaller)."
+    },
+    {
+      "location": "Grey matter / gender, model 4",
+      "finding": "Table 2: -2.53 (-5.28,0.29); Results: 2.78 percent smaller (-0.12,5.61 smaller)."
+    },
+    {
+      "location": "White matter / gender, model 4",
+      "finding": "Table 2: -5.76 (-9.17,-2.21); Results: 5.87 percent smaller (2.21,9.40 smaller)."
+    },
+    {
+      "location": "Hippocampus / gender, model 4",
+      "finding": "Table 2: -3.32 (-7.77,1.34), p=0.157; Results: 3.38 percent smaller (-1.44,7.97 smaller), p=0.16."
+    },
+    {
+      "location": "Amygdala / gender, model 4",
+      "finding": "Table 2: -3.90 (-9.32,1.84), p=0.176; Results: 3.62 percent smaller (-2.34,9.23 smaller), p=0.22."
+    },
+    {
+      "location": "Whole brain / log TIV, model 4",
+      "finding": "Table 2: 1.02 (0.91,1.12); Results TIV adjusted: 1.03 (0.92,1.14)."
+    },
+    {
+      "location": "White matter / log TIV, model 4",
+      "finding": "Table 2: b=1.27 (1.06,1.49); Results TIV adjusted describes a power less than one. Retain both; do not reverse b."
+    },
+    {
+      "location": "Caudate / upgrade",
+      "finding": "Discussion includes caudate among independent upgrade effects; Table 2 model 4 has 0.28 (-4.58,5.39), p=0.910; Results identifies grey matter/amygdala only."
+    }
+  ],
+  "permitted_use": "Verified Table 2 covariate associations with 95% coefficient CI, not group volume means, SD or individual prediction intervals. TIV entries are log-log power coefficients, not percentages. Age effects are cross-sectional, not longitudinal atrophy rates. Published table/text conflicts are retained; intercept and residual prediction parameters are not reported in the inspected main paper. Modified FreeSurfer 4.1.0/MIDAS/SPM5 is not calibrated to current processing. Method context only; no patient numerical comparison or disease classification.",
+  "findings": {
+    "models": "Natural log ROI volume; models 1-3 each include upgrade, model 4 includes age, gender, log TIV and upgrade. TIV slopes are b in vol=k*TIV^b, not percentage changes.",
+    "reconstruction": "Table 2 supplies slopes/effects and coefficient CI, but no numerical intercept k, residual variance or full coefficient covariance for individual prediction. Do not build an absolute volume reference interval.",
+    "cohort": "78 healthy controls aged 24-81 years from a single 1.5T GE Signa site; not an AD/PD classifier. Female printed n=4 is retained as a source typo, not silently replaced.",
+    "methods": "MIDAS whole brain and TIV; FS4.1.0 subcortical segmentation and modified cortical stream with MIDAS brain mask, ventricle-informed WM mask and manual edits; SPM5/DARTEL GM/WM.",
+    "correction": "Cortical surface FDR 0.05 separately over each hemisphere; VBM FDR 0.05. Neither establishes corrected status for Table 2 ROI tests. Tests of b=1 in prose differ from Table 2 tests of no association.",
+    "age": "Cross-sectional age associations are not within-person annual atrophy rates; total bilateral hippocampus/amygdala/caudate/putamen effects are not separate hemisphere effects.",
+    "recommendations": "Table 3: age Yes for ROI/thickness/VBM; gender Maybe/Yes/Yes; TIV Yes/Probably not/Yes; upgrade Maybe/Yes/Yes. Study-specific balance/confounding still matters; nonsignificance alone is not grounds to omit adjustment.",
+    "conflicts": "Table values retained as printed, conflicting prose retained separately. No erratum is supplied; no assistant correction of cohort counts or effect values is applied."
+  },
+  "patient_comparison_enabled": false,
+  "human_signatures_changed": false,
+  "patient_qc_changed": false
+}

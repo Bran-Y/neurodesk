@@ -1,0 +1,24 @@
+[
+  {
+    "paper_code": "READ-DU-2007",
+    "source_title": "Different regional patterns of cortical thinning in Alzheimer's disease and frontotemporal dementia",
+    "doi": "10.1093/brain/awm016",
+    "year": 2007,
+    "input_value": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1853284/",
+    "diseases": [
+      "AD",
+      "FTD",
+      "Control"
+    ],
+    "rois": [
+      "frontal lobe",
+      "temporal lobe",
+      "parietal lobe",
+      "precuneus"
+    ],
+    "evidence_category": "disease_evidence",
+    "note": "Source review only; numerical comparison not approved.",
+    "full_text_review_file": "workflow_sources/paper_reading_reviews/three_paper_review.json",
+    "full_text_review_key": "10.1093/brain/awm016"
+  }
+]

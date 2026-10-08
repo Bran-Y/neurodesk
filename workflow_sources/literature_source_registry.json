@@ -1,0 +1,13 @@
+{
+  "registry_version": "V0.3-hierarchical-disease-roi",
+  "description": "Manifest for canonical source registries plus disease- and ROI-specific category indexes.",
+  "registry_files": {
+    "disease_evidence": "workflow_sources/Disease/disease_literature_sources.json",
+    "roi_evidence": "workflow_sources/ROI/roi_literature_sources.json"
+  },
+  "category_roots": {
+    "disease_categories": "workflow_sources/Disease/*/*.json",
+    "roi_categories": "workflow_sources/ROI/*/*.json"
+  },
+  "usage_note": "Use the two root JSON files as canonical database inputs. Recursively read category JSON files for browsing and audit, then deduplicate by paper_code. Keep generated databases out of Git."
+}

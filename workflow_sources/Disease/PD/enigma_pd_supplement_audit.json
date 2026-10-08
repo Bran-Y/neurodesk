@@ -1,0 +1,966 @@
+{
+  "source_pdf_sha256": "076e783485824d61d168958060e9d4188d68393d615e4275b03c38b5fea4a2a1",
+  "tables": {
+    "S2a": 68,
+    "S2b": 68,
+    "S2c": 16,
+    "S4a": 68,
+    "S4b": 68,
+    "S4c": 68,
+    "S4d": 68,
+    "S4e": 68,
+    "S4f": 68,
+    "S4g": 68,
+    "S4h": 68,
+    "S4i": 16,
+    "S4j": 16,
+    "S4k": 16,
+    "S4l": 16
+  },
+  "audit_type": "automated_field_comparison",
+  "human_review_status": "pending_human_review",
+  "full_sample_checks": [
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_bankssts",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_bankssts",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_caudalanteriorcingulate",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_caudalanteriorcingulate",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_caudalmiddlefrontal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_caudalmiddlefrontal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_cuneus",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_cuneus",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_entorhinal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_entorhinal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_frontalpole",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_frontalpole",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_fusiform",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_fusiform",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_inferiorparietal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_inferiorparietal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_inferiortemporal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_inferiortemporal",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_insula",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_insula",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_isthmuscingulate",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_isthmuscingulate",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_lateraloccipital",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_lateraloccipital",
+      "source_page": 6,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_lateralorbitofrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_lateralorbitofrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_lingual",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_lingual",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_medialorbitofrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_medialorbitofrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_middletemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_middletemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_paracentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_paracentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_parahippocampal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_parahippocampal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_parsopercularis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_parsopercularis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_parsorbitalis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_parsorbitalis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_parstriangularis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_parstriangularis",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_pericalcarine",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_pericalcarine",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_postcentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_postcentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_posteriorcingulate",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_posteriorcingulate",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_precentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_precentral",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_precuneus",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_precuneus",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_rostralanteriorcingulate",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_rostralanteriorcingulate",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_rostralmiddlefrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_rostralmiddlefrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_superiorfrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_superiorfrontal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_superiorparietal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_superiorparietal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_superiortemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_superiortemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_supramarginal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_supramarginal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_temporalpole",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_temporalpole",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:L_transversetemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortThick:R_transversetemporal",
+      "source_page": 7,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_bankssts",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_bankssts",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_caudalanteriorcingulate",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_caudalanteriorcingulate",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {
+        "regression_ci_lower": {
+          "existing": -7.17,
+          "supplement": -7.71
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_caudalmiddlefrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_caudalmiddlefrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_cuneus",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_cuneus",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_entorhinal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_entorhinal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_frontalpole",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_frontalpole",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_fusiform",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_fusiform",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_inferiorparietal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_inferiorparietal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_inferiortemporal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_inferiortemporal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_insula",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_insula",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_isthmuscingulate",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_isthmuscingulate",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {
+        "regression_ci_upper": {
+          "existing": 25.0,
+          "supplement": 25.9
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_lateraloccipital",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_lateraloccipital",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_lateralorbitofrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_lateralorbitofrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {
+        "effect_size": {
+          "existing": -0.053,
+          "supplement": 0.053
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_lingual",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_lingual",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_medialorbitofrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_medialorbitofrontal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_middletemporal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_middletemporal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_paracentral",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_paracentral",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_parahippocampal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_parahippocampal",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_parsopercularis",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_parsopercularis",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_parsorbitalis",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_parsorbitalis",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_parstriangularis",
+      "source_page": 8,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_parstriangularis",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_pericalcarine",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_pericalcarine",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_postcentral",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_postcentral",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {
+        "effect_size": {
+          "existing": 0.003,
+          "supplement": -0.003
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_posteriorcingulate",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {
+        "n_patients": {
+          "existing": 239,
+          "supplement": 2309
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_posteriorcingulate",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_precentral",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_precentral",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_precuneus",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_precuneus",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_rostralanteriorcingulate",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_rostralanteriorcingulate",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_rostralmiddlefrontal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_rostralmiddlefrontal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_superiorfrontal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_superiorfrontal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_superiorparietal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_superiorparietal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {
+        "regression_ci_lower": {
+          "existing": 48.78,
+          "supplement": -48.78
+        }
+      }
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_superiortemporal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_superiortemporal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_supramarginal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_supramarginal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_temporalpole",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_temporalpole",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:L_transversetemporal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:CortSurf:R_transversetemporal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lamyg",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Ramyg",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lcaud",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Rcaud",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lpal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Rpal",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lhippo",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Rhippo",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:LLatVent",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:RLatVent",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Laccumb",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Raccumb",
+      "source_page": 9,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lput",
+      "source_page": 10,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Rput",
+      "source_page": 10,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Lthal",
+      "source_page": 10,
+      "fields_checked": 8,
+      "differences": {}
+    },
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:Rthal",
+      "source_page": 10,
+      "fields_checked": 8,
+      "differences": {}
+    }
+  ]
+}

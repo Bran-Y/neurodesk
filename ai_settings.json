@@ -1,0 +1,6 @@
+{
+  "base_url": "https://llm.chudian.site/v1",
+  "model": "glm-5.3-flash",
+  "timeout_seconds": 180,
+  "max_tokens": 6000
+}

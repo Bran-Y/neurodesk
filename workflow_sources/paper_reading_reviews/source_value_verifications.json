@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scope": "Completed source-value checks, not unrestricted data-use approval or patient QC",
+  "records": [
+    {
+      "evidence_id": "PD-ENIGMA-2021:Subvol:LLatVent:HY4-5",
+      "doi": "10.1002/mds.28706",
+      "source": "ENIGMA PD, HY4-5, left lateral ventricle",
+      "verification_status": "completed",
+      "verified_at": "2026-10-05",
+      "verification_basis": "Assistant inspected primary PDF; user supplied matching screenshots of both tables and requested workflow update",
+      "source_locations": "Supplementary Table S3c, PDF page 11; Table S4l, PDF page 25",
+      "source_pdf": "Disease/PD/raw/mds28706-sup-0001-supinfo.pdf",
+      "source_pdf_sha256": "076e783485824d61d168958060e9d4188d68393d615e4275b03c38b5fea4a2a1",
+      "values": {"summary_d": -0.357, "detailed_d": 0.357, "b": 2761.46, "percent_difference": 18.43},
+      "reported_values": "S3c d=-0.357; S4l d=+0.357, b=+2761.46, difference=+18.43%",
+      "finding": "Published tables report opposite signs for the same stage and structure; not an extraction error",
+      "interpretation_status": "published_sign_conflict_unresolved",
+      "permitted_use": "Source values retained; excluded from directional interpretation; author clarification required to lift exclusion",
+      "direction_authorized": false,
+      "patient_qc_changed": false,
+      "screenshots": [
+        {"path": "paper_reading_reviews/source_value_images/enigma_s3c.png", "sha256": "013439ed4e2a993bc0409be083b6fcdcbe2888d63c828e190feb61a0806fb995"},
+        {"path": "paper_reading_reviews/source_value_images/enigma_s4l.png", "sha256": "2f5eaf146f0c0820f674590798ddd328703ecadeb9c1b8e3dcb85a016acfcb35"}
+      ]
+    },
+    {
+      "evidence_id": "HANGANU_Q0013",
+      "doi": "10.1093/brain/awu036",
+      "source": "Hanganu 2014, Table 2, PAL, PD-MCI",
+      "verification_status": "completed",
+      "verified_at": "2026-10-05",
+      "verification_basis": "Assistant inspected primary PDF and methods; user supplied matching Table 2 screenshot and requested workflow update",
+      "source_locations": "Table 2, PDF page 5 / journal page 1124; methods, PDF page 4 / journal page 1123",
+      "source_pdf": "Disease/PD/raw/hanganu_2014_awu036.pdf",
+      "source_pdf_sha256": "c2c8abe3b53728c0618e9bc471f47e6cae9a6afa0b2af4d41757425c286d26e3",
+      "values": {"mean_change_mm3": -43.67, "percent_change": 1.40},
+      "reported_values": "Mean change=-43.67 mm3; percentage change=+1.40%",
+      "finding": "Both reported values verified. Methods describe regression corrections and percentages relative to each subject's first scan; opposite group-summary signs alone do not establish a printing error",
+      "interpretation_status": "opposite_sign_summaries_unexplained",
+      "permitted_use": "Retain both source values without sign correction; no directional inference from this pair; not applicable to current single-scan comparisons",
+      "direction_authorized": false,
+      "patient_qc_changed": false,
+      "screenshots": [
+        {"path": "paper_reading_reviews/source_value_images/hanganu_table2.png", "sha256": "10399cc778c59733606aa71e90196ff96824c158b944a1fc97174b4dcab02199"}
+      ]
+    }
+  ]
+}

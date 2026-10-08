@@ -1,0 +1,15 @@
+numpy
+pandas
+scipy
+openpyxl
+nibabel
+matplotlib
+ipywidgets
+anywidget
+ipython
+markdown
+tabulate
+requests
+nbformat
+ipykernel
+# Optional interactive MRI: ipyniivue
