@@ -55,16 +55,6 @@ python run_workflow.py tools/audit_all_patients.py --help
 For a Python session, run `from run_workflow import bootstrap; bootstrap()` before
 importing modules. The notebook and CLI entry points do this automatically.
 
-## AI Report Removal
-
-The retired AI-generated patient-report feature, credential helpers, configuration,
-and AI-specific tests are no longer in this workflow tree. Their originals were
-preserved outside the repository. See [cleanup notes](docs/ORGANIZATION.md).
-
-`assistant_visual_review.py` remains a reader of saved QC evidence, not an AI report
-generator. The literature parser retains an optional extraction backend, disabled
-by default; it is separate from the removed patient-report feature.
-
 ## Public Repository Safety
 
 Do not publish patient images, case metadata, patient reports, credentials, FreeSurfer
