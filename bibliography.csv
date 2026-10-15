@@ -1,0 +1,39 @@
+title,year,doi,url,records
+A comparison of methods for the automated calculation of volumes and atrophy rates in the hippocampus,2008,10.1016/j.neuroimage.2008.01.012,doi:10.1016/j.neuroimage.2008.01.012,
+AddNeuroMed and ADNI: Similar patterns of Alzheimer's atrophy and automated MRI classification accuracy in Europe and North America,2011,10.1016/j.neuroimage.2011.06.065,https://doi.org/10.1016/j.neuroimage.2011.06.065,ad_signature_reported_statistics.json
+ADNI data page,,,https://adni.loni.usc.edu/data-samples/adni-data/,
+Alzheimer-signature MRI biomarker predicts AD dementia in cognitively normal adults,2011,10.1212/wnl.0b013e3182166e96,https://pmc.ncbi.nlm.nih.gov/articles/PMC3087406/,ad_signature_reported_statistics.json
+Automated cross-sectional and longitudinal hippocampal volume measurement in mild cognitive impairment and Alzheimer's disease,2010,10.1016/j.neuroimage.2010.03.018,doi:10.1016/j.neuroimage.2010.03.018,quantitative_reference_statistics.json
+"Automated mapping of hippocampal atrophy in 1-year repeat MRI data from 490 subjects with Alzheimer disease, mild cognitive impairment, and elderly controls",2009,10.1016/j.neuroimage.2008.10.043,https://pmc.ncbi.nlm.nih.gov/articles/PMC2733354/,hippocampal_006_010_reported_statistics.json; method_evidence_statistics.json
+Automated measurement of hippocampal atrophy using fluid-registered serial MRI in AD and controls,2007,10.1097/rct.0b013e31802f4139,doi:10.1097/rct.0b013e31802f4139,hippocampal_006_010_reported_statistics.json
+Automated MRI measures identify individuals with mild cognitive impairment and Alzheimer's disease,2009,10.1093/brain/awp123,https://pmc.ncbi.nlm.nih.gov/articles/PMC2714061/,method_evidence_statistics.json
+Automatic calculation of hippocampal atrophy rates using a hippocampal template and the boundary shift integral,2007,10.1016/j.neurobiolaging.2006.07.008,doi:10.1016/j.neurobiolaging.2006.07.008,
+Cerebral atrophy measurements using Jacobian integration: comparison with the boundary shift integral,2006,10.1016/j.neuroimage.2006.02.052,doi:10.1016/j.neuroimage.2006.02.052,
+Classification of primary progressive aphasia and its variants,2011,10.1212/WNL.0b013e31821103e6,https://pubmed.ncbi.nlm.nih.gov/21325651/,
+Computer assisted diagnosis of Alzheimer's disease using statistical likelihood-ratio test,2023,10.1371/journal.pone.0279574,https://pmc.ncbi.nlm.nih.gov/articles/PMC9937475/,quantitative_reference_statistics.json
+Cortical Complexity Analyses and Their Cognitive Correlate in Alzheimer's Disease and Frontotemporal Dementia,2020,10.3233/JAD-200246,https://pmc.ncbi.nlm.nih.gov/articles/PMC7338220/,quantitative_reference_statistics.json
+Different regional patterns of cortical thinning in Alzheimer's disease and frontotemporal dementia,2007,10.1093/brain/awm016,https://pmc.ncbi.nlm.nih.gov/articles/PMC1853284/,
+Does Alzheimer's disease affect hippocampal asymmetry? Evidence from a cross-sectional and longitudinal volumetric MRI study,2005,10.1159/000084560,doi:10.1159/000084560,barnes_2005_reported_statistics.json
+Gerrits 2016,,10.1371/journal.pone.0148852,https://doi.org/10.1371/journal.pone.0148852,reviewed_pd_quantitative_tables.json
+Gray matter atrophy rate as a marker of disease progression in AD,2012,10.1016/j.neurobiolaging.2010.11.001,doi:10.1016/j.neurobiolaging.2010.11.001,
+Hanganu 2014,,10.1093/brain/awu036,https://doi.org/10.1093/brain/awu036,reviewed_pd_quantitative_tables.json
+"Head size, age and gender adjustment in MRI studies: a necessary nuisance?",2010,10.1016/j.neuroimage.2010.06.025,doi:10.1016/j.neuroimage.2010.06.025,barnes_2010_covariate_reported_statistics.json
+Improved maximum a posteriori cortical segmentation by iterative relaxation of priors,2009,,Cardoso et al. 2009 MICCAI cortical segmentation,
+Increased hippocampal atrophy rates in AD over 6 months using serial MR imaging,2008,10.1016/j.neurobiolaging.2007.02.011,doi:10.1016/j.neurobiolaging.2007.02.011,barnes_2008_reported_statistics.json
+International Multicenter Analysis of Brain Structure Across Clinical Stages of Parkinson's Disease,2021,10.1002/mds.28706,https://doi.org/10.1002/mds.28706,enigma_pd_cohort_demographics.json; enigma_pd_group_statistics.json; enigma_pd_stage_statistics.json
+Issues with threshold masking in voxel-based morphometry of atrophied brains,2009,10.1016/j.neuroimage.2008.08.045,doi:10.1016/j.neuroimage.2008.08.045,
+Longitudinal measures of cholinergic forebrain atrophy in the transition from healthy aging to Alzheimer's disease,2013,10.1016/j.neurobiolaging.2012.10.018,https://pmc.ncbi.nlm.nih.gov/articles/PMC4058576/,
+Magnetic resonance imaging-measured atrophy and its relationship to cognitive functioning in vascular dementia and Alzheimer's disease patients,2011,10.1016/j.jalz.2011.01.004,https://pmc.ncbi.nlm.nih.gov/articles/PMC3166967/,quantitative_reference_statistics.json
+Mak 2015 ICICLE-PD,,10.1093/brain/awv211,https://doi.org/10.1093/brain/awv211,reviewed_pd_quantitative_tables.json
+MIRIAD--Public release of a multiple time point Alzheimer MR imaging dataset,2013,10.1016/j.neuroimage.2012.12.044,https://pmc.ncbi.nlm.nih.gov/articles/PMC3809512/,
+OASIS-3 dataset page,,,https://sites.wustl.edu/oasisbrains/home/oasis-3/,
+Patterns of cortical thickness according to APOE genotype in Alzheimer's disease,2009,10.1159/000258100,doi:10.1159/000258100,gutierrez_galve_2009_reported_statistics.json
+Patterns of cortical thinning in the language variants of frontotemporal lobar degeneration,2009,10.1212/WNL.0b013e3181a4124e,https://pmc.ncbi.nlm.nih.gov/articles/PMC2827264/,method_evidence_statistics.json
+Patterns of cortical thinning in the language variants of frontotemporal lobar degeneration,,10.1212/wnl.0b013e3181a4124e,https://pmc.ncbi.nlm.nih.gov/articles/PMC2827264/,rohrer_2009_reported_statistics.json
+Peripheral (deep) but not periventricular MRI white matter hyperintensities are increased in clinical vascular dementia compared to Alzheimer disease,2016,10.1002/brb3.438,https://pmc.ncbi.nlm.nih.gov/articles/PMC4754499/,
+"Pulsed Arterial Spin Labeling and Segmented Brain Volumetry in the Diagnostic Evaluation of Frontotemporal Dementia, Alzheimer's Disease and Mild Cognitive Impairment",2022,10.3390/tomography8010018,https://pmc.ncbi.nlm.nih.gov/articles/PMC8788517/,quantitative_reference_statistics.json
+Sensitivity of revised diagnostic criteria for the behavioural variant of frontotemporal dementia,2011,10.1093/brain/awr179,https://pubmed.ncbi.nlm.nih.gov/21810890/,
+Sokolowski 2024,,10.1371/journal.pone.0295069,https://doi.org/10.1371/journal.pone.0295069,reviewed_pd_quantitative_tables.json
+Structural Covariance of the Default Network in Healthy and Pathological Aging,2013,10.1523/JNEUROSCI.2261-13.2013,https://pmc.ncbi.nlm.nih.gov/articles/PMC3776065/,
+The Cortical Signature of Alzheimer's Disease: Regionally Specific Cortical Thinning Relates to Symptom Severity in Very Mild to Mild AD Dementia and is Detectable in Asymptomatic Amyloid-Positive Individuals,2009,10.1093/cercor/bhn113,https://surfer.nmr.mgh.harvard.edu/pub/articles/CerebralCortexMar09.pdf,ad_signature_reported_statistics.json
+The Parkinson Progression Marker Initiative (PPMI),2011,10.1016/j.pneurobio.2011.09.005,https://doi.org/10.1016/j.pneurobio.2011.09.005,
