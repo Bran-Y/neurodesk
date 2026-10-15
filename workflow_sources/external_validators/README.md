@@ -1,6 +1,6 @@
 # External normative validators
 
-This folder contains an extracted MMC normal-reference model and optional manual exports. The original workbook is not redistributed.
+This folder contains the supplied MMC normal-reference model and optional manual exports.
 
 ## Automated normal-reference workflow
 

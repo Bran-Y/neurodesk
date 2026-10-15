@@ -14,7 +14,7 @@ ranges or patient-level diagnostic predictors.
 
 Data documentation: https://enigma-toolbox.readthedocs.io/en/latest/pages/04.loadsumstats/#parkinson-s-disease
 
-Pinned repository commit: b08974b55243060cbc1fad12c87048037446e8f7. Raw tables are not redistributed in this repository; every imported record contains its URL, CSV line and SHA-256 checksum. Consult the upstream repository for its license and original tables.
+Pinned repository commit: b08974b55243060cbc1fad12c87048037446e8f7. Raw tables and repository license are retained in `raw/`; every imported record contains its URL, CSV line and SHA-256 checksum.
 
 These data are adjusted group contrasts, NOT individual patient measurements, group mean/SD distributions, diagnostic cutoffs or individual prediction intervals. Raw CI and SE columns are preserved but not interpreted as Cohen d intervals: their scale is not equivalent to the d column in these files. Blank FDR values remain blank; p-values such as `<0.001` remain censored strings. No significance-based or probability classification is derived.
 
@@ -29,7 +29,7 @@ not feed effect sizes into the individual-range ranking engine.
 
 ## Original supplement integration
 
-The 65-page source PDF is not redistributed here.
+The supplied 65-page PDF is retained in `raw/mds28706-sup-0001-supinfo.pdf`.
 `import_pd_supplement.py` extracts S2a-S2c (152 existing contrasts) and
 S4a-S4l (608 stage-specific contrasts). Each record preserves its table,
 page, extracted row, PDF SHA-256, metric-specific adjustments, and per-ROI
